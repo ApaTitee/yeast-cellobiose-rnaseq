@@ -120,7 +120,8 @@ P0 将这 7 个文件 `git mv` 至 `docs/literature/original_study/`，md5 写�
 
 - `Fold Change` 列 = **带符号倍数**：上调为 `+(C8/G8)`，下调为 `-(G8/C8)`（如 THI4 记 −64.17）。
 - `log` 列 = **`log2(C8/G8)`**（THI4 = −6.0038）。
-- Dataset S3：`244 UP genes` + `256 DOWN genes`；UP 分析中 15 个基因 "not found"（`ARG5,6`、`MFALPHA292`、Ty 元件等），DOWN 分析中 3 个 "not found"。**244 + 256 = 500，距 519 差 19；15 + 3 = 18**，差额需在 5.12 对账并写明。
+- Dataset S3：`244 UP genes` + `256 DOWN genes`；UP 侧未映射 15 个基因（`ARG5,6`、`MFALPHA292`、Ty 元件等），DOWN 侧未映射 3 个（`COX26`、`MOS1`、`SHH3`）。
+- **对账已闭合**（2026-09-13，由 `scripts/08_original_study/06_parse_original_study.py` 复算，见 `data/metadata/original_study/derived/reconciliation.tsv`）：244 + 256 + 15 + 3 = **518**，与 519 相差 **1** 条，即外源条目 `gh1-1`（无 GO 注释故未进入 FunSpec 分析）。此结论仍须在报告 5.12 中以数字形式复述。
 
 **(e) 原文锚定值（Dataset S1/S2 的逐样本 RPKM）**：
 
