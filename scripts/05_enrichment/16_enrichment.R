@@ -25,28 +25,19 @@ de_dir <- file.path(root, "results", "differential_expression")
 
 ORS <- "^Y[A-P][LR][0-9]{3}[WC](-[A-Z])?$"
 
-# ---------- TERM2GENE：GO slim（SGD 规范） ----------
-slim <- read.delim(file.path(ann, "go_slim_mapping.tab"), header = FALSE, stringsAsFactors = FALSE)
-slim <- slim[grepl(ORS, slim$V1), c("V1", "V5", "V6")]
-t2g_slim <- unique(data.frame(term = paste0(slim$V5, " [", slim$V6, "]"), gene = slim$V1))
+# ---------- TERM2GENE（由 16a_build_term2gene.R 预先生成，保证口径一致）----------
+# GO slim：SGD go_slim_mapping.tab（SGD 规范）
+# 全 GO  ：SGD GAF 经 GO 层级传播（true path rule）到祖先术语
+#          —— SGD GAF 只含最具体术语，不传播会使宽泛术语的基因集严重偏小
+t2g_slim_df <- read.delim(file.path(ann, "term2gene_goslim.tsv"), stringsAsFactors = FALSE)
+t2g_go_df   <- read.delim(file.path(ann, "term2gene_go_propagated.tsv"), stringsAsFactors = FALSE)
+t2g_slim <- unique(data.frame(term = paste0(t2g_slim_df$term_name, " [", t2g_slim_df$term, "]"),
+                              gene = t2g_slim_df$gene))
+t2g_go   <- unique(data.frame(term = t2g_go_df$term_name, gene = t2g_go_df$gene))
 cat(sprintf("GO slim TERM2GENE：%d 个 slim 术语，覆盖 %d 个基因\n",
             length(unique(t2g_slim$term)), length(unique(t2g_slim$gene))))
-
-# ---------- TERM2GENE：全 GO（SGD GAF） ----------
-gaf <- read.delim(gzfile(file.path(ann, "sgd.gaf.gz")), header = FALSE, comment.char = "!",
-                  stringsAsFactors = FALSE, quote = "")
-orf <- vapply(strsplit(gaf$V11, "\\|"), function(x) {
-  h <- grep(ORS, x, value = TRUE); if (length(h)) h[1] else NA_character_
-}, character(1))
-t2g_go <- unique(data.frame(term = gaf$V5, gene = orf))
-t2g_go <- t2g_go[!is.na(t2g_go$gene), ]
-# 术语名（用 GO.db；缺失的保留 GO ID）
-go_names <- suppressMessages(AnnotationDbi::select(GO.db, keys = unique(t2g_go$term),
-                                                   columns = c("TERM"), keytype = "GOID"))
-t2g_go$term_name <- ifelse(is.na(go_names$TERM[match(t2g_go$term, go_names$GOID)]),
-                           t2g_go$term, go_names$TERM[match(t2g_go$term, go_names$GOID)])
-cat(sprintf("全 GO TERM2GENE：%d 个术语，覆盖 %d 个基因（GAF 行 %d）\n",
-            length(unique(t2g_go$term)), length(unique(t2g_go$gene)), nrow(gaf)))
+cat(sprintf("全 GO TERM2GENE（含层级传播）：%d 个术语，覆盖 %d 个基因\n",
+            length(unique(t2g_go$term)), length(unique(t2g_go$gene))))
 
 # ---------- 输入：universe 与 DEG ----------
 all_genes <- read.delim(file.path(de_dir, "DESeq2_all_genes.tsv"), stringsAsFactors = FALSE)
@@ -103,11 +94,10 @@ rnk <- all_genes$LFC_apeglm
 names(rnk) <- all_genes$gene_id
 rnk <- sort(rnk[!is.na(rnk)], decreasing = TRUE)
 set.seed(1)
-gsea <- try(GSEA(rnk, TERM2GENE = t2g_go[, c("term", "gene")], pvalueCutoff = 0.05,
+gsea <- try(GSEA(rnk, TERM2GENE = as.data.frame(t2g_go), pvalueCutoff = 0.05,
                  pAdjustMethod = "BH", minGSSize = 10, maxGSSize = 500, eps = 0, verbose = FALSE), silent = TRUE)
 if (!inherits(gsea, "try-error") && !is.null(gsea) && nrow(as.data.frame(gsea)) > 0) {
   gd <- as.data.frame(gsea)
-  gd$term_name <- t2g_go$term_name[match(gd$ID, t2g_go$term)]
   write.table(gd, file.path(enr_dir, "gsea_go.tsv"), sep = "\t", quote = FALSE, row.names = FALSE)
   cat(sprintf("GSEA：%d 条显著通路（已写入 gsea_go.tsv）\n", nrow(gd)))
 } else {

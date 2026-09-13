@@ -23,6 +23,9 @@ results/quantification/**/aux_info/
 results/quantification/**/*.rad
 results/quantification/**/logs/
 
+# ---- 注释映射中间产物（由 scripts/05_enrichment/16a_build_term2gene.R 重建）----
+refs/host/annotation/term2gene_go_propagated.tsv
+
 # ---- 可由脚本确定性重建的大文件（md5 记录在 refs/VERSIONS.md）----
 refs/custom/gentrome.fa
 refs/custom/transcripts.fa
