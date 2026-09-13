@@ -223,7 +223,12 @@ GEO 补充文件直链（P0 下载并记 md5）：
    - `cdt-1`（NCU00801）：存在 **Myc 版**（BamHI–EcoRI，C 端 Myc）与 **GFP 融合版**（BamHI–EcoRI 插入已含 `ClaI–GSGS–sfGFP–SalI` 的 P_PGK1-pRS426 骨架）；`sfGFP` 为 **superfolder GFP**，N 端带 **Gly-Ser-Gly-Ser** 接头，反向引物含终止密码子。
    - `gh1-1`（NCU00130）：Kozak 优化 + **C 端 6×His**（引物 `…TTA ATG×6 GTCCTTCTTGATCAAAGAGTCA AAG`），蛋白末端为 `…KPLFDSLIKKD-HHHHHH-*`（与天然 CDS 末端 `…AAGAAGGAC TAA` 一致）。
    - 终止子为 **CYC1 终止子**（XhoI–KpnI）；启动子为酵母基因组 **PGK1 启动子**（可由宿主参考直接取得）。
-6. **仍需由数据裁决的部分**：① pRS426-BT 中 cdt-1 用的是 Myc 版还是 GFP 融合版；② 标签为 sfGFP（2010 SOM）还是 2014 论文所称的 "eGFP"；③ 各接头的精确碱基；④ mRNA 的 5'/3' 边界（In-Fusion 克隆可能引入额外碱基）。
+6. **由数据裁决的部分（已于 2026-09-13 完成，见 `refs/custom/PROVENANCE.md`）**：
+   - pRS426-BT 中 cdt-1 为天然 CDS + 标签融合体；标签经 reads 裁决为 **superfolder GFP（sfGFP）**，其密码子接近人源化 eGFP
+     （reads 共识与 pEGFP-N1 的 EGFP CDS 仅 7 nt 差异；翻译后为 eGFP 骨架 + sfGFP 全部 6 个 superfolder 替换）；
+     因此参考中使用 **reads 共识序列**，不使用任何 GenBank 的 sfGFP 记录（密码子不同，会丢失比对）。
+   - `gh1-1` 为 **天然 CDS（0 处差异）+ C 端 6×His**；Figure S8 的 `gh1-1a` 在样本中不存在（阴性对照，仅 2 reads）。
+   - **仍待完成**：cdt-1–标签接头的精确碱基、两条转录本的 5'/3' 边界（由软剪切 reads 与覆盖断点界定）。
 
 #### 3.4.2 重建方案
 
