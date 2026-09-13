@@ -20,7 +20,7 @@ OUT="$ENV_DIR/tool_versions.txt"
   echo "## CLI tools"
   for c in "fastqc --version" "fastp --version" "multiqc --version" "salmon --version" \
            "bowtie2 --version" "samtools --version" "seqtk" "gffread --version" \
-           "datasets --version" "seqtk 2>/dev/null" "quarto --version" "typst --version" \
+           "datasets --version" "seqtk 2>/dev/null" "quarto --version" "typst --version" "pdftotext -v" \
            "python3 --version" "md5sum --version"; do
     name="${c%% *}"
     if command -v "$name" >/dev/null 2>&1; then

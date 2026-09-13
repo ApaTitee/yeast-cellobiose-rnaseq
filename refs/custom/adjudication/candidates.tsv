@@ -1,0 +1,11 @@
+candidate	length_bp	source	expectation	md5
+gh1-1_native_CDS	1431	XM_011395456.1 (NCU00130) CDS	样本预期为真	aee7824bd6119bcb8f3d49b58383d1fe
+gh1-1_native_His6	1449	XM_011395456.1 CDS + C 端 6xHis（Galazka 2010 SOM 引物推导）	样本预期为真	e26974f71b1979132cba0b32790e0812
+gh1-1a_FigureS8	1449	本论文 Figure S8（DNA2.0 密码子优化）	阴性对照：不应有 reads	629162fcd390a79bfdf00c1458c6c0d1
+cdt-1_native_CDS	1740	XM_958708.2 (NCU00801) CDS	样本预期为真（eGFP 融合体的一部分）	b90f51c4359cb65b3c2167cfa4260247
+tag_eGFP_U55762	720	U55762.1 (pEGFP-N1) egfp CDS	标签候选	9867624e8f6edf3e6001bef17335e56e
+tag_sfGFP_PX636966	717	PX636966 superfolder GFP CDS	标签候选	b2c2d62ad5380c92f669adee3ade6241
+tag_sfGFP_MW132720	717	MW132720 superfolder GFP CDS	标签候选	0c4443abd6ea9d3a11a8fba2b4300407
+tag_sfGFP_JQ341914	717	JQ341914 superfolder GFP CDS	标签候选	b2ccb328611d34d12598359807908855
+CTRL_pRS426_backbone	5726	U03451.1 (pRS426)	诊断对照：用于 read fate 归类	e8c79f106594bd75839477eed0ad62a2
+CTRL_native_2micron	6318	NC_001398.1 (2μ circle)	诊断对照：用于 read fate 归类	d0e43e849a68f7c4381d751af8f229bb

@@ -527,6 +527,7 @@ GEO 补充文件直链（P0 下载并记 md5）：
 │   ├── literature/
 │   │   ├── original_study/       # 7 个只读输入文件
 │   │   └── CHECKSUMS.md
+│   ├── acceptance/               # 阶段出口验收记录（P0.md …）
 │   ├── report/                   # report_zh.qmd / report_en.qmd / refs.bib / 渲染产物
 │   └── decisions/                # phred 编码、countsFromAbundance、LFC 口径、5.13 启停、E1–E5
 │

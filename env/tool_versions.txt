@@ -1,4 +1,4 @@
-# Tool versions — generated 2026-09-13 22:55:57 HKT
+# Tool versions — generated 2026-09-13 23:15:01 HKT
 # host: Linux 6.18.33.2-microsoft-standard-WSL2 x86_64 | conda env: yeast-cellobiose-rnaseq
 
 ## OS / scheduler
@@ -19,6 +19,7 @@ datasets   datasets version: 18.37.0
 seqtk      [main] unrecognized command '2>/dev/null'. Abort!
 quarto     1.9.38
 typst      typst 0.14.2 (82176338)
+pdftotext  pdftotext version 24.02.0
 python3    Python 3.11.16
 md5sum     md5sum (GNU coreutils) 9.4
 

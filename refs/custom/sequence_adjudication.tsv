@@ -1,0 +1,10 @@
+sample	candidate	reads_best_NM	total_reads	reads_best_NM0
+ALL	CTRL_native_2micron	23244		19788
+ALL	CTRL_pRS426_backbone	81329		66023
+ALL	cdt-1_native_CDS	12054		10118
+ALL	gh1-1_native_CDS	11654		9740
+ALL	gh1-1_native_His6	264		241
+ALL	gh1-1a_FigureS8	2		2
+ALL	tag_eGFP_U55762	4964		2771
+ALL	tag_sfGFP_JQ341914	8		5
+ALL	tag_sfGFP_PX636966	0		0

@@ -17,6 +17,14 @@ refs/host/*.gbff.gz
 # ---- 中间校验产物（汇总值见 checksums/md5_verification.tsv）----
 checksums/.verify/
 
+# ---- 裁决实验中间产物（可重跑生成）----
+refs/custom/adjudication/subsample/
+refs/custom/adjudication/*.bam
+refs/custom/adjudication/*.bam.bai
+refs/custom/adjudication/*.bt2
+refs/custom/adjudication/*.bt2l
+*.fq.gz
+
 # ---- 运行日志 ----
 logs/*
 !logs/.gitkeep
