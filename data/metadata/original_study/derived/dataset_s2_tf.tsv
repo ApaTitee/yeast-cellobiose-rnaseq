@@ -1,0 +1,20 @@
+feature_id	pathway	FC_reported	FC_recomputed	log2FC_reported	log2FC_recomputed	FDR_p_reported	C8_mean	G8_mean	is_transgene	sgd_description	synonym
+MET32		-8.51	-8.51058	-3.08916	-3.08926	1.05E-33	25.05	213.19	no	Zinc-finger DNA-binding transcription factor	YDR253C
+MET28		-6.36	-6.35858	-2.66903	-2.66871	1.84E-39	82.38	523.82	no	bZIP transcriptional activator in the Cbf1p-Met4p-Met28p complex	YIR017C
+THI2		-5.89	-5.88587	-2.55827	-2.55726	4.3199999999999999E-91	41.27	242.91	no	Transcriptional activator of thiamine biosynthetic genes	YBR240C|PHO6|phoF
+MIG2		-4.13	-4.12985	-2.04614	-2.04609	3.8599999999999998E-21	25.49	105.27	no	Zinc finger transcriptional repressor	YGL209W|MLZ1
+UGA3		-3.38	-3.37642	-1.75702	-1.7555	3.4599999999999998E-50	58.79	198.5	no	Transcriptional activator for GABA-dependent induction of GABA genes	YDL170W
+SIP4		-3.33	-3.32795	-1.73552	-1.73463	8.8899999999999996E-6	6.19	20.6	no	C6 zinc cluster transcriptional activator	YJL089W
+MIG3		-3.25	-3.251	-1.70044	-1.70089	1.9000000000000001E-8	9.96	32.38	no	Transcriptional regulator	YER028C
+HMS2		-3	-2.99668	-1.58496	-1.58336	2.5300000000000002E-16	24.08	72.16	no	Protein with similarity to heat shock transcription factors	YJR147W
+KAR4		-2.57	-2.56926	-1.36177	-1.36135	2.29E-11	23.75	61.02	no	Transcription factor required for response to pheromones	YCL055W
+MAL13		-2.1	-2.10396	-1.07039	-1.07311	1.12E-4	15.39	32.38	no	MAL-activator protein	YGR288W|MALR
+YAP5		-2	-2.00185	-1	-1.00133	2.74E-11	48.65	97.39	no	Basic leucine zipper (bZIP) iron-sensing transcription factor	YIR018W
+DAL80		2.17	2.1706	1.1177	1.1181	2.7799999999999999E-9	66.16	30.48	no	Negative regulator of genes in multiple nitrogen degradation pathways	YKR034W|UGA43
+ADR1		2.59	2.59018	1.37295	1.37305	2.03E-6	32.17	12.42	no	Carbon source-responsive zinc-finger transcription factor	YDR216W
+USV1		2.68	2.68154	1.42223	1.42306	0	93.13	34.73	no	Putative transcription factor containing a C2H2 zinc finger	YPL230W|NSF1
+CAT8		2.68	2.68159	1.42223	1.42309	9.1600000000000004E-5	21.56	8.04	no	Zinc cluster transcriptional activator	YMR280C|DIL1|MSP8
+GSM1		2.43	2.43016	1.28096	1.28105	1.1999999999999999E-6	37.06	15.25	no	Putative zinc cluster protein of unknown function	YJL103C
+XBP1		3.39	3.39448	1.76129	1.76319	0	61.44	18.1	no	Transcriptional repressor	YIL101C
+SUT1		3.4	3.3989	1.76553	1.76507	0	161.21	47.43	no	Transcription factor of the Zn(II)2Cys6 family	YGL162W
+HAP4		6.12	6.12351	2.61353	2.61436	0	143.78	23.48	no	Transcription factor	YKL109W

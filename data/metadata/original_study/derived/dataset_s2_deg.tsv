@@ -1,0 +1,520 @@
+feature_id	pathway	FC_reported	FC_recomputed	log2FC_reported	log2FC_recomputed	FDR_p_reported	C8_mean	G8_mean	is_transgene	sgd_description	synonym
+THI4		-64.17	-64.1698	-6.00383	-6.00382	2.3300000000000002E-37	105.53	6771.84	no	Thiazole synthase	YGR144W|ESP35|MOL1
+YOR387C		-44.22	-44.2206	-5.46663	-5.46665	4.29E-8	92.78	4102.79	no	Putative protein of unknown function	YOR387C
+MET17		-39.61	-39.6079	-5.30779	-5.30772	3.9300000000000001E-42	114.58	4538.27	no	O-acetyl homoserine-O-acetyl serine sulfhydrylase	YLR303W|MET15|MET25|bifunctional cysteine synthase/O-acetylhomoserine aminocarboxypropyltransferase MET17
+PDC5		-38.52	-38.5265	-5.26754	-5.26778	2.1199999999999999E-173	16.96	653.41	no	Minor isoform of pyruvate decarboxylase	YLR134W|indolepyruvate decarboxylase 5
+MET3		-37.84	-37.8415	-5.24184	-5.2419	6.3099999999999996E-31	32.42	1226.82	no	ATP sulfurylase	YJR010W|sulfate adenylyltransferase
+VEL1		-34.05	-34.0467	-5.08958	-5.08944	1.67E-18	124.01	4222.13	no	Protein of unknown function	YGL258W
+HXT1		-29.7	-29.7093	-4.89239	-4.89285	5.42E-71	9.84	292.34	no	Low-affinity glucose transporter of the major facilitator superfamily	YHR094C|HOR4
+MET14		-22.13	-22.1314	-4.46793	-4.46802	5.0900000000000004E-28	69.7	1542.56	no	Adenylylsulfate kinase	YKL001C|adenylyl-sulfate kinase
+SUL2		-17.11	-17.1111	-4.09677	-4.09686	1.38E-47	24.93	426.58	no	High affinity sulfate permease	YLR092W
+MET5		-16.21	-16.2119	-4.01881	-4.01898	6.9899999999999999E-60	24.68	400.11	no	Sulfite reductase beta subunit	YJR137C|ECM17|sulfite reductase (NADPH) subunit beta
+MET10		-14.7	-14.7045	-3.87774	-3.87818	3.9100000000000002E-51	37.12	545.83	no	Subunit alpha of assimilatory sulfite reductase	YFR030W|sulfite reductase subunit alpha
+THI73		-14.2	-14.1967	-3.82782	-3.82748	2.2199999999999999E-253	55.01	780.96	no	Putative plasma membrane permease	YLR004C
+MET16		-14.2	-14.1948	-3.82782	-3.82729	1.51E-52	39.64	562.68	no	3'-phosphoadenylsulfate reductase	YPR167C|phosphoadenylyl-sulfate reductase (thioredoxin)
+HXT3		-13.85	-13.8511	-3.79181	-3.79192	2.72E-163	131.53	1821.83	no	Low affinity glucose transporter of the major facilitator superfamily	YDR345C
+MET2		-13.49	-13.4942	-3.75382	-3.75427	1.2E-56	43.04	580.79	no	L-homoserine-O-acetyltransferase	YNL277W|homoserine O-acetyltransferase
+MET6		-12.35	-12.3515	-3.62644	-3.62661	4.4599999999999997E-126	194.22	2398.9	no	Cobalamin-independent methionine synthase	YER091C|5-methyltetrahydropteroyltriglutamate-homocysteine S-methyltransferase
+ARN2		-11.54	-11.5422	-3.52857	-3.52884	1.7700000000000001E-151	26.08	301.02	no	Transporter	YHL047C|TAF1
+MET1		-11.1	-11.101	-3.47249	-3.47262	4.7299999999999997E-69	34.55	383.54	no	S-adenosyl-L-methionine uroporphyrinogen III transmethylase	YKR069W|MET20|uroporphyrinogen-III C-methyltransferase
+ICY2		-11.07	-11.0702	-3.46858	-3.46861	3.8699999999999997E-207	251.65	2785.81	no	Protein of unknown function	YPL250C
+THI22		-10.76	-10.7599	-3.42761	-3.42759	7.1800000000000001E-105	24.28	261.25	no	Protein with similarity to hydroxymethylpyrimidine phosphate kinases	YPR121W|putative phosphomethylpyrimidine kinase
+MET8		-10.25	-10.2483	-3.35755	-3.35732	7.8900000000000004E-60	11.92	122.16	no	Bifunctional dehydrogenase and ferrochelatase	YBR213W|bifunctional precorrin-2 dehydrogenase/sirohydrochlorin ferrochelatase MET8
+PHO3		-10.03	-10.0268	-3.32625	-3.32578	5.62E-90	76.61	768.15	no	Constitutively expressed acid phosphatase similar to Pho5p	YBR092C|phoC
+RAD59		-9.82	-9.81772	-3.29572	-3.29539	2.22E-50	15.8	155.12	no	Protein involved DNA double-strand break repair	YDL059C
+SER33		-9.56	-9.56297	-3.25701	-3.25746	1.43E-37	86.79	829.97	no	3-phosphoglycerate dehydrogenase	YIL074C|phosphoglycerate dehydrogenase SER33
+SAM2		-9.24	-9.23862	-3.20789	-3.20768	7.3899999999999998E-108	95.59	883.12	no	S-adenosylmethionine synthetase	YDR502C|ETH2|methionine adenosyltransferase SAM2
+YJL213W		-8.87	-8.87405	-3.14893	-3.14959	6.9899999999999999E-60	14.45	128.23	no	Protein of unknown function that may interact with ribosomes	YJL213W
+PET18		-8.77	-8.77017	-3.13258	-3.1326	3.16E-28	49.08	430.44	no	Protein of unknown function	YCR020C|HIT2
+MET32		-8.51	-8.51058	-3.08916	-3.08926	1.05E-33	25.05	213.19	no	Zinc-finger DNA-binding transcription factor	YDR253C
+STR3		-8.35	-8.3551	-3.06178	-3.06266	2.3700000000000001E-61	16.08	134.35	no	Peroxisomal cystathionine beta-lyase	YGL184C|cystathionine beta-lyase STR3
+YKL068W-A		-7.68	-7.6803	-2.94111	-2.94116	1.1099999999999999E-46	184.3	1415.48	no	Putative protein of unknown function	YKL068W-A
+ARG4		-7.6	-7.59891	-2.926	-2.92579	3.7099999999999999E-135	275.95	2096.92	no	Argininosuccinate lyase	YHR018C|argininosuccinate lyase ARG4
+SAM1		-7.35	-7.34731	-2.87774	-2.87722	2.3800000000000002E-129	163.57	1201.8	no	S-adenosylmethionine synthetase	YLR180W|ETH10|methionine adenosyltransferase SAM1
+CYS3		-7.31	-7.31122	-2.86987	-2.87011	3.9700000000000001E-72	100.22	732.73	no	Cystathionine gamma-lyase	YAL012W|CYI1|FUN35|STR1|cystathionine gamma-lyase CYS3
+RMD6		-7.09	-7.08737	-2.82579	-2.82525	3.9100000000000003E-24	23.12	163.86	no	Protein required for sporulation	YEL072W
+BNA3		-7.07	-7.06686	-2.82171	-2.82107	9.1999999999999999E-36	55.19	390.02	no	Kynurenine aminotransferase	YJL060W
+MET22		-6.84	-6.84163	-2.774	-2.77434	1.6399999999999999E-49	82.97	567.65	no	Bisphosphate-3'-nucleotidase	YOL064C|HAL2
+YMR265C		-6.67	-6.67039	-2.73769	-2.73777	3.8400000000000001E-25	8.95	59.7	no	Putative protein of unknown function	YMR265C
+FIT3		-6.38	-6.37625	-2.67356	-2.67271	9.0600000000000006E-39	595.94	3799.86	no	Mannoprotein that is incorporated into the cell wall	YOR383C
+MET28		-6.36	-6.35858	-2.66903	-2.66871	1.84E-39	82.38	523.82	no	bZIP transcriptional activator in the Cbf1p-Met4p-Met28p complex	YIR017C
+MUP3		-6.24	-6.24471	-2.64155	-2.64263	3.48E-20	20.8	129.89	no	Low affinity methionine permease	YHL036W
+SNZ1		-6.06	-6.06293	-2.59932	-2.60002	1.03E-206	204.83	1241.87	no	Protein involved in vitamin B6 biosynthesis	YMR096W
+NDJ1		-6	-6.00912	-2.58496	-2.58715	2.2099999999999999E-8	3.29	19.77	no	Meiosis-specific telomere protein	YOL104C|TAM1
+THI2		-5.89	-5.88587	-2.55827	-2.55726	4.3199999999999999E-91	41.27	242.91	no	Transcriptional activator of thiamine biosynthetic genes	YBR240C|PHO6|phoF
+ARG3		-5.8	-5.79553	-2.53605	-2.53494	8.1799999999999996E-159	71.6	414.96	no	Ornithine carbamoyltransferase	YJL088W|argF|ornithine carbamoyltransferase
+ENB1		-5.72	-5.7248	-2.51602	-2.51723	6.9999999999999996E-47	21.33	122.11	no	Endosomal ferric enterobactin transporter	YOL158C|ARN4
+ARG1		-5.71	-5.70881	-2.51349	-2.51319	0	259.62	1482.12	no	Arginosuccinate synthetase	YOL058W|ARG10|argininosuccinate synthase
+GCV1		-5.68	-5.67791	-2.50589	-2.50536	6.1499999999999998E-135	88.67	503.46	no	T subunit of the mitochondrial glycine decarboxylase complex	YDR019C|GSD1|glycine decarboxylase subunit T
+YNL018C		-5.54	-5.54271	-2.46989	-2.47059	7.9900000000000004E-5	1.99	11.03	no	Putative protein of unknown function	YNL018C
+TPO2		-5.46	-5.46253	-2.4489	-2.44957	1.6400000000000001E-67	33.23	181.52	no	Polyamine transporter of the major facilitator superfamily	YGR138C
+THI20		-5.39	-5.3902	-2.43029	-2.43034	2.5699999999999999E-35	116.99	630.6	no	Trifunctional enzyme of thiamine biosynthesis, degradation and salvage	YOL055C|trifunctional hydroxymethylpyrimidine kinase/phosphomethylpyrimidine kinase/thiaminase
+WSC4		-4.85	-4.85251	-2.27798	-2.27873	9.2000000000000005E-55	32.68	158.58	no	Endoplasmic reticulum (ER) membrane protein	YHL028W|YFW1|YHC8
+AQY2		-4.84	-4.84074	-2.27501	-2.27523	5.21E-14	8.1	39.21	no	Water channel that mediates water transport across cell membranes	YLL052C
+YHI9		-4.79	-4.78998	-2.26003	-2.26002	5.3999999999999996E-75	45.9	219.86	no	Protein of unknown function	YHR029C
+YLL053C		-4.67	-4.66418	-2.22342	-2.22162	3.6700000000000001E-15	9.38	43.75	no	Putative protein	YLL053C
+SST2		-4.66	-4.66512	-2.22033	-2.22191	5.7800000000000004E-14	8.6	40.12	no	GTPase-activating protein for Gpa1p	YLR452C
+ARI1		-4.61	-4.60483	-2.20477	-2.20315	2.4E-31	20.27	93.34	no	NADPH-dependent aldehyde reductase	YGL157W|carbonyl reductase (NADPH-dependent) ARI1
+ARG7		-4.52	-4.52002	-2.17632	-2.17633	1.28E-169	122.63	554.29	no	Mitochondrial ornithine acetyltransferase	YMR062C|ECM40|glutamate N-acetyltransferase
+MUP1		-4.51	-4.51289	-2.17313	-2.17405	4.4499999999999997E-70	87.68	395.69	no	High affinity methionine permease	YGR055W
+YJR005C-A		-4.51	-4.50936	-2.17313	-2.17292	1.25E-4	2.67	12.04	no	Putative protein of unknown function	YJR005C-A
+ARG5,6		-4.42	-4.422	-2.14405	-2.1447	3.1100000000000001E-120	84.81	375.03	no	Acetylglutamate kinase and N-acetyl-gamma-glutamyl-phosphate reductase	YER069W|bifunctional acetylglutamate kinase/N-acetyl-gamma-glutamyl-phosphate reductase
+GCV2		-4.41	-4.40642	-2.14078	-2.13961	4.3000000000000002E-49	34.57	152.33	no	P subunit of the mitochondrial glycine decarboxylase complex	YMR189W|GSD2|glycine decarboxylase subunit P
+LYS1		-4.4	-4.40106	-2.1375	-2.13785	1.4199999999999999E-113	80.76	355.43	no	Saccharopine dehydrogenase (NAD+, L-lysine-forming)	YIR034C|saccharopine dehydrogenase (NAD+, L-lysine-forming)
+FCY22		-4.39	-4.39461	-2.13422	-2.13574	1.43E-12	8.54	37.53	no	Putative purine-cytosine permease	YER060W-A
+TMT1		-4.39	-4.38999	-2.13422	-2.13422	1.27E-111	79.72	349.97	no	Trans-aconitate methyltransferase	YER175C|TAM1
+ARN1		-4.36	-4.3619	-2.12433	-2.12496	6.9700000000000004E-39	27.77	121.13	no	ARN family transporter for siderophore-iron chelates	YHL040C
+MET13		-4.33	-4.32972	-2.11437	-2.11427	8.2500000000000001E-46	33.24	143.92	no	Major isozyme of methylenetetrahydrofolate reductase	YGL125W|MET11|MRPL45|methylenetetrahydrofolate reductase (NAD(P)H) MET13
+FET3		-4.33	-4.32753	-2.11437	-2.11354	9.8400000000000001E-32	90.8	392.94	no	Ferro-O2-oxidoreductase	YMR058W
+YHR112C		-4.27	-4.26655	-2.09424	-2.09307	6.81E-42	101.37	432.5	no	Protein of unknown function	YHR112C|putative cystathionine beta-lyase
+AGA1		-4.23	-4.2255	-2.08066	-2.07912	5.2499999999999998E-13	9.49	40.1	no	Anchorage subunit of a-agglutinin of a-cells	YNR044W
+YIL163C		-4.22	-4.22706	-2.07724	-2.07966	2.2299999999999998E-6	4.36	18.43	no	Protein of unknown function	YIL163C
+NIT1		-4.21	-4.20885	-2.07382	-2.07343	4.6199999999999998E-42	32.08	135.02	no	Nitrilase	YIL164C
+YPL264C		-4.18	-4.17907	-2.0635	-2.06318	1.46E-22	17.2	71.88	no	Putative membrane protein of unknown function	YPL264C
+MIG2		-4.13	-4.12985	-2.04614	-2.04609	3.8599999999999998E-21	25.49	105.27	no	Zinc finger transcriptional repressor	YGL209W|MLZ1
+YLR179C		-4.07	-4.07252	-2.02503	-2.02592	0	633.35	2579.33	no	Protein of unknown function with similarity to Tfs1p	YLR179C
+FIT2		-4.06	-4.06287	-2.02148	-2.0225	9.6300000000000003E-44	447.94	1819.92	no	Mannoprotein that is incorporated into the cell wall	YOR382W
+SNO1		-4.06	-4.05554	-2.02148	-2.01989	3.8700000000000001E-37	30.25	122.68	no	Protein of unconfirmed function	YMR095C
+CPA2		-4.04	-4.03894	-2.01436	-2.01398	2.6E-87	72.42	292.5	no	Large subunit of carbamoyl phosphate synthetase	YJR109C|carbamoyl-phosphate synthase (glutamine-hydrolyzing) CPA2
+STD1		-4.02	-4.0213	-2.0072	-2.00766	2.15E-27	22.53	90.6	no	Protein involved in control of glucose-regulated gene expression	YOR047C|MSN3|SFS3
+HXT4		-4.01	-4.00802	-2.0036	-2.00289	7.9799999999999998E-17	13.72	54.99	no	High-affinity glucose transporter	YHR092C|LGT1|RAG1
+SAM3		-3.95	-3.95264	-1.98185	-1.98282	1.9000000000000001E-147	127.75	504.95	no	High-affinity S-adenosylmethionine permease	YPL274W
+SHM2		-3.95	-3.94779	-1.98185	-1.98105	9.8499999999999995E-126	357.23	1410.27	no	Cytosolic serine hydroxymethyltransferase	YLR058C|SHMT2|glycine hydroxymethyltransferase SHM2
+HOM3		-3.95	-3.94639	-1.98185	-1.98053	4.6300000000000003E-188	163.59	645.59	no	Aspartate kinase (L-aspartate 4-P-transferase)	YER052C|BOR1|SIL4|THR3|aspartate kinase
+YAR009C		-3.94	-3.93484	-1.9782	-1.97631	9.3900000000000006E-5	3.53	13.89	no	Retrotransposon TYA Gag and TYB Pol genes	YAR009C|YARCTyB1-1|truncated gag-pol fusion protein
+YEL073C		-3.92	-3.91997	-1.97085	-1.97084	4.5399999999999999E-38	59.98	235.12	no	Putative protein of unknown function	YEL073C
+GSH1		-3.82	-3.82015	-1.93357	-1.93363	4.6699999999999998E-36	32.86	125.53	no	Gamma glutamylcysteine synthetase	YJL101C|glutamate--cysteine ligase
+SIT1		-3.79	-3.79025	-1.9222	-1.92229	2.16E-55	63.41	240.34	no	Ferrioxamine B transporter	YEL065W|ARN3
+GRX8		-3.76	-3.75668	-1.91073	-1.90946	3.4700000000000002E-17	40.44	151.92	no	Glutaredoxin that employs a dithiol mechanism of catalysis	YLR364W|glutathione-disulfide reductase GRX8
+YIL165C		-3.73	-3.725	-1.89918	-1.89724	7.7699999999999997E-39	37.2	138.57	no	Putative protein of unknown function	YIL165C
+MF(ALPHA)2		-3.66	-3.6578	-1.87184	-1.87098	2.14E-17	16.92	61.89	no	Mating pheromone alpha-factor, made by alpha cells	YGL089C
+YOR032W-A		-3.58	-3.58104	-1.83996	-1.84038	7.4600000000000003E-4	3.27	11.71	no	Protein of unknown function	YOR032W-A
+YLR227W-B		-3.57	-3.5733	-1.83592	-1.83726	1.29E-8	8.39	29.98	no	Retrotransposon TYA Gag and TYB Pol genes	YLR227W-B|gag-pol fusion protein
+SAG1		-3.57	-3.56658	-1.83592	-1.83454	2.2E-28	29.44	105	no	Alpha-agglutinin of alpha-cells	YJR004C|AG(ALPHA)1
+YJR027W		-3.54	-3.53913	-1.82375	-1.82339	6.0700000000000001E-4	3.45	12.21	no	Retrotransposon TYA Gag and TYB Pol genes	YJR027W|gag-pol fusion protein
+MCH4		-3.48	-3.47605	-1.79909	-1.79745	1.29E-40	44.68	155.31	no	Protein with similarity to mammalian monocarboxylate permeases	YOL119C
+IMD2		-3.47	-3.47331	-1.79494	-1.79631	5.9399999999999998E-19	68.94	239.45	no	Inosine monophosphate dehydrogenase	YHR216W|IMP dehydrogenase IMD2|PUR5
+YMR045C		-3.47	-3.4709	-1.79494	-1.79531	8.7799999999999997E-11	11.34	39.36	no	Retrotransposon TYA Gag and TYB Pol genes	YMR045C|gag-pol fusion protein
+CYS4		-3.47	-3.46864	-1.79494	-1.79437	4.01E-142	248.27	861.16	no	Cystathionine beta-synthase	YGR155W|NHS5|STR4|VMA41|cystathionine beta-synthase CYS4
+ZRT2		-3.45	-3.45152	-1.7866	-1.78723	3.8300000000000002E-139	219.7	758.3	no	Low-affinity zinc transporter of the plasma membrane	YLR130C|low-affinity Zn(2+) transporter ZRT2
+TRP4		-3.44	-3.44115	-1.78241	-1.78289	7.1899999999999996E-93	127.87	440.02	no	Anthranilate phosphoribosyl transferase	YDR354W|anthranilate phosphoribosyltransferase
+MMP1		-3.41	-3.40682	-1.76977	-1.76842	9.2900000000000003E-17	18.78	63.98	no	High-affinity S-methylmethionine permease	YLL061W
+MFA2		-3.4	-3.39556	-1.76553	-1.76365	3.9199999999999997E-9	9.91	33.65	no	Mating pheromone a-factor	YNL145W
+ODC2		-3.39	-3.39358	-1.76129	-1.76281	6.8099999999999997E-53	61.36	208.23	no	Mitochondrial inner membrane transporter	YOR222W
+YDR261C-D		-3.38	-3.38832	-1.75702	-1.76057	4.4099999999999999E-4	3.94	13.35	no	Retrotransposon TYA Gag and TYB Pol genes	YDR261C-D|gag-pol fusion protein
+UGA3		-3.38	-3.37642	-1.75702	-1.7555	3.4599999999999998E-50	58.79	198.5	no	Transcriptional activator for GABA-dependent induction of GABA genes	YDL170W
+SDT1		-3.36	-3.36035	-1.74846	-1.74861	2.97E-32	37.88	127.29	no	Pyrimidine nucleotidase	YGL224C|SSM1
+GTO1		-3.35	-3.35294	-1.74416	-1.74543	1.1E-20	24.14	80.94	no	Omega-class glutathione transferase	YGR154C
+SPO22		-3.35	-3.34921	-1.74416	-1.74382	5.2800000000000003E-8	8.82	29.54	no	Meiosis-specific protein essential for chromosome synapsis	YIL073C|ZIP4
+AMN1		-3.33	-3.33396	-1.73552	-1.73724	1.2E-61	74.32	247.78	no	Protein required for daughter cell separation	YBR158W|CST13|ICS4
+SIP4		-3.33	-3.32795	-1.73552	-1.73463	8.8899999999999996E-6	6.19	20.6	no	C6 zinc cluster transcriptional activator	YJL089W
+HIS1		-3.31	-3.30939	-1.72683	-1.72657	2.51E-194	239.73	793.36	no	ATP phosphoribosyltransferase	YER055C|ATP phosphoribosyltransferase
+YGL117W		-3.3	-3.30386	-1.72247	-1.72415	2.12E-181	271.05	895.51	no	Putative protein of unknown function	YGL117W
+QDR2		-3.3	-3.3033	-1.72247	-1.72391	1.33E-81	100.56	332.18	no	Plasma membrane transporter of the major facilitator superfamily	YIL121W
+TRP3		-3.3	-3.30061	-1.72247	-1.72273	2.23E-71	88.02	290.52	no	Indole-3-glycerol-phosphate synthase	YKL211C|bifunctional anthranilate synthase/indole-3-glycerol-phosphate synthase
+SMF3		-3.29	-3.29098	-1.71809	-1.71852	4.3E-31	45.88	150.99	no	Putative divalent metal ion transporter involved in iron homeostasis	YLR034C|putative divalent metal ion transporter SMF3
+RIB5		-3.28	-3.28317	-1.7137	-1.71509	2.53E-162	203.48	668.06	no	Riboflavin synthase	YBR256C|riboflavin synthase
+YCT1		-3.27	-3.2738	-1.70929	-1.71097	7.6699999999999994E-21	29.73	97.33	no	High-affinity cysteine-specific transporter	YLL055W
+SER1		-3.26	-3.2594	-1.70487	-1.70461	2.66E-180	254.05	828.05	no	3-phosphoserine aminotransferase	YOR184W|ADE9|O-phospho-L-serine:2-oxoglutarate transaminase
+PMU1		-3.26	-3.25535	-1.70487	-1.70281	8.0700000000000007E-34	42.49	138.32	no	Putative phosphomutase	YKL128C
+MIG3		-3.25	-3.251	-1.70044	-1.70089	1.9000000000000001E-8	9.96	32.38	no	Transcriptional regulator	YER028C
+DLD3		-3.23	-3.22639	-1.69153	-1.68992	2.0900000000000002E-214	932.04	3007.12	no	D-lactate dehydrogenase	YEL071W
+DUR3		-3.22	-3.2196	-1.68706	-1.68688	8.98E-9	10.61	34.16	no	Plasma membrane transporter for both urea and polyamines	YHL016C
+FMP23		-3.2	-3.20106	-1.67807	-1.67855	4.8599999999999999E-32	41.68	133.42	no	Putative protein of unknown function	YBR047W
+YNL284C-B		-3.19	-3.1922	-1.67356	-1.67455	1.06E-13	17.43	55.64	no	Retrotransposon TYA Gag and TYB Pol genes	YNL284C-B|gag-pol fusion protein
+MHT1		-3.17	-3.1676	-1.66448	-1.66339	1.7200000000000001E-16	21.54	68.23	no	S-methylmethionine-homocysteine methyltransferase	YLL062C
+YML018C		-3.1	-3.10157	-1.63227	-1.633	3.0299999999999999E-58	81.91	254.05	no	Protein of unknown function	YML018C
+YDR170W-A		-3.1	-3.09727	-1.63227	-1.631	1.75E-22	31.15	96.48	no	Retrotransposon TYA Gag gene	YDR170W-A|gag protein
+FMO1		-3.09	-3.09323	-1.62761	-1.62911	1.15E-20	28.64	88.59	no	Flavin-containing monooxygenase	YHR176W
+PAU4		-3.08	-3.08235	-1.62293	-1.62403	1.33E-6	8.5	26.2	no	Member of the seripauperin multigene family	YLR461W
+IES5		-3.06	-3.05895	-1.61353	-1.61303	3.9600000000000002E-66	96.02	293.72	no	Protein that associates with the INO80 chromatin remodeling complex	YER092W
+LYS20		-3.06	-3.0558	-1.61353	-1.61155	3.8499999999999999E-74	269.19	822.59	no	Homocitrate synthase isozyme	YDL182W|homocitrate synthase LYS20
+SEO1		-3.04	-3.03806	-1.60407	-1.60315	1.9399999999999999E-9	16.29	49.49	no	Putative permease	YAL067C
+PMP2		-3.02	-3.02102	-1.59455	-1.59504	3.2099999999999998E-79	118.45	357.84	no	Proteolipid associated with plasma membrane H(+)-ATPase (Pma1p)	YEL017C-A
+PHO84		-3.02	-3.01752	-1.59455	-1.59337	9.3199999999999993E-19	27.39	82.65	no	High-affinity inorganic phosphate (Pi) transporter	YML123C|phoT
+YCR100C		-3.01	-3.01328	-1.58976	-1.59133	3.6600000000000002E-7	9.79	29.5	no	Putative protein of unknown function	YCR100C
+HMS2		-3	-2.99668	-1.58496	-1.58336	2.5300000000000002E-16	24.08	72.16	no	Protein with similarity to heat shock transcription factors	YJR147W
+STE3		-2.99	-2.99245	-1.58015	-1.58133	1.05E-18	27.83	83.28	no	Receptor for a factor pheromone	YKL178C|DAF2
+LEU4		-2.98	-2.97539	-1.57531	-1.57308	3.71E-214	333.17	991.31	no	Alpha-isopropylmalate synthase (2-isopropylmalate synthase)	YNL104C|2-isopropylmalate synthase LEU4
+DAN1		-2.96	-2.9647	-1.5656	-1.56789	2.3500000000000001E-81	685.64	2032.72	no	Cell wall mannoprotein	YJR150C|CCW13
+THI7		-2.96	-2.96108	-1.5656	-1.56612	1.7100000000000001E-85	284.91	843.64	no	Plasma membrane transporter responsible for the uptake of thiamine	YLR237W|THI10
+YJR111C		-2.96	-2.95678	-1.5656	-1.56403	2.84E-40	62.7	185.39	no	Putative protein of unknown function	YJR111C
+TEA1		-2.93	-2.92837	-1.5509	-1.5501	9.770000000000001E-16	24.43	71.54	no	Ty1 enhancer activator involved in Ty enhancer-mediated transcription	YOR337W
+MNN4		-2.92	-2.91884	-1.54597	-1.54539	1.49E-18	29.2	85.23	no	Putative positive regulator of mannosylphosphate transferase Mnn6p	YKL201C|YKL200C
+TPN1		-2.91	-2.91376	-1.54102	-1.54288	9.6600000000000002E-34	54.15	157.78	no	Plasma membrane pyridoxine (vitamin B6) transporter	YGL186C
+LEU1		-2.91	-2.91327	-1.54102	-1.54264	1.22E-189	309.46	901.54	no	Isopropylmalate isomerase	YGL009C|3-isopropylmalate dehydratase LEU1
+DUG3		-2.9	-2.90227	-1.53605	-1.53718	7.9500000000000006E-24	38.27	111.07	no	Component of glutamine amidotransferase (GATase II)	YNL191W|glutamine amidotransferase subunit DUG3
+YOR302W		-2.9	-2.90203	-1.53605	-1.53706	1.8700000000000001E-100	164.85	478.4	no	CPA1 uORF	YOR302W
+BSC5		-2.88	-2.87688	-1.52607	-1.5245	3.5700000000000001E-10	16	46.03	no	Protein of unknown function	YNR069C|BUL3
+GGC1		-2.87	-2.86659	-1.52105	-1.51934	2.43E-55	92.95	266.45	no	Mitochondrial GTP/GDP transporter	YDL198C|SHM1|YHM1
+ADE3		-2.85	-2.84521	-1.51096	-1.50854	8.2400000000000006E-121	207.83	591.32	no	Cytoplasmic trifunctional enzyme C1-tetrahydrofolate synthase	YGR204W|trifunctional formate-tetrahydrofolate ligase/methenyltetrahydrofolate cyclohydrolase/methylenetetrahydrofolate dehydrogenase ADE3
+IDP1		-2.83	-2.83206	-1.5008	-1.50185	9.5299999999999999E-58	142.67	404.05	no	Mitochondrial NADP-specific isocitrate dehydrogenase	YDL066W|isocitrate dehydrogenase (NADP(+)) IDP1
+ZRT3		-2.82	-2.8246	-1.4957	-1.49805	2.9700000000000001E-59	191.05	539.64	no	Vacuolar membrane zinc transporter	YKL175W|Zn(2+) transporter ZRT3
+PRM5		-2.82	-2.81772	-1.4957	-1.49453	2.04E-26	45.59	128.46	no	Pheromone-regulated protein, predicted to have 1 transmembrane segment	YIL117C
+ORT1		-2.82	-2.81658	-1.4957	-1.49394	5.2100000000000003E-24	41.38	116.55	no	Ornithine transporter of the mitochondrial inner membrane	YOR130C|ARG11
+YMC2		-2.81	-2.81024	-1.49057	-1.49069	5.2799999999999997E-33	57.6	161.87	no	Putative mitochondrial inner membrane transporter	YBR104W
+URA4		-2.76	-2.76343	-1.46467	-1.46646	1.09E-29	53.81	148.7	no	Dihydroorotase	YLR420W|dihydroorotase
+THI72		-2.76	-2.7566	-1.46467	-1.46289	3.2200000000000003E-10	17.79	49.04	no	Transporter of thiamine or related compound	YOR192C
+ASN1		-2.75	-2.75088	-1.45943	-1.45989	1.3400000000000001E-118	221.02	608	no	Asparagine synthetase	YPR145W|asparagine synthase (glutamine-hydrolyzing) 1
+EST3		-2.74	-2.7433	-1.45418	-1.45591	1.2799999999999999E-21	39.58	108.58	no	Component of the telomerase holoenzyme	YIL009C-A
+FTR1		-2.73	-2.73257	-1.4489	-1.45026	1.2700000000000001E-24	440.82	1204.57	no	High affinity iron permease	YER145C
+FUS1		-2.73	-2.73163	-1.4489	-1.44976	1.74E-7	12.93	35.32	no	Membrane protein localized to the shmoo tip	YCL027W
+URA1		-2.72	-2.72455	-1.44361	-1.44602	3.15E-102	234.67	639.37	no	Dihydroorotate dehydrogenase	YKL216W|dihydroorotate dehydrogenase
+YOL107W		-2.72	-2.72187	-1.44361	-1.4446	1.27E-5	9.42	25.64	no	Putative protein of unknown function	YOL107W
+OPT1		-2.7	-2.70077	-1.43296	-1.43337	4.9199999999999997E-8	14.37	38.81	no	Proton-coupled oligopeptide transporter of the plasma membrane	YJL212C|GSH11|HGT1
+YCR101C		-2.69	-2.68825	-1.42761	-1.42667	6.2199999999999994E-5	8.34	22.42	no	Putative protein of unknown function	YCR101C
+HIS3		-2.68	-2.68106	-1.42223	-1.4228	9.4000000000000006E-36	8023.97	21512.7	no	Imidazoleglycerol-phosphate dehydratase	YOR202W|HIS10|HIS8|imidazoleglycerol-phosphate dehydratase HIS3
+SUL1		-2.67	-2.67434	-1.41684	-1.41918	1.3999999999999999E-9	30.83	82.45	no	High affinity sulfate permease of the SulP anion transporter family	YBR294W|SFP2
+POP1		-2.67	-2.6681	-1.41684	-1.41581	8.8700000000000004E-17	32.6	86.98	no	Subunit of both RNase MRP and nuclear RNase P	YNL221C
+AAD14		-2.66	-2.66357	-1.41143	-1.41336	3.5800000000000002E-18	35.55	94.69	no	Putative aryl-alcohol dehydrogenase	YNL331C
+GCV3		-2.65	-2.65151	-1.40599	-1.40682	2.9900000000000002E-102	415.94	1102.87	no	H subunit of the mitochondrial glycine decarboxylase complex	YAL044C|glycine decarboxylase subunit H
+OAC1		-2.65	-2.64531	-1.40599	-1.40344	3.7200000000000002E-93	191.83	507.45	no	Mitochondrial inner membrane transporter	YKL120W
+YCR099C		-2.64	-2.64291	-1.40054	-1.40213	4.34E-7	13.19	34.86	no	Putative protein of unknown function	YCR099C
+ADH5		-2.64	-2.63751	-1.40054	-1.39918	2.4800000000000001E-39	125.19	330.19	no	Alcohol dehydrogenase isoenzyme V	YBR145W|alcohol dehydrogenase ADH5
+THI21		-2.62	-2.62132	-1.38957	-1.3903	6.5799999999999994E-8	29.92	78.43	no	Hydroxymethylpyrimidine (HMP) and HMP-phosphate kinase	YPL258C|bifunctional hydroxymethylpyrimidine kinase/phosphomethylpyrimidine kinase
+DSE2		-2.61	-2.61381	-1.38405	-1.38615	2.8400000000000001E-96	203.19	531.1	no	Daughter cell-specific secreted protein with similarity to glucanases	YHR143W
+RIB4		-2.61	-2.61059	-1.38405	-1.38437	7.5999999999999998E-205	500.06	1305.45	no	Lumazine synthase (DMRL synthase)	YOL143C|lumazine synthase RIB4
+HIS5		-2.6	-2.59657	-1.37851	-1.37661	3.7999999999999997E-55	183.18	475.64	no	Histidinol-phosphate aminotransferase	YIL116W|histidinol-phosphate transaminase
+CPA1		-2.59	-2.59083	-1.37295	-1.37341	2.8600000000000001E-159	431.75	1118.59	no	Small subunit of carbamoyl phosphate synthetase	YOR303W|carbamoyl-phosphate synthase (glutamine-hydrolyzing) CPA1
+YDR541C		-2.58	-2.57936	-1.36737	-1.36701	3.66E-31	67.04	172.92	no	Putative dihydrokaempferol 4-reductase	YDR541C|carbonyl reductase (NADPH-dependent)
+THI6		-2.58	-2.57895	-1.36737	-1.36678	1.8000000000000002E-30	65.55	169.05	no	Thiamine-phosphate diphosphorylase and hydroxyethylthiazole kinase	YPL214C|bifunctional hydroxyethylthiazole kinase/thiamine-phosphate diphosphorylase
+KAR4		-2.57	-2.56926	-1.36177	-1.36135	2.29E-11	23.75	61.02	no	Transcription factor required for response to pheromones	YCL055W
+POS5		-2.57	-2.56738	-1.36177	-1.3603	2.3700000000000001E-16	34.95	89.73	no	Mitochondrial NADH kinase	YPL188W
+YBL005W-B		-2.53	-2.53198	-1.33914	-1.34027	1.6099999999999999E-8	18.29	46.31	no	Retrotransposon TYA Gag and TYB Pol genes	YBL005W-B|gag-pol fusion protein
+PCL5		-2.52	-2.52213	-1.33342	-1.33464	9.0700000000000009E-44	315.88	796.69	no	Cyclin	YHR071W
+ATM1		-2.52	-2.51946	-1.33342	-1.33311	8.08E-10	21.33	53.74	no	Mitochondrial inner membrane ATP-binding cassette (ABC) transporter	YMR301C|ATP-binding cassette Fe/S cluster precursor transporter ATM1
+YNL024C		-2.52	-2.51883	-1.33342	-1.33275	2.7000000000000001E-7	15.4	38.79	no	Putative methyltransferase	YNL024C
+SWF1		-2.51	-2.51505	-1.32769	-1.33059	3.9800000000000002E-13	29.24	73.54	no	Palmitoyltransferase that acts on transmembrane proteins	YDR126W|PSL10
+MPC2		-2.5	-2.49918	-1.32193	-1.32145	0	1368.89	3421.1	no	Highly conserved subunit of the mitochondrial pyruvate carrier	YHR162W
+HIS4		-2.5	-2.49859	-1.32193	-1.32112	1.52E-50	312.58	781.01	no	Multifunctional enzyme containing phosphoribosyl-ATP pyrophosphatase	YCL030C|trifunctional histidinol dehydrogenase/phosphoribosyl-AMP cyclohydrolase/phosphoribosyl-ATP diphosphatase
+HOM6		-2.49	-2.48538	-1.31615	-1.31347	1.87E-30	302.05	750.71	no	Homoserine dehydrogenase (L-homoserine:NADP oxidoreductase)	YJR139C|THR6|homoserine dehydrogenase
+FOL2		-2.48	-2.48004	-1.31034	-1.31037	1.68E-64	155.34	385.25	no	GTP-cyclohydrolase I	YGR267C|GTP cyclohydrolase I
+MCH1		-2.45	-2.45425	-1.29278	-1.29528	2.8500000000000002E-15	36.61	89.85	no	Protein with similarity to mammalian monocarboxylate permeases	YDL054C
+ARG8		-2.44	-2.44303	-1.28688	-1.28867	1.2500000000000001E-18	45.55	111.28	no	Acetylornithine aminotransferase	YOL140W|acetylornithine transaminase
+NUT2		-2.44	-2.44295	-1.28688	-1.28862	6.8299999999999996E-16	38.65	94.42	no	Subunit of the RNA polymerase II mediator complex	YPR168W|MED10
+CAF16		-2.43	-2.43121	-1.28096	-1.28168	7.4400000000000005E-32	80.03	194.57	no	Part of evolutionarily-conserved CCR4-NOT regulatory complex	YFL028C|putative ATP-binding cassette family ATPase CAF16
+YNL234W		-2.38	-2.37907	-1.25096	-1.2504	1.81E-6	15.67	37.28	no	Protein of unknown function with similarity to globins	YNL234W
+COG1		-2.38	-2.37637	-1.25096	-1.24876	2.1900000000000002E-12	31.99	76.02	no	Essential component of the conserved oligomeric Golgi complex	YGL223C|COD3|LDB11|SEC36
+HOM2		-2.37	-2.37309	-1.24489	-1.24677	4.2299999999999998E-113	308.05	731.03	no	Aspartic beta semi-aldehyde dehydrogenase	YDR158W|THR2|aspartate-semialdehyde dehydrogenase
+SCW11		-2.35	-2.35258	-1.23266	-1.23424	6.4700000000000001E-44	121.42	285.65	no	Cell wall protein with similarity to glucanases	YGL028C
+ARG2		-2.34	-2.34453	-1.22651	-1.2293	6.9999999999999998E-9	23.22	54.44	no	Acetylglutamate synthase (glutamate N-acetyltransferase)	YJL071W|HRB574|acetyl-CoA:L-glutamate N-acetyltransferase
+AAC3		-2.34	-2.34128	-1.22651	-1.2273	7.3999999999999995E-17	46.15	108.05	no	Mitochondrial inner membrane ADP/ATP translocator	YBR085W|ANC3
+BAT1		-2.34	-2.33932	-1.22651	-1.22609	1.5900000000000001E-144	458.09	1071.62	no	Mitochondrial branched-chain amino acid (BCAA) aminotransferase	YHR208W|ECA39|TWT1|branched-chain-amino-acid transaminase BAT1
+YAT2		-2.34	-2.33804	-1.22651	-1.2253	1.05E-24	68.69	160.6	no	Carnitine acetyltransferase	YER024W|carnitine O-acetyltransferase YAT2
+YJL218W		-2.34	-2.33677	-1.22651	-1.22452	1.83E-4	10.66	24.91	no	Putative acetyltransferase	YJL218W|acetyltransferase
+BUD16		-2.33	-2.32824	-1.22033	-1.21924	7.2099999999999994E-18	49.78	115.9	no	Putative pyridoxal kinase	YEL029C|putative pyridoxal kinase BUD16
+CTF13		-2.32	-2.31935	-1.21412	-1.21372	1E-4	11.68	27.09	no	Subunit of the CBF3 complex	YMR094W|CBF3C
+EXG2		-2.32	-2.31628	-1.21412	-1.21181	2.8300000000000001E-10	28.14	65.18	no	Exo-1,3-beta-glucanase	YDR261C
+SKP2		-2.31	-2.31394	-1.20789	-1.21035	1.3E-6	17.36	40.17	no	F-box protein of unknown function	YNL311C|putative SCF ubiquitin ligase complex subunit SKP2
+GIC2		-2.31	-2.31237	-1.20789	-1.20937	1.4799999999999999E-16	46.9	108.45	no	Redundant rho-like GTPase Cdc42p effector	YDR309C
+TRP5		-2.31	-2.30967	-1.20789	-1.20769	1.77E-51	150.19	346.89	no	Tryptophan synthase	YGL026C|tryptophan synthase TRP5
+MET30		-2.31	-2.30943	-1.20789	-1.20754	4.9199999999999998E-26	75.04	173.3	no	F-box protein containing five copies of the WD40 motif	YIL046W|ZRG11
+STR2		-2.3	-2.30216	-1.20163	-1.20299	1.7399999999999999E-16	47.26	108.8	no	Cystathionine gamma-synthase, converts cysteine into cystathionine	YJR130C
+RGS2		-2.29	-2.29097	-1.19535	-1.19596	8.8500000000000005E-8	36.67	84.01	no	Negative regulator of glucose-induced cAMP signaling	YOR107W
+MPC54		-2.28	-2.27972	-1.18903	-1.18886	5.1999999999999995E-4	10.01	22.82	no	Component of the meiotic outer plaque	YOR177C
+YCR102C		-2.27	-2.26716	-1.18269	-1.18089	3.3399999999999999E-4	10.78	24.44	no	Putative protein of unknown function	YCR102C
+TIS11		-2.27	-2.26558	-1.18269	-1.17988	1.4000000000000001E-13	127.72	289.36	no	mRNA-binding protein expressed during iron starvation	YLR136C|CTH2
+PDE1		-2.25	-2.24976	-1.16993	-1.16977	3.26E-23	71.91	161.78	no	Low-affinity cyclic AMP phosphodiesterase	YGL248W
+HIS2		-2.24	-2.24033	-1.1635	-1.16371	2.1599999999999999E-17	54.05	121.09	no	Histidinolphosphatase	YFR025C|histidinol-phosphatase
+REE1		-2.24	-2.23792	-1.1635	-1.16216	1.3700000000000001E-35	113.02	252.93	no	Cytoplasmic protein involved in the regulation of enolase (ENO1)	YJL217W
+YBR012W-B		-2.23	-2.2344	-1.15704	-1.15989	2.2000000000000001E-4	11.86	26.5	no	Retrotransposon TYA Gag and TYB Pol genes	YBR012W-B|gag-pol fusion protein
+ALD5		-2.23	-2.23433	-1.15704	-1.15984	1.3399999999999999E-48	156.49	349.65	no	Mitochondrial aldehyde dehydrogenase	YER073W|aldehyde dehydrogenase (NAD(P)(+)) ALD5
+PHM8		-2.22	-2.22199	-1.15056	-1.15186	2.6100000000000001E-21	68.29	151.74	no	Lysophosphatidic acid (LPA) phosphatase, nucleotidase	YER037W
+ADE17		-2.22	-2.2166	-1.15056	-1.14835	2.9299999999999998E-20	230.38	510.66	no	Enzyme of 'de novo' purine biosynthesis	YMR120C|bifunctional phosphoribosylaminoimidazolecarboxamide formyltransferase/IMP cyclohydrolase ADE17
+ZPS1		-2.21	-2.21402	-1.14405	-1.14667	1.55E-30	7736.85	17129.5	no	Putative GPI-anchored protein	YOL154W
+HBN1		-2.21	-2.21346	-1.14405	-1.1463	3.7300000000000002E-7	21.55	47.7	no	Protein of unknown function	YCL026C-B|YCL027C-A
+YBL100W-B		-2.21	-2.20591	-1.14405	-1.14137	7.4600000000000003E-4	10.49	23.14	no	Retrotransposon TYA Gag and TYB Pol genes	YBL100W-B|TY2B_B|YBL101W-B|gag-pol fusion protein
+HIS7		-2.2	-2.20251	-1.1375	-1.13915	1.5200000000000001E-29	97.97	215.78	no	Imidazole glycerol phosphate synthase	YBR248C|imidazoleglycerol-phosphate synthase
+UTR2		-2.2	-2.19771	-1.1375	-1.136	8.9600000000000004E-17	55.08	121.05	no	Chitin transglycosylase	YEL040W|CRH2
+RSB1		-2.19	-2.18918	-1.13093	-1.13039	2.31E-10	33.46	73.25	no	Suppressor of sphingoid LCB sensitivity of an LCB-lyase mutation	YOR049C|phospholipid-translocating ATPase RSB1
+FRE5		-2.19	-2.18706	-1.13093	-1.12899	2.0800000000000001E-8	26.73	58.46	no	Putative ferric reductase with similarity to Fre2p	YOR384W
+GPI19		-2.18	-2.17897	-1.12433	-1.12364	4.1199999999999999E-4	11.79	25.69	no	Subunit of GPI-GlcNAc transferase involved in synthesis of GlcNAc-PI	YDR437W
+CIA2		-2.17	-2.17212	-1.1177	-1.1191	3.48E-18	62.05	134.78	no	Component of cytosolic iron-sulfur protein assembly (CIA) machinery	YHR122W
+FMS1		-2.17	-2.16663	-1.1177	-1.11546	7.21E-15	50.71	109.87	no	Polyamine oxidase	YMR020W|polyamine oxidase
+ISU2		-2.17	-2.16599	-1.1177	-1.11503	1.23E-43	168.62	365.23	no	Protein required for synthesis of iron-sulfur proteins	YOR226C|NUA2
+PRM1		-2.16	-2.16439	-1.11103	-1.11396	7.6799999999999993E-6	18.31	39.63	no	Pheromone-regulated multispanning membrane protein	YNL279W
+DSE1		-2.16	-2.16304	-1.11103	-1.11306	7.9599999999999998E-40	140.27	303.41	no	Daughter cell-specific protein	YER124C
+THI80		-2.16	-2.15604	-1.11103	-1.10838	5.4E-10	33.71	72.68	no	Thiamine pyrophosphokinase	YOR143C|thiamine diphosphokinase
+RPI1		-2.15	-2.14751	-1.10434	-1.10266	9.8300000000000008E-15	51.59	110.79	no	Transcription factor, allelic differences between S288C and Sigma1278b	YIL119C
+YLR042C		-2.15	-2.14725	-1.10434	-1.10249	2.23E-9	31.85	68.39	no	Protein of unknown function	YLR042C
+COS6		-2.15	-2.14693	-1.10434	-1.10228	4.6299999999999996E-21	125.43	269.29	no	Protein of unknown function	YGR295C
+MXR1		-2.15	-2.14515	-1.10434	-1.10108	1.37E-18	65.93	141.43	no	Methionine-S-sulfoxide reductase	YER042W|MSRA
+CHO2		-2.14	-2.13793	-1.09761	-1.09622	8.5299999999999996E-6	18.85	40.3	no	Phosphatidylethanolamine methyltransferase (PEMT)	YGR157W|PEM1|phosphatidylethanolamine N-methyltransferase
+YHL044W		-2.13	-2.13208	-1.09085	-1.09226	1.3900000000000001E-10	37.1	79.1	no	Putative integral membrane protein	YHL044W
+IRC4		-2.13	-2.12903	-1.09085	-1.0902	1.8199999999999999E-7	25.42	54.12	no	Putative protein of unknown function	YDR540C
+RTC4		-2.13	-2.12689	-1.09085	-1.08874	2.0499999999999998E-31	155.65	331.05	no	Protein of unknown function	YNL254C
+YNR068C		-2.13	-2.12504	-1.09085	-1.08749	1.9499999999999999E-8	29.27	62.2	no	Putative protein of unknown function	YNR068C|BUL3
+ARO8		-2.12	-2.12335	-1.08406	-1.08634	2.5199999999999999E-43	161.73	343.41	no	Aromatic aminotransferase I	YGL202W|bifunctional 2-aminoadipate transaminase/aromatic-amino-acid:2-oxoglutarate transaminase
+YDL085C-A		-2.12	-2.12098	-1.08406	-1.08473	6.7900000000000003E-20	85.88	182.15	no	Putative protein of unknown function	YDL085C-A
+PGM1		-2.12	-2.11867	-1.08406	-1.08316	1.7499999999999999E-7	25.87	54.81	no	Phosphoglucomutase, minor isoform	YKL127W|phosphoglucomutase PGM1
+YIR018C-A		-2.12	-2.11643	-1.08406	-1.08163	9.0799999999999998E-5	15.46	32.72	no	Putative protein of unknown function	YIR018C-A
+YJL160C		-2.11	-2.10817	-1.07724	-1.07599	2.43E-4	13.96	29.43	no	Putative protein of unknown function	YJL160C
+BAP3		-2.11	-2.10821	-1.07724	-1.07602	3.9999999999999998E-29	110.34	232.62	no	Amino acid permease	YDR046C|PAP1
+MAL13		-2.1	-2.10396	-1.07039	-1.07311	1.12E-4	15.39	32.38	no	MAL-activator protein	YGR288W|MALR
+SUN4		-2.1	-2.10168	-1.07039	-1.07154	1.82E-30	116.64	245.14	no	Cell wall protein related to glucanases	YNL066W|SCW3
+LYS21		-2.08	-2.08394	-1.05658	-1.05931	5.6099999999999998E-50	198.24	413.12	no	Homocitrate synthase isozyme	YDL131W|homocitrate synthase LYS21
+FRD1		-2.07	-2.07454	-1.04963	-1.05279	4.5000000000000001E-35	140.32	291.1	no	Soluble fumarate reductase	YEL047C|FRDS1
+YJR146W		-2.07	-2.07276	-1.04963	-1.05155	3.43E-5	18.28	37.89	no	Protein of unknown function	YJR146W
+SRY1		-2.07	-2.07245	-1.04963	-1.05134	1.8E-12	48.31	100.12	no	3-hydroxyaspartate dehydratase	YKL218C|threo-3-hydroxy-L-aspartate ammonia-lyase SRY1
+SOL3		-2.06	-2.06433	-1.04264	-1.04567	4.5599999999999998E-29	117.68	242.93	no	6-phosphogluconolactonase	YHR163W|6-phosphogluconolactonase SOL3
+MRH1		-2.06	-2.06244	-1.04264	-1.04435	4.58E-71	404.69	834.65	no	Protein that localizes primarily to the plasma membrane	YDR033W
+PAN5		-2.06	-2.05791	-1.04264	-1.04118	8.0200000000000005E-11	42.48	87.42	no	2-dehydropantoate 2-reductase	YHR063C|2-dehydropantoate 2-reductase PAN5
+CHL4		-2.05	-2.04703	-1.03562	-1.03353	1.56E-4	16.16	33.08	no	Outer kinetochore protein required for chromosome stability	YDR254W|CTF17|MCM17
+NRK1		-2.04	-2.04196	-1.02857	-1.02996	2.8700000000000001E-6	23.83	48.66	no	Nicotinamide riboside kinase	YNL129W|ribosylnicotinamide kinase
+YAP1801		-2.04	-2.04183	-1.02857	-1.02986	2.3499999999999998E-18	76.03	155.24	no	Protein of the AP180 family, involved in clathrin cage assembly	YHR161C
+GAP1		-2.03	-2.02844	-1.02148	-1.02037	8.4399999999999999E-7	26.72	54.2	no	General amino acid permease	YKR039W
+YHR210C		-2.03	-2.02613	-1.02148	-1.01872	3.7200000000000003E-5	19.52	39.55	no	Putative aldose 1-epimerase superfamily protein	YHR210C|aldose 1-epimerase superfamily protein
+AKR1		-2.02	-2.02463	-1.01436	-1.01766	7.9000000000000002E-17	71.45	144.66	no	Palmitoyl transferase involved in protein palmitoylation	YDR264C
+AUS1		-2.02	-2.0239	-1.01436	-1.01714	4.7800000000000002E-25	115.07	232.89	no	Plasma membrane sterol transporter of the ATP-binding cassette family	YOR011W|ATP-binding cassette sterol transporter AUS1
+HPF1		-2.02	-2.02293	-1.01436	-1.01645	4.3099999999999998E-13	145.23	293.79	no	Haze-protective mannoprotein	YOL155C
+ORC5		-2.01	-2.00966	-1.0072	-1.00695	5.9900000000000003E-4	14.5	29.14	no	Subunit of the origin recognition complex (ORC)	YNL261W|origin recognition complex subunit 5
+YGK3		-2.01	-2.00582	-1.0072	-1.0042	9.5099999999999998E-7	27.47	55.1	no	Protein kinase related to mammalian GSK-3 glycogen synthase kinases	YOL128C
+YAP5		-2	-2.00185	-1	-1.00133	2.74E-11	48.65	97.39	no	Basic leucine zipper (bZIP) iron-sensing transcription factor	YIR018W
+YER084W		2	2.00318	1	1.00229	3.27E-6	50.36	25.14	no	Protein of unknown function	YER084W
+ZEO1		2.01	2.00765	1.0072	1.0055	0	1415.41	705.01	no	Peripheral membrane protein of the plasma membrane	YOL109W
+BGL2		2.01	2.01394	1.0072	1.01002	0	2716.82	1349.01	no	Endo-beta-1,3-glucanase	YGR282C
+PBI2		2.02	2.01793	1.01436	1.01288	0	1490.16	738.46	no	Cytosolic inhibitor of vacuolar proteinase B (PRB1)	YNL015W|I2B|IB2|LMA1
+FMP21		2.03	2.03202	1.02148	1.02291	0	225.31	110.88	no	Putative protein of unknown function	YBR269C
+YNK1		2.04	2.0368	1.02857	1.02631	0	533.5	261.93	no	Nucleoside diphosphate kinase	YKL067W|NDK1|nucleoside diphosphate kinase
+ECM13		2.04	2.03902	1.02857	1.02787	6.8700000000000006E-11	93.02	45.62	no	Non-essential protein of unknown function	YBL043W
+NSR1		2.04	2.04464	1.02857	1.03184	4.8300000000000001E-9	766.35	374.81	no	Nucleolar protein that binds nuclear localization sequences	YGR159C|SHE5
+SPR3		2.07	2.07401	1.04963	1.05242	4.0000000000000003E-5	37.27	17.97	no	Sporulation-specific homolog of the CDC3/10/11/12 family of genes	YGR059W|septin SPR3
+IMA2		2.09	2.08565	1.0635	1.06049	6.8800000000000003E-4	26.3	12.61	no	Isomaltase (alpha-1,6-glucosidase/alpha-methylglucosidase)	YOL157C
+YET2		2.1	2.10247	1.07039	1.07209	1.8600000000000001E-8	63.81	30.35	no	Protein of unknown function that may interact with ribosomes	YMR040W
+GTT1		2.12	2.11531	1.08406	1.08087	0	489.63	231.47	no	ER associated glutathione S-transferase capable of homodimerization	YIR038C|bifunctional glutathione transferase/peroxidase
+LIA1		2.12	2.11671	1.08406	1.08182	0	506.57	239.32	no	Deoxyhypusine hydroxylase	YJR070C|MMD1
+YCL012C		2.12	2.11676	1.08406	1.08185	7.0100000000000002E-12	90.83	42.91	no	Putative protein of unknown function	YCL012C|YCL011C-A
+YCL048W-A		2.13	2.12822	1.09085	1.08965	6.1600000000000004E-10	235.53	110.67	no	Putative protein of unknown function	YCL048W-A
+YHR022C		2.13	2.13219	1.09085	1.09234	1.1899999999999999E-7	63.39	29.73	no	Putative protein of unknown function	YHR022C
+NNK1		2.13	2.13198	1.09085	1.09219	1.8600000000000001E-5	37.8	17.73	no	Protein kinase	YKL171W
+YNL194C		2.14	2.138	1.09761	1.09626	1.54E-4	30.21	14.13	no	Integral membrane protein	YNL194C
+gh1-1		2.16	2.16056	1.11103	1.11141	0	2013.08	931.74	yes	2	
+YLR146W-A		2.16	2.16046	1.11103	1.11134	2.36E-13	98.56	45.62	no	Putative protein of unknown function	YLR146W-A
+SPR28		2.16	2.16283	1.11103	1.11292	1.88E-5	36.66	16.95	no	Sporulation-specific homolog of the CDC3/10/11/12 family of genes	YDR218C|septin SPR28
+DAL80		2.17	2.1706	1.1177	1.1181	2.7799999999999999E-9	66.16	30.48	no	Negative regulator of genes in multiple nitrogen degradation pathways	YKR034W|UGA43
+ERV2		2.17	2.17327	1.1177	1.11987	0	201.18	92.57	no	Flavin-linked sulfhydryl oxidase localized to the ER lumen	YPR037C
+FMP10		2.17	2.17398	1.1177	1.12034	5.2000000000000001E-15	109.46	50.35	no	Putative protein of unknown function	YER182W
+FMP46		2.17	2.17428	1.1177	1.12054	0	259	119.12	no	Putative redox protein containing a thioredoxin fold	YKR049C
+COS111		2.18	2.17585	1.12433	1.12158	5.2200000000000002E-5	32.79	15.07	no	Protein required for antifungal drug ciclopirox olamine resistance	YBR203W
+POP6		2.18	2.1768	1.12433	1.12221	1.7800000000000001E-14	106.01	48.7	no	Subunit of both RNase MRP and nuclear RNase P	YGR030C
+YBR255C-A		2.18	2.18035	1.12433	1.12456	0	196.82	90.27	no	Putative protein of unknown function	YBR255C-A
+FUI1		2.21	2.20618	1.14405	1.14155	5.2000000000000001E-15	107.75	48.84	no	High affinity uridine permease, localizes to the plasma membrane	YBL042C
+MBR1		2.22	2.22368	1.15056	1.15295	1.79E-9	64.42	28.97	no	Protein involved in mitochondrial functions and stress response	YKL093W
+HPT1		2.23	2.23192	1.15704	1.15828	0	697.14	312.35	no	Dimeric hypoxanthine-guanine phosphoribosyltransferase	YDR399W|BRA6|HPRT|hypoxanthine phosphoribosyltransferase
+NUM1		2.25	2.25	1.16993	1.16993	8.0400000000000003E-5	29.34	13.04	no	Protein required for nuclear migration	YDR150W|PAC12
+SED1		2.26	2.26012	1.17632	1.1764	0	7096.02	3139.66	no	Major stress-induced structural GPI-cell wall glycoprotein	YDR077W
+ATG34		2.28	2.27742	1.18903	1.1874	5.2000000000000001E-15	100.07	43.94	no	Receptor protein involved in selective autophagy during starvation	YOL083W|ATG19-B
+DOG2		2.28	2.28353	1.18903	1.19126	0	226.8	99.32	no	2-deoxyglucose-6-phosphate phosphatase	YHR043C
+KGD1		2.3	2.29655	1.20163	1.19947	0	122.36	53.28	no	Subunit of the mitochondrial alpha-ketoglutarate dehydrogenase complex	YIL125W|OGD1|alpha-ketoglutarate dehydrogenase KGD1
+FUR4		2.31	2.30958	1.20789	1.20763	2.6399999999999998E-7	45.06	19.51	no	Plasma membrane localized uracil permease	YBR021W
+CRS5		2.32	2.32286	1.21412	1.2159	0	584.85	251.78	no	Copper-binding metallothionein	YOR031W
+HFD1		2.33	2.32841	1.22033	1.21934	4.4500000000000002E-13	83.52	35.87	no	Hexadecenal dehydrogenase	YMR110C
+GDH3		2.33	2.3314	1.22033	1.22119	0	325.02	139.41	no	NADP(+)-dependent glutamate dehydrogenase	YAL062W|FUN51|glutamate dehydrogenase (NADP(+)) GDH3
+HSP104		2.34	2.34249	1.22651	1.22805	0	380.14	162.28	no	Disaggregase	YLL026W|chaperone ATPase HSP104
+MRK1		2.37	2.36522	1.24489	1.24198	0	109.77	46.41	no	Glycogen synthase kinase 3 (GSK-3) homolog	YDL079C
+VID24		2.37	2.37226	1.24489	1.24626	0	489.73	206.44	no	GID Complex regulatory subunit	YBR105C|GID4|glucose-induced degradation complex subunit VID24
+MOS1		2.38	2.37762	1.25096	1.24952	0	609.36	256.29	no	Mitochondrial protein essential for proper inner membrane organization	YCL057C-A|MCS10|MIO10
+COA2		2.39	2.39157	1.25701	1.25796	2.4299999999999999E-12	74.88	31.31	no	Cytochrome oxidase assembly factor	YPL189C-A
+PMA2		2.4	2.39633	1.26303	1.26083	3.9E-13	79.75	33.28	no	Plasma membrane H+-ATPase	YPL036W|H(+)-exporting P2-type ATPase PMA2
+CYT1		2.4	2.39671	1.26303	1.26106	0	116.72	48.7	no	Cytochrome c1	YOR065W|CTC1|YOR29-16|ubiquinol--cytochrome-c reductase catalytic subunit CYT1
+MSC1		2.41	2.40552	1.26903	1.26635	0	301.7	125.42	no	Protein of unknown function	YML128C
+LSC2		2.42	2.41763	1.27501	1.27359	0	293.21	121.28	no	Beta subunit of succinyl-CoA ligase	YGR244C|succinate--CoA ligase (GDP-forming) subunit beta
+GSM1		2.43	2.43016	1.28096	1.28105	1.1999999999999999E-6	37.06	15.25	no	Putative zinc cluster protein of unknown function	YJL103C
+YHR050W-A		2.43	2.43289	1.28096	1.28267	4.66E-8	45.86	18.85	no	Protein of unknown function	YHR050W-A
+CWP1		2.44	2.43561	1.28688	1.28428	1.4000000000000001E-10	127.09	52.18	no	Cell wall mannoprotein that localizes to birth scars of daughter cells	YKL096W|YJU1
+YKL050C		2.44	2.44061	1.28688	1.28724	7.9199999999999995E-4	19.11	7.83	no	Protein of unknown function	YKL050C
+YDR461C-A		2.44	2.4421	1.28688	1.28812	0	278.35	113.98	no	Putative protein of unknown function	YDR461C-A
+RRT15		2.46	2.45632	1.29866	1.2965	2.7999999999999999E-6	59.05	24.04	no	Putative protein of unknown function	YLR162W-A
+GLC3		2.46	2.45773	1.29866	1.29732	0	249.41	101.48	no	Glycogen branching enzyme, involved in glycogen accumulation	YEL011W|1,4-alpha-glucan branching enzyme|GHA1
+YKL107W		2.46	2.45709	1.29866	1.29695	9.4699999999999998E-5	24.62	10.02	no	Putative short-chain dehydrogenase/reductase	YKL107W|putative short-chain dehydrogenase/reductase
+RPS22B		2.46	2.45791	1.29866	1.29743	0	544.5	221.53	no	Protein component of the small (40S) ribosomal subunit	YLR367W|ribosomal 40S subunit protein S22B
+RCK1		2.46	2.46319	1.29866	1.30053	9.2299999999999999E-4	18.4	7.47	no	Protein kinase involved in the response to oxidative stress	YGL158W
+GUT1		2.48	2.47546	1.31034	1.3077	0	145.78	58.89	no	Glycerol kinase	YHL032C|glycerol kinase
+ATP4		2.48	2.48186	1.31034	1.31142	0	720.26	290.21	no	Subunit b of the stator stalk of mitochondrial F1F0 ATP synthase	YPL078C|F1F0 ATP synthase subunit 4|LPF7
+ECM12		2.49	2.48536	1.31615	1.31346	2.03E-10	58.58	23.57	no	Putative protein of unknown function	YHR021W-A
+PDC6		2.49	2.49269	1.31615	1.3177	6.5200000000000005E-13	73.31	29.41	no	Minor isoform of pyruvate decarboxylase	YGR087C|indolepyruvate decarboxylase 6
+CIR2		2.51	2.51308	1.32769	1.32945	1.5599999999999999E-7	40.36	16.06	no	Putative ortholog of human ETF-dH	YOR356W
+ACH1		2.52	2.52209	1.33342	1.33462	0	183.28	72.67	no	Protein with CoA transferase activity	YBL015W
+RTC3		2.52	2.52298	1.33342	1.33513	0	288.25	114.25	no	Protein of unknown function involved in RNA metabolism	YHR087W|HGI1
+YCL042W		2.54	2.53642	1.34483	1.3428	0	191.5	75.5	no	Putative protein of unknown function	YCL042W
+PNC1		2.54	2.5387	1.34483	1.34409	0	1026.22	404.23	no	Nicotinamidase that converts nicotinamide to nicotinic acid	YGL037C|nicotinamidase
+AIM41		2.55	2.55318	1.3505	1.35229	0	223.25	87.44	no	Putative protein of unknown function	YOR215C
+YMR31		2.57	2.56538	1.36177	1.35917	0	239.94	93.53	no	Mitochondrial ribosomal protein of the small subunit	YFR049W|mitochondrial 37S ribosomal protein YMR31
+ADR1		2.59	2.59018	1.37295	1.37305	2.03E-6	32.17	12.42	no	Carbon source-responsive zinc-finger transcription factor	YDR216W
+HXT17		2.6	2.60239	1.37851	1.37984	3.0899999999999998E-4	19.57	7.52	no	Hexose transporter	YNR072W
+ATP2		2.62	2.6176	1.38957	1.38825	0	906.11	346.16	no	Beta subunit of the F1 sector of mitochondrial F1F0 ATP synthase	YJR121W|F1F0 ATP synthase subunit beta
+TRX3		2.63	2.63177	1.39506	1.39603	0	202.62	76.99	no	Mitochondrial thioredoxin	YCR083W
+MLS1		2.65	2.65059	1.40599	1.40632	4.9799999999999998E-5	33.53	12.65	no	Malate synthase, enzyme of the glyoxylate cycle	YNL117W|malate synthase MLS1
+YDR034W-B		2.65	2.65275	1.40599	1.40749	4.1299999999999996E-9	45.76	17.25	no	Predicted tail-anchored plasma membrane protein	YDR034W-B
+YOR186W		2.66	2.6591	1.41143	1.41094	3.2900000000000001E-13	67.94	25.55	no	Putative protein of unknown function	YOR186W
+YBR201C-A		2.66	2.66275	1.41143	1.41292	0	1261.4	473.72	no	Putative protein of unknown function	YBR201C-A
+MAL31		2.67	2.66769	1.41684	1.41559	0	86.94	32.59	no	Maltose permease	YBR298C|MAL3T|MALT
+HYP2		2.67	2.66875	1.41684	1.41616	1.7800000000000001E-14	593.93	222.55	no	Translation elongation factor eIF-5A	YEL034W|TIF51A|eIF-5A|eIF5A
+USV1		2.68	2.68154	1.42223	1.42306	0	93.13	34.73	no	Putative transcription factor containing a C2H2 zinc finger	YPL230W|NSF1
+CAT8		2.68	2.68159	1.42223	1.42309	9.1600000000000004E-5	21.56	8.04	no	Zinc cluster transcriptional activator	YMR280C|DIL1|MSP8
+YFL052W		2.69	2.69116	1.42761	1.42823	8.7000000000000001E-5	21.61	8.03	no	Putative zinc cluster protein that contains a DNA binding domain	YFL052W|ROP1
+SPI1		2.7	2.70492	1.43296	1.43558	0	675.58	249.76	no	GPI-anchored cell wall protein involved in weak acid resistance	YER150W
+YOR214C		2.71	2.70887	1.43829	1.43769	4.4299999999999998E-7	33.59	12.4	no	Putative protein of unknown function	YOR214C
+ALD6		2.71	2.70927	1.43829	1.4379	0	660.71	243.87	no	Cytosolic aldehyde dehydrogenase	YPL061W|ALD1|aldehyde dehydrogenase (NADP(+)) ALD6
+NQM1		2.73	2.72946	1.4489	1.44861	0	226.19	82.87	no	Transaldolase of unknown function	YGR043C|sedoheptulose-7-phosphate:D-glyceraldehyde-3-phosphate transaldolase NQM1
+PRX1		2.73	2.73302	1.4489	1.4505	0	776.78	284.22	no	Mitochondrial peroxiredoxin with thioredoxin peroxidase activity	YBL064C
+SOR1		2.74	2.74436	1.45418	1.45647	4.6699999999999999E-7	32.85	11.97	no	Sorbitol dehydrogenase	YJR159W|L-iditol 2-dehydrogenase SOR1|SDH1
+TKL2		2.75	2.7454	1.45943	1.45702	0	79.15	28.83	no	Transketolase	YBR117C|transketolase TKL2
+RNR2		2.75	2.74904	1.45943	1.45893	0	889.04	323.4	no	Ribonucleotide-diphosphate reductase (RNR), small subunit	YJL026W|CRT6|ribonucleotide-diphosphate reductase subunit RNR2
+GLK1		2.75	2.75395	1.45943	1.4615	0	1372.65	498.43	no	Glucokinase	YCL040W|HOR3|glucokinase
+MTC7		2.76	2.75751	1.46467	1.46337	7.9900000000000003E-11	77.1	27.96	no	Protein of unknown function	YEL033W
+HSP12		2.77	2.77114	1.46989	1.47048	0	3971.37	1433.12	no	Plasma membrane protein involved in maintaining membrane organization	YFL014W|GLP1|HOR5
+IGD1		2.77	2.77359	1.46989	1.47175	0	149.33	53.84	no	Cytoplasmic protein that inhibits Gdb1p glycogen debranching activity	YFR017C
+CTT1		2.79	2.79008	1.48027	1.48031	0	91.71	32.87	no	Cytosolic catalase T	YGR088W|SPS101|catalase T
+SOR2		2.79	2.79368	1.48027	1.48217	6.2799999999999998E-9	41.57	14.88	no	Protein of unknown function	YDL246C|L-iditol 2-dehydrogenase SOR2
+ERG5		2.8	2.79953	1.48543	1.48518	1.13E-8	201.79	72.08	no	C-22 sterol desaturase	YMR015C|C-22 sterol desaturase|CYP61
+GDB1		2.81	2.81191	1.49057	1.49155	2.5099999999999998E-14	68.47	24.35	no	Glycogen debranching enzyme	YPR184W|bifunctional 4-alpha-glucanotransferase/amylo-alpha-1,6-glucosidase
+YIL024C		2.82	2.81774	1.4957	1.49454	0	86.42	30.67	no	Putative protein of unknown function	YIL024C
+IZH3		2.82	2.82293	1.4957	1.49719	0	289.83	102.67	no	Membrane protein involved in zinc ion homeostasis	YLR023C
+KGD2		2.83	2.8261	1.5008	1.49881	0	266.36	94.25	no	Dihydrolipoyl transsuccinylase	YDR148C|alpha-ketoglutarate dehydrogenase KGD2
+STF2		2.84	2.8433	1.50589	1.50756	0	928.45	326.54	no	Protein involved in resistance to dessication stress	YGR008C
+SUR1		2.86	2.86137	1.51602	1.51671	0	199.18	69.61	no	Mannosylinositol phosphorylceramide (MIPC) synthase catalytic subunit	YPL057C|BCL21|CSG1|LPE15|mannosylinositol phosphorylceramide synthase catalytic subunit SUR1
+YLR154C-G		2.86	2.86216	1.51602	1.5171	0	715.74	250.07	no	Putative protein of unknown function	YLR154C-G
+ATP7		2.88	2.88452	1.52607	1.52833	0	820.04	284.29	no	Subunit d of the stator stalk of mitochondrial F1F0 ATP synthase	YKL016C|F1F0 ATP synthase subunit d
+LEE1		2.89	2.88576	1.53107	1.52895	0	155.6	53.92	no	Zinc-finger protein of unknown function	YPL054W
+ACS1		2.9	2.90214	1.53605	1.53712	1.1200000000000001E-11	52.79	18.19	no	Acetyl-coA synthetase isoform	YAL054C|FUN44|acetate--CoA ligase 1
+YMR114C		2.9	2.90423	1.53605	1.53816	0	149.51	51.48	no	Protein of unknown function	YMR114C
+PAU21		2.92	2.91698	1.54597	1.54448	5.4099999999999999E-7	68.87	23.61	no	Protein of unknown function	YOR394W
+VHS1		2.92	2.92036	1.54597	1.54615	1.09E-13	61.97	21.22	no	Cytoplasmic serine/threonine protein kinase	YDR247W
+YGL138C		2.94	2.93844	1.55582	1.55505	2.6699999999999998E-4	21.48	7.31	no	Putative protein of unknown function	YGL138C
+GPX1		2.94	2.94053	1.55582	1.55608	0	132.03	44.9	no	Phospholipid hydroperoxide glutathione peroxidase	YKL026C|glutathione peroxidase GPX1
+PAU2		2.99	2.99054	1.58015	1.5804	1.9499999999999999E-8	230.69	77.14	no	Member of the seripauperin multigene family	YEL049W
+ATP5		2.99	2.99238	1.58015	1.58129	0	522.47	174.6	no	Subunit 5 of the stator stalk of mitochondrial F1F0 ATP synthase	YDR298C|F1F0 ATP synthase subunit 5|OSC1
+EMI2		3	3.00371	1.58496	1.58674	0	275.59	91.75	no	Non-essential protein of unknown function	YDR516C|putative glucokinase
+NDE2		3.02	3.01579	1.59455	1.59253	4.9599999999999998E-14	61.13	20.27	no	Mitochondrial external NADH dehydrogenase	YDL085W|NADH-ubiquinone reductase (H(+)-translocating) NDE2|NDH2
+YER121W		3.02	3.02151	1.59455	1.59527	3.0800000000000002E-10	43.54	14.41	no	Putative protein of unknown function	YER121W
+YER085C		3.04	3.04113	1.60407	1.60461	4.5900000000000001E-8	33.27	10.94	no	Putative protein of unknown function	YER085C
+YFL051C		3.08	3.07372	1.62293	1.61998	5.0099999999999998E-5	19.18	6.24	no	Putative protein of unknown function	YFL051C
+MEF2		3.1	3.1023	1.63227	1.63334	4.1300000000000001E-4	14.86	4.79	no	Mitochondrial elongation factor involved in translational elongation	YJL102W
+NDE1		3.14	3.14302	1.65076	1.65215	5.5400000000000001E-7	27.25	8.67	no	Mitochondrial external NADH dehydrogenase	YMR145C|NADH-ubiquinone reductase (H(+)-translocating) NDE1|NDH1
+DLD1		3.17	3.17321	1.66448	1.66594	0	139.78	44.05	no	D-lactate dehydrogenase	YDL174C
+YNR014W		3.19	3.18662	1.67356	1.67203	0	169.56	53.21	no	Putative protein of unknown function	YNR014W
+CYC7		3.21	3.20664	1.68257	1.68106	0	256.82	80.09	no	Cytochrome c isoform 2, expressed under hypoxic conditions	YEL039C
+PAU22		3.23	3.2296	1.69153	1.69135	1.5800000000000001E-7	70.05	21.69	no	Protein of unknown function	YPL282C
+ATP1		3.24	3.24332	1.69599	1.69747	0	555.03	171.13	no	Alpha subunit of the F1 sector of mitochondrial F1F0 ATP synthase	YBL099W|F1F0 ATP synthase subunit alpha
+ATP20		3.25	3.25161	1.70044	1.70115	0	272.42	83.78	no	Subunit g of the mitochondrial F1F0 ATP synthase	YPR020W|F1F0 ATP synthase subunit g
+RPM2		3.26	3.25623	1.70487	1.7032	0	66.59	20.45	no	Protein subunit of mitochondrial RNase P	YML091C
+MDH1		3.3	3.29939	1.72247	1.7222	0	643.48	195.03	no	Mitochondrial malate dehydrogenase	YKL085W|malate dehydrogenase MDH1
+SPO19		3.31	3.30713	1.72683	1.72558	1.67E-9	36.18	10.94	no	Meiosis-specific prospore protein	YPL130W
+GND2		3.31	3.31505	1.72683	1.72903	0	125.11	37.74	no	6-phosphogluconate dehydrogenase (decarboxylating)	YGR256W|phosphogluconate dehydrogenase (decarboxylating) GND2
+ATP17		3.32	3.32412	1.73118	1.73297	0	836.15	251.54	no	Subunit f of the F0 sector of mitochondrial F1F0 ATP synthase	YDR377W|F1F0 ATP synthase subunit f
+TIM11		3.34	3.34235	1.73985	1.74086	0	373.14	111.64	no	Subunit e of mitochondrial F1F0-ATPase	YDR322C-A|ATP21|F1F0 ATP synthase subunit e
+MCR1		3.36	3.36028	1.74846	1.74858	0	458.14	136.34	no	Mitochondrial NADH-cytochrome b5 reductase	YKL150W
+QCR2		3.37	3.36784	1.75275	1.75182	0	251.51	74.68	no	Subunit 2 of ubiquinol cytochrome-c reductase (Complex III)	YPR191W|COR2|UCR2|ubiquinol--cytochrome-c reductase subunit 2
+STF1		3.38	3.37652	1.75702	1.75554	0	903.05	267.45	no	Protein involved in regulation of the mitochondrial F1F0-ATP synthase	YDL130W-A|AIS2
+YHR138C		3.39	3.38944	1.76129	1.76105	0	553.36	163.26	no	Protein of unknown function	YHR138C
+ISF1		3.39	3.39351	1.76129	1.76278	0	100.38	29.58	no	Serine-rich, hydrophilic protein	YMR081C|MBR3
+XBP1		3.39	3.39448	1.76129	1.76319	0	61.44	18.1	no	Transcriptional repressor	YIL101C
+SUT1		3.4	3.3989	1.76553	1.76507	0	161.21	47.43	no	Transcription factor of the Zn(II)2Cys6 family	YGL162W
+MAL32		3.4	3.40749	1.76553	1.76871	1.26E-4	15.47	4.54	no	Maltase (alpha-D-glucosidase)	YBR299W|MAL3S|MALS
+PIR3		3.41	3.4088	1.76977	1.76926	0	1247.45	365.95	no	O-glycosylated covalently-bound cell wall protein	YKL163W|CCW8
+ATP14		3.44	3.4427	1.78241	1.78354	0	698.49	202.89	no	Subunit h of the F0 sector of mitochondrial F1F0 ATP synthase	YLR295C|F1F0 ATP synthase subunit h
+COX6		3.45	3.44652	1.7866	1.78514	0	340.24	98.72	no	Subunit VI of cytochrome c oxidase (Complex IV)	YHR051W|cytochrome c oxidase subunit VI
+HSP26		3.49	3.48601	1.80323	1.80157	0	5750.34	1649.55	no	Small heat shock protein (sHSP) with chaperone activity	YBR072W
+PAU7		3.51	3.5064	1.81147	1.80999	0	167.15	47.67	no	Member of the seripauperin multigene family	YAR020C
+QCR6		3.53	3.53015	1.81967	1.81973	0	760.5	215.43	no	Subunit 6 of the ubiquinol cytochrome-c reductase complex	YFR033C|COR3|UCR6|ubiquinol--cytochrome-c reductase subunit 6
+PGM2		3.53	3.53115	1.81967	1.82014	2.5900000000000001E-12	427.41	121.04	no	Phosphoglucomutase	YMR105C|GAL5|phosphoglucomutase PGM2
+MTH1		3.54	3.5381	1.82375	1.82298	0	265.11	74.93	no	Negative regulator of the glucose-sensing signal transduction pathway	YDR277C|BPC1|DGT1|HTR1
+QCR9		3.57	3.5665	1.83592	1.83451	0	642.22	180.07	no	Subunit 9 of ubiquinol cytochrome-c reductase (Complex III)	YGR183C|UCR9|ubiquinol--cytochrome-c reductase subunit 9
+CYC3		3.58	3.58146	1.83996	1.84055	0	360.94	100.78	no	Cytochrome c heme lyase (holocytochrome c synthase)	YAL039C|holocytochrome c synthase CYC3
+OM14		3.62	3.62475	1.85599	1.85788	0	355.95	98.2	no	Integral mitochondrial outer membrane protein	YBR230C
+AQY1		3.64	3.64071	1.86394	1.86422	1.6199999999999999E-6	61.71	16.95	no	Spore-specific water channel	YPR192W
+COR1		3.7	3.69609	1.88753	1.886	0	363.51	98.35	no	Core subunit of the ubiquinol-cytochrome c reductase complex	YBL045C|QCR1|ubiquinol--cytochrome-c reductase subunit COR1
+SDH3		3.72	3.71776	1.8953	1.89443	0	708.68	190.62	no	Subunit of succinate dehydrogenase and of TIM22 translocase	YKL141W|CYB3|YKL4|succinate dehydrogenase cytochrome b subunit SDH3
+FMP45		3.72	3.72113	1.8953	1.89574	0	100.21	26.93	no	Integral membrane protein localized to mitochondria	YDL222C
+CBP4		3.72	3.72194	1.8953	1.89606	0	147.24	39.56	no	Mitochondrial protein required for assembly of cytochrome bc1 complex	YGR174C
+ECM3		3.73	3.7287	1.89918	1.89867	0	217.98	58.46	no	Non-essential protein of unknown function	YOR092W|YOR3165W|putative ATPase ECM3
+SDH4		3.74	3.73899	1.90304	1.90265	0	524.58	140.3	no	Membrane anchor subunit of succinate dehydrogenase	YDR178W|ACN18|succinate dehydrogenase membrane anchor subunit SDH4
+STL1		3.78	3.78189	1.91839	1.91911	0	55.14	14.58	no	Glycerol proton symporter of the plasma membrane	YDR536W
+POT1		3.8	3.79459	1.926	1.92394	2.2000000000000001E-7	23.83	6.28	no	3-ketoacyl-CoA thiolase with broad chain length specificity	YIL160C|FOX3|POX3|acetyl-CoA C-acyltransferase
+FMP16		3.81	3.80915	1.92979	1.92947	0	1260.83	331	no	Protein of unknown function	YDR070C
+NDI1		3.81	3.80936	1.92979	1.92955	0	135.88	35.67	no	NADH:ubiquinone oxidoreductase	YML120C|NADH-ubiquinone reductase (H(+)-translocating) NDI1
+ODC1		3.81	3.8106	1.92979	1.93002	0	139.43	36.59	no	Mitochondrial inner membrane transporter	YPL134C
+ATP16		3.81	3.81098	1.92979	1.93016	0	578.85	151.89	no	Delta subunit of the central stalk of mitochondrial F1F0 ATP synthase	YDL004W|F1F0 ATP synthase subunit delta
+SPG4		3.82	3.81506	1.93357	1.93171	0	373.8	97.98	no	Protein required for high temperature survival during stationary phase	YMR107W
+YKR075C		3.84	3.8353	1.94111	1.93934	0	250.1	65.21	no	Protein of unknown function	YKR075C
+ATP18		3.9	3.89859	1.96347	1.96295	0	978.04	250.87	no	Subunit of the mitochondrial F1F0 ATP synthase	YML081C-A|F1F0 ATP synthase subunit i
+RGI1		3.93	3.92552	1.97453	1.97289	0	467.53	119.1	no	Protein of unknown function	YER067W
+TAR1		3.98	3.97628	1.99277	1.99142	7.3100000000000001E-5	1259.17	316.67	no	Protein potentially involved in regulation of respiratory metabolism	YLR154W-C|YLR154W-A
+ATP3		3.98	3.98254	1.99277	1.99369	0	711.56	178.67	no	Gamma subunit of the F1 sector of mitochondrial F1F0 ATP synthase	YBR039W|F1F0 ATP synthase subunit gamma
+STP4		3.99	3.98518	1.99639	1.99464	0	163.99	41.15	no	Protein containing a Kruppel-type zinc-finger domain	YDL048C
+PAU24		4.04	4.04094	2.01436	2.01469	3.2600000000000001E-8	186.53	46.16	no	Cell wall mannoprotein	YBR301W|DAN3
+MIR1		4.1	4.09934	2.03562	2.03539	0	622.69	151.9	no	Mitochondrial phosphate carrier	YJR077C|PTP
+YDL218W		4.15	4.15305	2.05311	2.05417	1.29E-11	36.09	8.69	no	Putative protein of unknown function	YDL218W
+SOD2		4.16	4.1593	2.05658	2.05634	0	579.1	139.23	no	Mitochondrial manganese superoxide dismutase	YHR008C|superoxide dismutase SOD2
+OYE3		4.21	4.21196	2.07382	2.07449	7.7700000000000001E-8	23.25	5.52	no	Conserved NADPH oxidoreductase containing flavin mononucleotide (FMN)	YPL171C|ZRG6
+COX13		4.24	4.2375	2.08406	2.08321	0	664.44	156.8	no	Subunit VIa of cytochrome c oxidase	YGL191W|cytochrome c oxidase subunit VIa
+SPS100		4.27	4.26923	2.09424	2.09398	0	99.9	23.4	no	Protein required for spore wall maturation	YHR139C
+GIP2		4.35	4.35326	2.12102	2.1221	0	79.36	18.23	no	Putative regulatory subunit of protein phosphatase Glc7p	YER054C
+ATP19		4.39	4.39142	2.13422	2.13469	0	975.73	222.19	no	Subunit k of the mitochondrial F1F0 ATP synthase	YOL077W-A|F1F0 ATP synthase subunit k
+INH1		4.39	4.39167	2.13422	2.13477	0	583.96	132.97	no	Protein that inhibits ATP hydrolysis by the F1F0-ATP synthase	YDL181W
+ATP15		4.41	4.40638	2.14078	2.13959	0	1224.18	277.82	no	Epsilon subunit of the F1 sector of mitochondrial F1F0 ATP synthase	YPL271W|ATPEPSILON|F1F0 ATP synthase subunit epsilon
+QCR8		4.44	4.43777	2.15056	2.14984	0	644.32	145.19	no	Subunit 8 of ubiquinol cytochrome-c reductase (Complex III)	YJL166W|COR5|ubiquinol--cytochrome-c reductase subunit 8
+HXT5		4.47	4.47118	2.16027	2.16066	0	292.46	65.41	no	Hexose transporter with moderate affinity for glucose	YHR096C
+CWP2		4.51	4.51444	2.17313	2.17455	0	3983.59	882.41	no	Covalently linked cell wall mannoprotein	YKL096W-A|LPR1|YKL097W-A
+SHH3		4.61	4.60681	2.20477	2.20377	0	190.63	41.38	no	Putative mitochondrial inner membrane protein of unknown function	YMR118C|protein SHH3
+HXT10		4.67	4.677	2.22342	2.22558	3.3199999999999999E-10	28.67	6.13	no	Putative hexose transporter	YFL011W
+UIP4		4.69	4.69444	2.22959	2.23095	0	196.04	41.76	no	Protein that interacts with Ulp1p	YPL186C
+JEN1		4.79	4.78663	2.26003	2.25901	0	63.71	13.31	no	Monocarboxylate/proton symporter of the plasma membrane	YKL217W
+PAU19		4.81	4.8142	2.26604	2.2673	6.2499999999999997E-8	148.47	30.84	no	Protein of unknown function	YMR325W
+HBT1		4.84	4.83599	2.27501	2.27381	0	106.15	21.95	no	Shmoo tip protein, substrate of Hub1p ubiquitin-like protein	YDL223C
+HOP2		4.86	4.85437	2.28096	2.27928	3.6699999999999998E-4	10	2.06	no	Meiosis-specific protein that localizes to chromosomes	YGL033W
+OM45		4.89	4.89198	2.28983	2.29042	0	475.99	97.3	no	Mitochondrial outer membrane protein of unknown function	YIL136W
+RIP1		4.94	4.94011	2.30451	2.30454	0	195.48	39.57	no	Ubiquinol-cytochrome-c reductase	YEL024W|ubiquinol--cytochrome-c reductase catalytic subunit RIP1
+GUT2		4.97	4.96942	2.31325	2.31308	0	48.75	9.81	no	Mitochondrial glycerol-3-phosphate dehydrogenase	YIL155C|glycerol-3-phosphate dehydrogenase
+YGR201C		5.04	5.04363	2.33342	2.33446	0	690.17	136.84	no	Putative protein of unknown function	YGR201C
+COX8		5.08	5.07497	2.34483	2.3434	0	429.19	84.57	no	Subunit VIII of cytochrome c oxidase (Complex IV)	YLR395C|cytochrome c oxidase subunit VIII
+SDH2		5.11	5.10594	2.35332	2.35218	0	723.41	141.68	no	Iron-sulfur protein subunit of succinate dehydrogenase	YLL041C|ACN17|SDHB|succinate dehydrogenase iron-sulfur protein subunit SDH2
+PET9		5.11	5.11259	2.35332	2.35405	0	338.76	66.26	no	Major ADP/ATP carrier of the mitochondrial inner membrane	YBL030C|AAC2|ANC2|OP1
+QCR7		5.37	5.3686	2.42492	2.42455	0	892.1	166.17	no	Subunit 7 of ubiquinol cytochrome-c reductase (Complex III)	YDR529C|COR4|CRO1|UCR7|ubiquinol--cytochrome-c reductase subunit 7
+YNL144C		5.4	5.39698	2.43296	2.43215	0	89.32	16.55	no	Putative protein of unknown function	YNL144C
+YJR115W		5.41	5.40741	2.43563	2.43494	0	40.88	7.56	no	Putative protein of unknown function	YJR115W
+YPR010C-A		5.41	5.41254	2.43563	2.43631	0	889.66	164.37	no	Putative protein of unknown function	YPR010C-A
+FMP43		5.44	5.43846	2.44361	2.4432	0	442.31	81.33	no	Highly conserved subunit of mitochondrial pyruvate carrier	YGR243W|MPC3
+YGR174W-A		5.47	5.47356	2.45154	2.45248	0	94.2	17.21	no	Putative protein of unknown function	YGR174W-A
+SSA3		5.57	5.56645	2.47768	2.47676	0	185.14	33.26	no	ATPase involved in protein folding and the response to stress	YBL075C|Hsp70 family ATPase SSA3|YG106
+SDH1		5.57	5.56988	2.47768	2.47765	0	276.99	49.73	no	Flavoprotein subunit of succinate dehydrogenase	YKL148C|SDHA|succinate dehydrogenase flavoprotein subunit SDH1
+YMR206W		5.76	5.76304	2.52607	2.52683	0	123.79	21.48	no	Putative protein of unknown function	YMR206W
+HAP4		6.12	6.12351	2.61353	2.61436	0	143.78	23.48	no	Transcription factor	YKL109W
+COX12		6.2	6.1967	2.63227	2.6315	0	436	70.36	no	Subunit VIb of cytochrome c oxidase	YLR038C|cytochrome c oxidase subunit VIb
+COX7		6.5	6.50392	2.70044	2.70131	0	505.55	77.73	no	Subunit VII of cytochrome c oxidase (Complex IV)	YMR256C|cytochrome c oxidase subunit VII
+YNL195C		6.61	6.60531	2.72465	2.72363	0	74.64	11.3	no	Protein of unknown function	YNL195C
+ANS1		6.71	6.70982	2.74631	2.74627	0	120.24	17.92	no	Putative GPI protein	YHR126C
+GAC1		6.77	6.76844	2.75916	2.75882	0	119.26	17.62	no	Regulatory subunit for Glc7p type-1 protein phosphatase (PP1)	YOR178C
+YER053C-A		6.86	6.85979	2.77821	2.77817	3.6600000000000001E-6	33.27	4.85	no	Protein of unknown function	YER053C-A
+HSP30		7.18	7.18209	2.84398	2.8444	0	488.31	67.99	no	Negative regulator of the H(+)-ATPase Pma1p	YCR021C|YRO1
+PAI3		7.6	7.6039	2.926	2.92674	0	1294.26	170.21	no	Cytoplasmic proteinase A (Pep4p) inhibitor	YMR174C
+COX5A		7.77	7.76635	2.95791	2.95724	0	277.88	35.78	no	Subunit Va of cytochrome c oxidase	YNL052W|cytochrome c oxidase subunit Va
+RTN2		8.14	8.14024	3.02503	3.02507	0	168.91	20.75	no	Reticulon protein	YDL204W
+SUC2		8.26	8.26234	3.04614	3.04655	2.16E-7	388.33	47	no	Invertase	YIL162W|beta-fructofuranosidase SUC2
+YKL065W-A		8.39	8.39378	3.06867	3.06932	7.7300000000000006E-15	126.83	15.11	no	Putative protein of unknown function	YKL065W-A
+NCA3		8.51	8.50737	3.08916	3.08871	0	808.03	94.98	no	Protein involved in mitochondrion organization	YJL116C
+CSR2		8.64	8.63237	3.11103	3.10976	0	80.54	9.33	no	Nuclear ubiquitin protein ligase binding protein	YPR030W|ART8|MRG19
+KNH1		8.73	8.72545	3.12598	3.12523	0	178.61	20.47	no	Protein with similarity to Kre9p	YDL049C
+COX4		9.13	9.13351	3.19061	3.19117	0	482.98	52.88	no	Subunit IV of cytochrome c oxidase	YGL187C|cytochrome c oxidase subunit IV
+QCR10		10.06	10.0633	3.33056	3.33104	0	711.88	70.74	no	Subunit of the ubiqunol-cytochrome c oxidoreductase complex	YHR001W-A|ubiquinol--cytochrome-c reductase subunit 10
+DDR2		10.09	10.0872	3.33485	3.33446	0	2857	283.23	no	Multi-stress response protein	YOL052C-A|DDRA2|YOL053C-A
+YNR071C		12.8	12.8024	3.67807	3.67834	0	236.46	18.47	no	Putative aldose 1-epimerase	YNR071C|aldose 1-epimerase superfamily protein
+YNR034W-A		14.34	14.3376	3.84197	3.84174	1.7499999999999999E-10	2952.12	205.9	no	Putative protein of unknown function	YNR034W-A
+TMA10		14.82	14.8221	3.88947	3.88968	0	3187.35	215.04	no	Protein of unknown function that associates with ribosomes	YLR327C|RBF9|SFL2
+HXT13		15.2	15.2017	3.926	3.92616	0	73.12	4.81	no	Hexose transporter	YEL069C
+COX26		15.61	15.6116	3.9644	3.96455	0	648.82	41.56	no	Putative protein of unknown function	YDR119W-A
+SPG1		16.01	16.0012	4.0009	4.00011	0	131.37	8.21	no	Protein required for high temperature survival during stationary phase	YGR236C
+YHR033W		16.89	16.8871	4.0781	4.07785	0	649.14	38.44	no	Putative protein of unknown function	YHR033W|putative glutamate 5-kinase
+REG2		17.61	17.6023	4.13832	4.13769	0	123.92	7.04	no	Regulatory subunit of the Glc7p type-1 protein phosphatase	YBR050C
+MAL12		18.07	18.0833	4.17552	4.17659	0	78.12	4.32	no	Maltase (alpha-D-glucosidase)	YGR292W|MALS
+HXT6		18.17	18.1712	4.18349	4.18359	0	3758.54	206.84	no	High-affinity glucose transporter	YDR343C
+YMR175W-A		18.47	18.4436	4.20711	4.20505	0	49.06	2.66	no	Putative protein of unknown function	YMR175W-A
+HXT7		20.94	20.936	4.38819	4.38791	1.0299999999999999E-14	1079.25	51.55	no	High-affinity glucose transporter	YDR342C
+PCK1		24.04	24.0489	4.58736	4.5879	0	373.96	15.55	no	Phosphoenolpyruvate carboxykinase	YKR097W|JPM2|PPC1|phosphoenolpyruvate carboxykinase PCK1
+HXK1		26.02	26.0197	4.70155	4.70153	0	7559.75	290.54	no	Hexokinase isoenzyme 1	YFR053C|hexokinase 1
+YNR073C		27.43	27.4327	4.77768	4.77782	0	552.22	20.13	no	Putative mannitol dehydrogenase	YNR073C|putative mannitol dehydrogenase
+GRE1		33.46	33.4578	5.06437	5.06427	0	1366.08	40.83	no	Hydrophilin essential in dessication-rehydration process	YPL223C
+RGI2		70.8	70.9394	6.14568	6.14852	0	140.46	1.98	no	Protein of unknown function	YIL057C
+SIP18		91.77	91.7763	6.51995	6.52005	0	5063.3	55.17	no	Phospholipid-binding hydrophilin	YMR175W
+DSF1		94.62	94.6324	6.56407	6.56426	0	1637.14	17.3	no	Putative mannitol dehydrogenase	YEL070W|mannitol dehydrogenase DSF1

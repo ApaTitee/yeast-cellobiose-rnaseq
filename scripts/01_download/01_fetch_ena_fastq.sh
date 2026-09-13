@@ -23,6 +23,10 @@ mkdir -p "$META_ENA" "$RAW_FASTQ" "$LOGS_DIR" "$CHECKSUM_DIR" "$VDIR"
 
 log() { printf '[%s] %s\n' "$(date '+%F %T')" "$*" | tee -a "$LOGS_DIR/01_download.log"; }
 
+# 互斥锁：防止两个实例并发写同一个 FASTQ（并发写会损坏文件）
+exec 9>"$LOGS_DIR/.01_fetch_ena_fastq.lock"
+if ! flock -n 9; then log "另一个下载实例正在运行，退出"; exit 1; fi
+
 # --- 1. ENA filereport（含官方 md5、read_count、字节数）---
 if [ ! -s "$FILEREPORT" ]; then
   log "获取 ENA filereport: $ENA_PROJECT"

@@ -1,0 +1,8 @@
+feature_id	pathway	FC_reported	FC_recomputed	log2FC_reported	log2FC_recomputed	FDR_p_reported	C8_mean	G8_mean	is_transgene	sgd_description	synonym
+RGS2	cAMP-dependent PKA pathway	-2.29	-2.29097	-1.19535	-1.19596	8.8500000000000005E-8	36.67	84.01	no	Negative regulator of glucose-induced cAMP signaling	YOR107W
+PDE1	cAMP-dependent PKA pathway	-2.25	-2.24976	-1.16993	-1.16977	3.26E-23	71.91	161.78	no	Low-affinity cyclic AMP phosphodiesterase	YGL248W
+MTH1	Snf3/Rgt2-Rgt1 pathway	3.54	3.5381	1.82375	1.82298	0	265.11	74.93	no	Negative regulator of the glucose-sensing signal transduction pathway	YDR277C|BPC1|DGT1|HTR1
+STD1	Snf3/Rgt2-Rgt1 pathway	-4.02	-4.0213	-2.0072	-2.00766	2.15E-27	22.53	90.6	no	Protein involved in control of glucose-regulated gene expression	YOR047C|MSN3|SFS3
+GIP2	Snf1-Mig1 glucose repression pathway	4.35	4.35326	2.12102	2.1221	0	79.36	18.23	no	Putative regulatory subunit of protein phosphatase Glc7p	YER054C
+GAC1	Snf1-Mig1 glucose repression pathway	6.77	6.76844	2.75916	2.75882	0	119.26	17.62	no	Regulatory subunit for Glc7p type-1 protein phosphatase (PP1)	YOR178C
+REG2	Snf1-Mig1 glucose repression pathway	17.61	17.6023	4.13832	4.13769	0	123.92	7.04	no	Regulatory subunit of the Glc7p type-1 protein phosphatase	YBR050C

@@ -1,5 +1,6 @@
 # ---- 大文件：不入库，仅保留下载/构建脚本与校验值 ----
 data/raw/fastq/*
+!data/raw/fastq/.gitkeep
 data/processed/fastq/*
 !data/processed/fastq/.gitkeep
 refs/index/
