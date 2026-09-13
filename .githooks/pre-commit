@@ -14,4 +14,11 @@ if [ "$bad" -eq 1 ]; then
   echo "预提交检查失败：存在 >5 MB 文件。请加入 .gitignore 或改用脚本重建。" >&2
   exit 1
 fi
+
+# 机器相关信息（绝对路径 / 用户名 / 邮箱）不得入库：仓库会被公开
+if ! bash "$(git rev-parse --show-toplevel)/scripts/00_setup/00_sanitize_paths.sh" --check >/dev/null 2>&1; then
+  echo "预提交检查失败：工作区存在机器相关信息（绝对路径/用户名）。" >&2
+  echo "请先运行： bash scripts/00_setup/00_sanitize_paths.sh" >&2
+  exit 1
+fi
 exit 0

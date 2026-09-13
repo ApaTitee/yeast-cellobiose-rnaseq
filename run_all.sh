@@ -42,6 +42,7 @@ STEP_SCRIPTS=(
   "18|scripts/07_comparison/18_consistency_with_original.R"
   "19|scripts/07_comparison/19_hypothesis_scorecard.R"
   "20|scripts/07_comparison/20_render_report.sh"
+  "21|scripts/00_setup/00_sanitize_paths.sh"
 )
 
 run_one() {
