@@ -1,0 +1,3 @@
+dataset	n_total	n_mapped	n_unmapped	unmapped_examples
+S1_6351	6351	6024	327	AAD16,HOR2,NTS1-2,NTS2-1,NTS2-2,PGM3,RHR2,snR10,snR11,snR128,snR13,snR14,snR161,snR17a,snR17b,snR18,snR189,snR19,snR190,snR191,snR24,snR3,snR30,snR31,snR32,snR33,snR34,snR35,snR36,snR37,snR38,snR39,snR39B,snR4,snR40,snR41,snR42,snR43,snR44,snR45,snR46,snR47,snR48,snR49,snR5,snR50,snR51,snR52,snR53,snR54,snR55,snR56,snR57,snR58,snR59,snR6,snR60,snR61,snR62,snR63
+S2_519	519	519	0	

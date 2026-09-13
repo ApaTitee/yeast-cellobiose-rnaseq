@@ -1,0 +1,13 @@
+{
+  "salmon_version": "2.7.0",
+  "index": "<PROJECT_ROOT>/refs/index/salmon/k25_decoy_host",
+  "libType": "A",
+  "output": "<PROJECT_ROOT>/results/quantification/salmon_k25/SRR1166443_JCYL002B_glucose",
+  "mates1": [],
+  "mates2": [],
+  "unmatedReads": [
+    "<PROJECT_ROOT>/data/processed/fastq/SRR1166443_JCYL002B_glucose.fastp.fastq.gz"
+  ],
+  "threads": 8,
+  "sketch": false
+}

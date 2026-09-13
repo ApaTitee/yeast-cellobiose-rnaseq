@@ -17,6 +17,17 @@ refs/host/*.gbff.gz
 # ---- 中间校验产物（汇总值见 checksums/md5_verification.tsv）----
 checksums/.verify/
 
+# ---- salmon 定量中间/产物（可重跑生成）----
+results/quantification/**/intermediate_mappings*
+results/quantification/**/aux_info/
+results/quantification/**/*.rad
+results/quantification/**/logs/
+
+# ---- 可由脚本确定性重建的大文件（md5 记录在 refs/VERSIONS.md）----
+refs/custom/gentrome.fa
+refs/custom/transcripts.fa
+refs/host/host_transcripts_gffread.fa
+
 # ---- 裁决实验中间产物（可重跑生成）----
 refs/custom/adjudication/subsample/
 refs/custom/adjudication/*.bam
@@ -51,3 +62,7 @@ __pycache__/
 *.pem
 *token*
 !docs/decisions/token_notes.md
+
+# ---- 临时文件 ----
+.tmp_*
+refs/host/.tmp_*

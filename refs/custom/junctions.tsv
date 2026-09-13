@@ -1,0 +1,2 @@
+junction	cdt1_cds_end	linker	downstream	tag_start_offset	evidence	assembled_transcript
+cdt-1->sfGFP	GTGTCCGAAGCTATCGTTGCT (cdt-1 CDS 末 20 bp，终止子已去除)	ATCGAT (ClaI) + GGTAGTGGTAGT (Gly-Ser-Gly-Ser)	sfGFP (superfolder GFP)	标签共识序列自第 4 位起（公共 eGFP 的起始 ATG 不在构建体中）	跨接头 reads（含 ATCGAT+GSGS）见证据表；与 Galazka 2010 SOM 的 "superfolder GFP with an N-terminal linker of Gly-Ser-Gly-Ser" 及 ClaI 克隆位点描述一致	cdt-1 CDS[-stop] + ATCGAT + GGTAGTGGTAGT + tag[3:]

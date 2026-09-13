@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# 拒绝提交体积过大的文件（本仓库规则：大文件不入库，仅保留脚本与校验值）
+LIMIT=$((5 * 1024 * 1024))
+bad=0
+while IFS= read -r f; do
+  [ -f "$f" ] || continue
+  sz=$(stat -c%s "$f" 2>/dev/null || echo 0)
+  if [ "$sz" -gt "$LIMIT" ]; then
+    printf '  [拒绝] %8.2f MB  %s\n' "$(echo "$sz/1048576" | bc -l)" "$f"
+    bad=1
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACM)
+if [ "$bad" -eq 1 ]; then
+  echo "预提交检查失败：存在 >5 MB 文件。请加入 .gitignore 或改用脚本重建。" >&2
+  exit 1
+fi
+exit 0

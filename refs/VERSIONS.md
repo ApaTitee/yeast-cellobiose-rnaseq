@@ -48,3 +48,10 @@
 - 所有 URL 均写死版本，不使用 `latest` 类动态地址。
 - 脚本：`scripts/01_download/02_fetch_reference.sh`。
 - 完整 md5 清单：`checksums/reference.md5`。
+
+## Salmon 索引
+
+- salmon 版本：salmon 2.7.0
+- 输入：`refs/custom/gentrome.fa`（md5 ad0ee8c09f9ae2cbd90f4a296ef19a75）+ `refs/custom/decoys.txt`（17 条宿主基因组序列作 decoy）
+- 索引：k=31（主用，对应 ~50 bp reads）与 k=25（敏感性对照）
+- decoy 中不含质粒骨架与 URA3（见 PLAN 3.5 的槽位说明）

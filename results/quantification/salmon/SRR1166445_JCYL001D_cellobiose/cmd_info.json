@@ -1,0 +1,13 @@
+{
+  "salmon_version": "2.7.0",
+  "index": "<PROJECT_ROOT>/refs/index/salmon/k31_decoy_host",
+  "libType": "A",
+  "output": "<PROJECT_ROOT>/results/quantification/salmon/SRR1166445_JCYL001D_cellobiose",
+  "mates1": [],
+  "mates2": [],
+  "unmatedReads": [
+    "<PROJECT_ROOT>/data/processed/fastq/SRR1166445_JCYL001D_cellobiose.fastp.fastq.gz"
+  ],
+  "threads": 8,
+  "sketch": false
+}
