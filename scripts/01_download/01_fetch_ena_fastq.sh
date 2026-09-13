@@ -20,6 +20,7 @@ FILEREPORT="$META_ENA/ena_filereport.tsv"
 VDIR="$CHECKSUM_DIR/.verify"
 
 mkdir -p "$META_ENA" "$RAW_FASTQ" "$LOGS_DIR" "$CHECKSUM_DIR" "$VDIR"
+rm -f "$VDIR"/*.tsv   # 清理上一轮的陈旧校验记录，避免汇总表混入过期结果
 
 log() { printf '[%s] %s\n' "$(date '+%F %T')" "$*" | tee -a "$LOGS_DIR/01_download.log"; }
 
@@ -38,12 +39,13 @@ fi
 # --- 2. 单个 run 的下载 + 校验 ---
 fetch_one() {
   local sample_id="$1" run="$2" cond="$3"
-  local row ftp md5_ena n_reads url fname dest md5_self bytes status
+  local row ftp md5_ena n_reads bytes_ena url fname dest md5_self bytes status
   row="$(awk -F'\t' -v r="$run" '$1==r {print; exit}' "$FILEREPORT")"
   if [ -z "$row" ]; then log "!! $run 不在 ENA filereport 中，跳过"; return 0; fi
   ftp="$(printf '%s' "$row" | cut -f9 | cut -d';' -f1)"
   md5_ena="$(printf '%s' "$row" | cut -f10 | cut -d';' -f1)"
   n_reads="$(printf '%s' "$row" | cut -f7)"
+  bytes_ena="$(printf '%s' "$row" | cut -f11 | cut -d';' -f1)"
   if [ -z "$ftp" ]; then log "!! $run 无 FASTQ 直链，跳过"; return 0; fi
 
   url="https://${ftp}"
@@ -53,14 +55,22 @@ fetch_one() {
   if [ -s "$dest" ] && [ "$(md5sum "$dest" | cut -d' ' -f1)" = "$md5_ena" ]; then
     log "校验通过，跳过下载：$fname"
   else
-    log "下载 $run ($cond) -> $fname  reads=$n_reads"
-    curl -fL --retry 5 --retry-delay 10 -C - -sS --no-progress-meter -o "$dest" "$url" \
+    log "下载 $run ($cond) -> $fname  reads=$n_reads  ENA_bytes=${bytes_ena:-NA}"
+    # --speed-limit/--speed-time：连接速率低于 100 KB/s 持续 60 s 即中断，交给 --retry 重连
+    # （应对 ENA 偶发的单连接限速；实测曾出现 54 KB/s 的停滞连接）
+    curl -fL --retry 8 --retry-delay 10 --retry-all-errors \
+         --speed-limit 102400 --speed-time 60 \
+         -C - -sS --no-progress-meter -o "$dest" "$url" \
       2>>"$LOGS_DIR/01_download.err.log" || true
   fi
 
   md5_self="$(md5sum "$dest" | cut -d' ' -f1)"
   bytes="$(stat -c%s "$dest")"
   status="FAIL"; [ "$md5_self" = "$md5_ena" ] && status="PASS"
+  # 额外一致性检查：字节数应与 ENA 公布的 fastq_bytes 相等
+  if [ "$status" = "PASS" ] && [ -n "$bytes_ena" ] && [ "$bytes" != "$bytes_ena" ]; then
+    status="FAIL_SIZE"; log "!! $fname 字节数 $bytes != ENA 公布 $bytes_ena"
+  fi
   printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
     "$run" "$sample_id" "$cond" "$fname" "$bytes" "$md5_self" "$md5_ena" "$status" \
     > "$VDIR/$run.tsv"
@@ -95,5 +105,5 @@ done < "$CHECKSUM_DIR/md5_verification.tsv"
 n_all=$(( $(wc -l < "$CHECKSUM_DIR/md5_verification.tsv") - 1 ))
 n_fail=$(awk -F'\t' 'NR>1 && $8!="PASS"' "$CHECKSUM_DIR/md5_verification.tsv" | wc -l)
 log "校验汇总：$((n_all - n_fail))/$n_all 通过"
-[ "$n_fail" -eq 0 ] || { log "!! 存在校验失败文件，见 checksums/md5_verification.tsv"; exit 1; }
+[ "$n_fail" -eq 0 ] || { log "!! 存在校验失败文件，见 checksums/md5_verification.tsv（重跑本脚本会自动重下或续传）"; exit 1; }
 log "完成。自算值 checksums/raw.md5，ENA 公布值 checksums/ena_published.md5"

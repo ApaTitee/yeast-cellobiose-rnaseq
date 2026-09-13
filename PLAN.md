@@ -70,7 +70,7 @@ P0 将这 7 个文件 `git mv` 至 `docs/literature/original_study/`，md5 写�
 ### 1.3 硬性验收标准
 
 - 在干净环境中，按 `README.md` 指令可从头重跑，重新生成全部表与图。
-- 环境可锁定：`environment.yml`（CLI）+ `renv.lock`（R）+ 基因组/注释/软件版本全部记录。
+- 环境可锁定：`environment.yml` + `env/conda-explicit.txt`（精确锁定，含 R/Bioconductor）+ `env/r_packages.tsv` + 基因组/注释/软件版本全部记录。
 - 每个中间产物可追溯（脚本 + 参数 + 输入文件），关键文件带 `md5`。
 - 报告中出现的每一个数字、阈值、版本，都能在产物文件中找到来源。
 - 与原研究给出一致性的**量化结论**，并显式标注哪些结论**不可评估**及其原因。
@@ -320,14 +320,14 @@ GEO 补充文件直链（P0 下载并记 md5）：
 ### 5.0 环境初始化与仓库
 
 - **目的**：建立可重建的分析环境、项目骨架与版本控制。
-- **工具**：WSL2 Ubuntu；conda 26.1.1（不装 mamba）；R + renv（R 由 conda 安装）；Git + GitHub。
+- **工具**：WSL2 Ubuntu；conda 26.1.1（不装 mamba）；R 4.4.3 + Bioconductor 3.20（由 conda 提供；不使用 renv 项目激活，理由见 `docs/decisions/r_environment.md`）；Git + GitHub。
 - **步骤**：
   1. `git init`，配置 `user.name` / `user.email`；
   2. 添加 GitHub 远端（`git remote add origin <GITHUB_REPO>`），首次推送；凭据方式（SSH key 或 HTTPS + PAT）由项目负责人提供，凭据本身不入库；
   3. 建立目录骨架（§6），`git mv` 归档 7 个文献文件并生成 `docs/literature/CHECKSUMS.md`；
   4. 编写 `environment.yml` / `renv.lock` / `.gitignore` / `README.md` / `run_all.sh` / `config/paths.sh`。
-- **输出**：`environment.yml`、`renv.lock`、`.gitignore`、`README.md`、`run_all.sh`、`config/paths.sh`、`env/tool_versions.txt`、`.git` + 远端。
-- **验收**：新 shell 中 `conda env create -f environment.yml` 与 `renv::restore()` 均成功；`git log` 有首个 commit 且远端可见；`env/tool_versions.txt` 含 **Bioconductor release（`BiocManager::version()`）**。
+- **输出**：`environment.yml`、`env/conda-explicit.txt`、`env/r_packages.tsv`、`.gitignore`、`README.md`、`run_all.sh`、`config/paths.sh`、`env/tool_versions.txt`、`.git` + 远端。
+- **验收**：新 shell 中 `conda env create -f environment.yml` 成功；`conda create --file env/conda-explicit.txt` 可逐位重建；R 关键包（DESeq2/tximport/apeglm/clusterProfiler/fgsea/org.Sc.sgd.db/GO.db）可加载（脚本断言）；`git log` 有首个 commit 且远端可见；`env/tool_versions.txt` 含 Bioconductor release。
 - **注意**：`data/raw/`、`refs/index/`、`*.bam`、`logs/` 不入库；凭据、token 一律不写入仓库。
 
 ### 5.1 数据获取与校验
@@ -516,7 +516,6 @@ GEO 补充文件直链（P0 下载并记 md5）：
 ├── README.md                     # 如何从零重跑
 ├── PLAN.md                       # 本文件
 ├── environment.yml
-├── renv.lock
 ├── run_all.sh                    # 顺序执行 00→08，幂等（存在即跳过 + 校验）
 ├── .gitignore                    # 排除 data/raw、refs/index、*.bam、logs/*
 │
@@ -550,7 +549,9 @@ GEO 补充文件直链（P0 下载并记 md5）：
 │   ├── checks/                   # locus_check.tsv、id_map_loss.tsv
 │   └── VERSIONS.md
 │
-├── env/tool_versions.txt
+├── env/tool_versions.txt         # CLI + R + Bioconductor 版本快照
+├── env/conda-explicit.txt        # 精确锁定（conda list --explicit）
+├── env/r_packages.tsv            # R 包版本清单
 │
 ├── scripts/
 │   ├── 00_setup/  01_download/  02_qc/  03_quantification/
@@ -708,6 +709,8 @@ Transcriptomics → Protein engineering → Structure-guided design → ML-assis
 | `docs/literature/CHECKSUMS.md` | 7 个只读输入文件的 md5 |
 | `data/metadata/{ena,geo_soft,original_study}/` | 使附录 A 的每条事实离线可复现 |
 | `env/tool_versions.txt` | fastp / FastQC / MultiQC / Salmon / bowtie2 / samtools / seqtk / R 及包版本 + Bioconductor release |
+| `env/conda-explicit.txt` | 精确环境锁定（conda list --explicit）；与 `environment.yml` 共同构成环境凭证 |
+| `env/r_packages.tsv` | R 包名称/版本/库路径快照（177 个包） |
 | `checksums/raw.md5` | 原始数据自算 md5（与 ENA 公布值比对结论） |
 | `logs/` | 各步骤运行日志 |
 | 运行结束的 `sessionInfo()` | R 包版本快照 |

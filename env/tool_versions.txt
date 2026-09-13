@@ -1,0 +1,231 @@
+# Tool versions — generated 2026-09-13 22:55:57 HKT
+# host: Linux 6.18.33.2-microsoft-standard-WSL2 x86_64 | conda env: yeast-cellobiose-rnaseq
+
+## OS / scheduler
+kernel: 6.18.33.2-microsoft-standard-WSL2
+cores: 16
+mem_total_GB: 15
+
+## CLI tools
+fastqc     FastQC v0.12.1
+fastp      fastp 1.3.6
+multiqc    multiqc, version 1.35
+salmon     salmon 2.7.0
+bowtie2    [WARNING] Failed to launch x86-64-v3 version, staying with default
+samtools   samtools 1.24
+seqtk      
+gffread    0.12.9
+datasets   datasets version: 18.37.0
+seqtk      [main] unrecognized command '2>/dev/null'. Abort!
+quarto     1.9.38
+typst      typst 0.14.2 (82176338)
+python3    Python 3.11.16
+md5sum     md5sum (GNU coreutils) 9.4
+
+## R / Bioconductor
+R: R version 4.4.3 (2025-02-28)
+Bioconductor: 3.20
+renv: 1.2.4
+
+## R packages
+Package	Version
+abind	1.4-8
+AnnotationDbi	1.68.0
+ape	5.8-1
+apeglm	1.28.0
+aplot	0.3.1
+askpass	1.2.1
+assertthat	0.2.1
+base	4.4.3
+base64enc	0.1-6
+bbmle	1.0.26
+bdsmatrix	1.3-7
+BH	1.87.0-1
+Biobase	2.66.0
+BiocGenerics	0.52.0
+BiocManager	1.30.27
+BiocParallel	1.40.0
+Biostrings	2.74.0
+bit	4.6.0
+bit64	4.8.6
+blob	1.3.0
+bslib	0.12.0
+cachem	1.1.0
+cellranger	1.1.0
+cli	3.6.6
+clusterProfiler	4.14.0
+coda	0.19-4.1
+codetools	0.2-20
+colorspace	2.1-3
+compiler	4.4.3
+corrplot	0.95
+cowplot	1.2.0
+cpp11	0.5.5
+crayon	1.5.3
+curl	8.0.0
+data.table	1.18.6.1
+datasets	4.4.3
+DBI	1.3.0
+DelayedArray	0.32.0
+DESeq2	1.46.0
+digest	0.6.39
+DOSE	4.0.0
+dplyr	1.2.1
+ellipsis	0.3.3
+emdbook	1.3.14
+enrichplot	1.26.1
+evaluate	1.0.5
+fansi	1.0.7
+farver	2.1.2
+fastmap	1.2.0
+fastmatch	1.1-8
+fgsea	1.32.2
+fontawesome	0.5.3
+formatR	1.14
+fs	2.1.0
+futile.logger	1.4.9
+futile.options	1.0.1
+generics	0.1.4
+GenomeInfoDb	1.42.0
+GenomeInfoDbData	1.2.13
+GenomicRanges	1.58.0
+ggforce	0.5.0
+ggfun	0.2.1
+ggnewscale	0.5.2
+ggplot2	4.0.3
+ggplotify	0.1.3
+ggrepel	0.9.8
+ggtangle	0.1.2
+ggtree	3.14.0
+glue	1.8.1
+GO.db	3.20.0
+GOSemSim	2.32.0
+graphics	4.4.3
+grDevices	4.4.3
+grid	4.4.3
+gridGraphics	0.5-1
+gson	0.2.1
+gtable	0.3.6
+highr	0.12
+hms	1.1.4
+htmltools	0.5.9
+httr	1.4.9
+igraph	2.3.3
+IRanges	2.40.0
+isoband	0.3.0
+jquerylib	0.1.4
+jsonlite	2.0.0
+KEGGREST	1.46.0
+knitr	1.52
+labeling	0.4.3
+lambda.r	1.2.4
+lattice	0.23-1
+lazyeval	0.2.3
+lifecycle	1.0.5
+locfit	1.5-9.12
+magrittr	2.0.5
+MASS	7.3-66
+Matrix	1.7-6
+MatrixGenerics	1.18.0
+matrixStats	1.5.0
+memoise	2.0.1
+methods	4.4.3
+mime	0.13
+munsell	0.5.1
+mvtnorm	1.4-2
+nlme	3.1-170
+numDeriv	2016.8-1.1
+openssl	2.4.2
+openxlsx	4.2.9
+org.Sc.sgd.db	3.20.0
+parallel	4.4.3
+patchwork	1.3.2
+pheatmap	1.0.13
+pillar	1.11.1
+pkgconfig	2.0.3
+plyr	1.8.9
+png	0.1-9
+polyclip	1.10-7
+prettyunits	1.2.0
+progress	1.2.3
+purrr	1.2.2
+qvalue	2.38.0
+R.methodsS3	1.8.2
+R.oo	1.27.1
+R.utils	2.13.0
+R6	2.6.1
+rappdirs	0.3.4
+RColorBrewer	1.1-3
+Rcpp	1.1.2
+RcppArmadillo	15.6.0-1
+RcppEigen	0.3.4.0.2
+RcppNumerical	0.7-0
+readxl	1.5.0
+rematch	2.0.0
+renv	1.2.4
+reshape2	1.4.5
+rlang	1.3.0
+rmarkdown	2.32
+RSQLite	3.53.3
+S4Arrays	1.6.0
+S4Vectors	0.44.0
+S7	0.2.2
+sass	0.4.10
+scales	1.4.0
+scatterpie	0.2.6
+sessioninfo	1.2.4
+snow	0.4-4
+SparseArray	1.6.0
+splines	4.4.3
+stats	4.4.3
+stats4	4.4.3
+stringi	1.8.9
+stringr	1.6.0
+SummarizedExperiment	1.36.0
+sys	3.4.3
+systemfonts	1.3.2
+tcltk	4.4.3
+tibble	3.3.1
+tidyr	1.3.2
+tidyselect	1.2.1
+tidytree	0.4.8
+tinytex	0.60
+tools	4.4.3
+treeio	1.30.0
+tweenr	2.0.3
+tximport	1.34.0
+UCSC.utils	1.2.0
+utf8	1.2.6
+utils	4.4.3
+vctrs	0.7.3
+viridisLite	0.4.3
+withr	3.0.3
+xfun	0.60
+XVector	0.46.0
+yaml	2.3.12
+yulab.utils	0.2.5
+zip	3.0.2
+zlibbioc	1.52.0
+
+## sessionInfo()
+R version 4.4.3 (2025-02-28)
+Platform: x86_64-conda-linux-gnu
+Running under: Ubuntu 24.04.5 LTS
+
+Matrix products: default
+BLAS/LAPACK: <HOME>/miniconda3/envs/yeast-cellobiose-rnaseq/lib/libopenblasp-r0.3.34.so;  LAPACK version 3.12.0
+
+locale:
+ [1] LC_CTYPE=C.UTF-8       LC_NUMERIC=C           LC_TIME=C.UTF-8       
+ [4] LC_COLLATE=C.UTF-8     LC_MONETARY=C.UTF-8    LC_MESSAGES=C.UTF-8   
+ [7] LC_PAPER=C.UTF-8       LC_NAME=C              LC_ADDRESS=C          
+[10] LC_TELEPHONE=C         LC_MEASUREMENT=C.UTF-8 LC_IDENTIFICATION=C   
+
+time zone: Asia/Hong_Kong
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.4.3
