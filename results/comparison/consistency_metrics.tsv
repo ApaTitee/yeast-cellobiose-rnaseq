@@ -1,0 +1,11 @@
+metric	value
+genes_comparable_FC	5771
+spearman_log2FC	0.973
+pearson_log2FC	0.8402
+our_DEG_threshold_matched	632
+original_DEG	519
+overlap	496
+jaccard	0.7573
+hypergeometric_p	0
+direction_concordance_in_overlap	1
+background_genes	5775

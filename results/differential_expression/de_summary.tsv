@@ -1,0 +1,6 @@
+model	n_tested	n_deg	n_up	n_down	n_transgene
+~condition (primary)	6049	644	346	298	2
+~condition relaxed	6049	4583	2325	2258	2
+~condition stringent	6049	363	207	156	2
+~condition FDR<=0.001 & |LFC|>=1	6049	632	341	291	2
+~replicate+condition (paired)	6049	643	347	296	2

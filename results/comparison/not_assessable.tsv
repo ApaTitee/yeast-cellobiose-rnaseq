@@ -1,0 +1,6 @@
+item	reason
+mtDNA-encoded gene expression	poly-A selection captures yeast mitochondrial transcripts inefficiently; 5-18 chrM reads per 1e6; 0/19 mt genes reach 1x
+absolute transgene abundance	the tag/junction part of the transgene reference is derived from the sample reads themselves (circularity)
+absolute RPKM/TPM matching the original	CLC multi-mapping and 'By totals' RPKM are not reproducible outside CLC; only gene-level trends are comparable
+cross-tool mapping statistics	original 92.3/83.4/76.3% were produced by CLC's internal algorithms; only order-of-magnitude comparison is meaningful
+transgene C-terminal His6 cleavage state	requires protein-level data, out of scope
