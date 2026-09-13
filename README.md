@@ -65,7 +65,8 @@ bash run_all.sh 01 03
 bash scripts/07_comparison/20_render_report.sh
 ```
 
-For the Chinese PDF, a CJK font must be available (Typst reads system fonts directly):
+PDF output is produced with LaTeX (xelatex); the Chinese PDF additionally needs a **static** CJK font
+file (variable fonts are not supported by xelatex), placed in `docs/report/fonts/` by the render script:
 
 ```bash
 mkdir -p ~/.local/share/fonts

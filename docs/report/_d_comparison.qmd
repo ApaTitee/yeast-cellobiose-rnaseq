@@ -6,12 +6,14 @@ tbl(RD("results", "comparison", "consistency_metrics.tsv"))
 ```{r fig-fc}
 #| echo: false
 #| fig-cap: "Per-gene log2FC agreement with the original study (Spearman = 0.973 over 5771 genes)."
+#| out-width: "72%"
 include_graphics(FIG("fc_agreement.png"))
 ```
 
 ```{r fig-sweep}
 #| echo: false
 #| fig-cap: "Precision/recall of the original 519 DEGs as a function of threshold."
+#| out-width: "80%"
 include_graphics(FIG("threshold_sweep.png"))
 ```
 

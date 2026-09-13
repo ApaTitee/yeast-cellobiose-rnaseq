@@ -504,7 +504,7 @@ GEO 补充文件直链（P0 下载并记 md5）：
 
 - **形式**：**中英双语两版**（`docs/report/report_zh.qmd`、`docs/report/report_en.qmd`），由同一数据源自动生成，两版的数字、表、图完全一致；渲染为 HTML + PDF。
 - **图表**：所有图的坐标轴标签、图例、图注、表头、表注**统一使用英文**（两版共用同一批图文件）。
-- **排版**：参照正规期刊（编号章节、Vancouver 编号引用、`Fig. N` / `Table N` 加粗图注、补充材料单列）。参考文献条目由 BibTeX 统一维护。
+- **排版**：参照正规期刊（编号章节、Vancouver 编号引用、LaTeX 排版，图注由 Quarto 自动编号）。参考文献条目由 BibTeX 统一维护；PDF 由 **xelatex** 生成（中文版通过 xeCJK 指定 Noto Sans SC 静态字体）。
 - **验收**：`quarto render` 一次命令生成两版；两版数字一致性由脚本断言校验（同一 TSV 输入）。
 
 ### 5.15 增补分析（P2.5，主结果产出后执行）

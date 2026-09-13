@@ -11,6 +11,11 @@ tbl(hs)
 #| echo: false
 sc <- RD("results", "interpretation", "hypothesis_scorecard.tsv")
 sc <- sc[, c("hypothesis", "n_genes", "mean_log2FC", "wilcoxon_p", "n_deg_in_set", "fisher_p", "verdict")]
+# 缩短标签与判定串，避免表格过宽（完整集合定义见 results/interpretation/hypothesis_gene_sets.tsv）
+sc$hypothesis <- gsub("\\s*\\(GO:[0-9]+\\)", "", sc$hypothesis)
+sc$hypothesis <- ifelse(nchar(sc$hypothesis) > 46, paste0(substr(sc$hypothesis, 1, 44), ".."), sc$hypothesis)
+sc$verdict <- ifelse(sc$verdict == "replicated (partial activation, as originally reported)",
+                     "replicated (partial)", sc$verdict)
 rownames(sc) <- NULL
 tbl(sc, digits = 3)
 ```
@@ -24,5 +29,6 @@ tbl(x)
 ```{r fig-anchor}
 #| echo: false
 #| fig-cap: "Independent estimators of the transgene fold change (cellobiose/glucose) and of the plasmid copy-number proxy URA3. Read-based estimators (1.89-2.01 for cdt-1EGFP, 2.22-2.32 for gh1-1) bracket the values reported in the original study (1.87 and 2.16)."
+#| out-width: "95%"
 include_graphics(FIG("transgene_anchor.png"))
 ```

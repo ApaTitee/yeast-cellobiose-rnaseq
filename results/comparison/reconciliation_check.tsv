@@ -1,16 +1,16 @@
 item	value	note	check
-dataset_s1_rows_total	6351	Dataset S1 数据行数（含 2 条外源）	ok
-dataset_s1_host_genes	6349	宿主基因条目数	ok
-dataset_s1_transgenes	2	外源条目数（cdt-1EGFP, gh1-1）	ok
-dataset_s2_deg_rows	519	原文报告的 519 个 DEG	ok
-dataset_s2_deg_transgenes	1	519 中的外源条目数（gh1-1）	ok
-dataset_s2_tf_rows	19	19 个转录因子	ok
-dataset_s2_grn_rows	7	7 个 GRN 调控基因	ok
-dataset_s3_go_terms_up	12	UP 侧 GO 条目数	ok
-dataset_s3_go_terms_down	16	DOWN 侧 GO 条目数	ok
-dataset_s3_up_genes	244	Dataset S3 区块标题声明的 UP 基因数	ok
-dataset_s3_down_genes	256	Dataset S3 区块标题声明的 DOWN 基因数	ok
-dataset_s3_notfound_up	3	FunSpec UP 未映射基因数	ok
-dataset_s3_notfound_down	0	FunSpec DOWN 未映射基因数	ok
-check_sum_of_parts	503	对账：UP + DOWN + 两侧 not found	ok
-check_gap_vs_519	16	与 519 的差额；需在报告 5.12 解释（候选：外源条目 gh1-1 无 GO 注释）	ok
+dataset_s1_rows_total	6351	Dataset S1 data rows (including the 2 transgene entries)	ok
+dataset_s1_host_genes	6349	host gene entries	ok
+dataset_s1_transgenes	2	transgene entries (cdt-1EGFP, gh1-1)	ok
+dataset_s2_deg_rows	519	the 519 DEGs reported in the original study	ok
+dataset_s2_deg_transgenes	1	transgene entries within the 519 (gh1-1)	ok
+dataset_s2_tf_rows	19	19 transcription factors	ok
+dataset_s2_grn_rows	7	7 GRN regulatory genes	ok
+dataset_s3_go_terms_up	12	GO terms on the UP side	ok
+dataset_s3_go_terms_down	16	GO terms on the DOWN side	ok
+dataset_s3_up_genes	244	UP gene count declared in the Dataset S3 section header	ok
+dataset_s3_down_genes	256	DOWN gene count declared in the Dataset S3 section header	ok
+dataset_s3_notfound_up	3	genes not mapped by FunSpec on the UP side	ok
+dataset_s3_notfound_down	0	genes not mapped by FunSpec on the DOWN side	ok
+check_sum_of_parts	503	reconciliation: UP + DOWN + not-found on both sides	ok
+check_gap_vs_519	16	gap versus 519; explained in the report (the transgene gh1-1 carries no GO annotation)	ok

@@ -28,9 +28,13 @@ EXTS=("md" "qmd" "R" "sh" "py" "tsv" "csv" "json" "log" "txt" "yml" "yaml" "bib"
 INCLUDE_ARGS=()
 for e in "${EXTS[@]}"; do INCLUDE_ARGS+=(--include="*.$e"); done
 
-mapfile -t FILES < <(grep -rIl -E "$PROJ|$HOME_DIR" "$PROJECT_ROOT" \
-  --exclude-dir=.git --exclude-dir=.quarto --exclude-dir=figures \
-  "${INCLUDE_ARGS[@]}" 2>/dev/null || true)
+# 只检查**纳入版本控制**的文件（未跟踪/被忽略的产物如 logs/ 不在提交范围内）
+if git -C "$PROJECT_ROOT" rev-parse --git-dir >/dev/null 2>&1; then
+  mapfile -t FILES < <(cd "$PROJECT_ROOT" && git ls-files -z | xargs -0 grep -lE "$PROJ|$HOME_DIR" 2>/dev/null || true)
+else
+  mapfile -t FILES < <(grep -rIl -E "$PROJ|$HOME_DIR" "$PROJECT_ROOT" \
+    --exclude-dir=.git --exclude-dir=.quarto --exclude-dir=figures "${INCLUDE_ARGS[@]}" 2>/dev/null || true)
+fi
 
 if [ "${#FILES[@]}" -eq 0 ]; then
   echo "  [ok] 未发现机器相关路径"

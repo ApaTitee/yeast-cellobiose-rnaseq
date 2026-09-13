@@ -245,22 +245,22 @@ def main() -> int:
     n_dn = s3_sizes.get("DOWN", 0)
     n_trans_in_deg = sum(1 for r in s2_deg if r[9] == "yes")
     recon = [
-        ["dataset_s1_rows_total", str(len(s1)), "Dataset S1 数据行数（含 2 条外源）"],
-        ["dataset_s1_host_genes", str(len(s1) - sum(1 for r in s1 if r[15] == "yes")), "宿主基因条目数"],
-        ["dataset_s1_transgenes", str(sum(1 for r in s1 if r[15] == "yes")), "外源条目数（cdt-1EGFP, gh1-1）"],
-        ["dataset_s2_deg_rows", str(len(s2_deg)), "原文报告的 519 个 DEG"],
-        ["dataset_s2_deg_transgenes", str(n_trans_in_deg), "519 中的外源条目数（gh1-1）"],
-        ["dataset_s2_tf_rows", str(len(s2_tf)), "19 个转录因子"],
-        ["dataset_s2_grn_rows", str(len(s2_grn)), "7 个 GRN 调控基因"],
-        ["dataset_s3_go_terms_up", str(n_up_terms), "UP 侧 GO 条目数"],
-        ["dataset_s3_go_terms_down", str(n_dn_terms), "DOWN 侧 GO 条目数"],
-        ["dataset_s3_up_genes", str(n_up), "Dataset S3 区块标题声明的 UP 基因数"],
-        ["dataset_s3_down_genes", str(n_dn), "Dataset S3 区块标题声明的 DOWN 基因数"],
-        ["dataset_s3_notfound_up", str(nf_up), "FunSpec UP 未映射基因数"],
-        ["dataset_s3_notfound_down", str(nf_dn), "FunSpec DOWN 未映射基因数"],
-        ["check_sum_of_parts", str(n_up + n_dn + nf_up + nf_dn), "对账：UP + DOWN + 两侧 not found"],
+        ["dataset_s1_rows_total", str(len(s1)), "Dataset S1 data rows (including the 2 transgene entries)"],
+        ["dataset_s1_host_genes", str(len(s1) - sum(1 for r in s1 if r[15] == "yes")), "host gene entries"],
+        ["dataset_s1_transgenes", str(sum(1 for r in s1 if r[15] == "yes")), "transgene entries (cdt-1EGFP, gh1-1)"],
+        ["dataset_s2_deg_rows", str(len(s2_deg)), "the 519 DEGs reported in the original study"],
+        ["dataset_s2_deg_transgenes", str(n_trans_in_deg), "transgene entries within the 519 (gh1-1)"],
+        ["dataset_s2_tf_rows", str(len(s2_tf)), "19 transcription factors"],
+        ["dataset_s2_grn_rows", str(len(s2_grn)), "7 GRN regulatory genes"],
+        ["dataset_s3_go_terms_up", str(n_up_terms), "GO terms on the UP side"],
+        ["dataset_s3_go_terms_down", str(n_dn_terms), "GO terms on the DOWN side"],
+        ["dataset_s3_up_genes", str(n_up), "UP gene count declared in the Dataset S3 section header"],
+        ["dataset_s3_down_genes", str(n_dn), "DOWN gene count declared in the Dataset S3 section header"],
+        ["dataset_s3_notfound_up", str(nf_up), "genes not mapped by FunSpec on the UP side"],
+        ["dataset_s3_notfound_down", str(nf_dn), "genes not mapped by FunSpec on the DOWN side"],
+        ["check_sum_of_parts", str(n_up + n_dn + nf_up + nf_dn), "reconciliation: UP + DOWN + not-found on both sides"],
         ["check_gap_vs_519", str(519 - (n_up + n_dn + nf_up + nf_dn)),
-         "与 519 的差额；需在报告 5.12 解释（候选：外源条目 gh1-1 无 GO 注释）"],
+         "gap versus 519; explained in the report (the transgene gh1-1 carries no GO annotation)"],
     ]
     write_tsv(os.path.join(OUT, "reconciliation.tsv"), ["item", "value", "note"], recon)
     return 0

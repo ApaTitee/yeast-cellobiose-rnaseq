@@ -14,13 +14,23 @@ format:
     fig-align: center
     code-fold: true
     theme: cosmo
-  typst:
+  pdf:
+    pdf-engine: xelatex
     toc: true
+    toc-depth: 2
     number-sections: true
-    margin:
-      x: 2.2cm
-      y: 2.2cm
-    mainfont: "Noto Sans SC"
+    geometry:
+      - margin=2.2cm
+    mainfont: "DejaVu Sans"
+    monofont: "DejaVu Sans Mono"
+    fig-align: center
+    colorlinks: true
+    keep-tex: false
+    include-in-header:
+      text: |
+        \usepackage{xeCJK}
+        \setCJKmainfont{NotoSansSC-Regular.otf}[Path=fonts/]
+        \usepackage{graphicx}
 bibliography: refs.bib
 reference-section-title: "References"
 ---
@@ -95,7 +105,7 @@ m <- data.frame(
     "DESeq2 1.46.0; primary ~ condition, sensitivity ~ replicate + condition; LFC shrinkage (apeglm) for display only",
     "Benjamini-Hochberg",
     "clusterProfiler 4.14.0 (ORA + GSEA) with self-built TERM2GENE tables; KEGG (sce) cached",
-    "Quarto 1.9.38 (HTML and PDF via Typst)"),
+    "Quarto 1.9.38 (HTML; PDF via LaTeX/xelatex)"),
   stringsAsFactors = FALSE)
 kable(m, booktabs = TRUE, longtable = TRUE, col.names = c("Step", "Tool, version and settings"))
 ```
@@ -321,7 +331,3 @@ quantified, and the growth-rate/glucose-repression confounder was measured rathe
 The limitations that cannot be removed — mitochondrially encoded genes, absolute transgene
 abundance, and CLC-specific mapping statistics — are stated explicitly rather than papered over.
 
-# References {.unnumbered}
-
-::: {#refs}
-:::

@@ -13,14 +13,25 @@ log() { printf '[%s] %s\n' "$(date '+%F %T')" "$*" | tee -a "$LOGS_DIR/20_report
 cd "$REPORT_DIR"
 
 # 1) 中文字体检查（PDF 需要）
-if ! fc-list 2>/dev/null | grep -qi "NotoSansSC\|Noto Sans SC"; then
-  log "!! 未检测到 Noto Sans SC，中文 PDF 可能显示为方块。安装方法见 README。"
+if [ ! -s "$HOME/.local/share/fonts/NotoSansSC-Regular.otf" ] && [ ! -s "$HOME/.fonts/NotoSansSC-Regular.otf" ]; then
+  log "!! 未检测到 NotoSansSC-Regular.otf（xelatex 需要静态字体文件，可变字体不可用）。安装方法见 README。"
 fi
 
-# 1b) 复制图件到报告目录（typst 只允许读取文档目录内的文件；报告与图件共用同一批产物）
+# 1b) 复制图件到报告目录（报告与图件共用同一批产物），并准备 CJK 字体（中文 PDF 需要）
 rm -rf "$REPORT_DIR/figures"; mkdir -p "$REPORT_DIR/figures"
 cp -r "$RESULTS_DIR/figures/." "$REPORT_DIR/figures/"
 log "图件已复制到 docs/report/figures（$(find "$REPORT_DIR/figures" -type f | wc -l) 个文件）"
+mkdir -p "$REPORT_DIR/fonts"
+CJK_SRC=""
+for c in ~/.local/share/fonts/NotoSansSC-Regular.otf ~/.fonts/NotoSansSC-Regular.otf; do
+  [ -s "$c" ] && CJK_SRC="$c" && break
+done
+if [ -n "$CJK_SRC" ]; then
+  cp "$CJK_SRC" "$REPORT_DIR/fonts/NotoSansSC-Regular.otf"
+  log "CJK 字体已就位（$(basename "$CJK_SRC")）"
+else
+  log "!! 缺少 NotoSansSC-Regular.otf，中文 PDF 将失败；安装方法见 README"
+fi
 
 # 1c) 渲染前静态自检：代码围栏必须成对；include 之间不得夹带游离围栏
 #     （曾出现的问题：模板残留的孤立围栏把整段 include 变成代码块，HTML/PDF 中图表退化为原始文本）
@@ -52,7 +63,7 @@ PYCHECK
 
 # 2) 渲染
 for lang in en zh; do
-  for fmt in html typst; do
+  for fmt in html pdf; do
     log "渲染 report_${lang}.qmd -> ${fmt}"
     quarto render "report_${lang}.qmd" --to "${fmt}" >>"$LOGS_DIR/20_report.log" 2>&1
   done

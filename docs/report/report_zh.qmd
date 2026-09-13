@@ -14,13 +14,27 @@ format:
     fig-align: center
     code-fold: true
     theme: cosmo
-  typst:
+  pdf:
+    pdf-engine: xelatex
     toc: true
+    toc-depth: 2
     number-sections: true
-    margin:
-      x: 2.2cm
-      y: 2.2cm
-    mainfont: "Noto Sans SC"
+    geometry:
+      - margin=2.2cm
+    mainfont: "DejaVu Sans"
+    monofont: "DejaVu Sans Mono"
+    fig-align: center
+    colorlinks: true
+    keep-tex: false
+    include-in-header:
+      text: |
+        \usepackage{graphicx}
+        \usepackage{xeCJK}
+        \setCJKmainfont{NotoSansSC-Regular.otf}[Path=fonts/]
+        \setCJKsansfont{NotoSansSC-Regular.otf}[Path=fonts/]
+        \setCJKmonofont{NotoSansSC-Regular.otf}[Path=fonts/]
+        \XeTeXlinebreaklocale "zh"
+        \XeTeXlinebreakskip = 0pt plus 1pt
 bibliography: refs.bib
 reference-section-title: "参考文献"
 ---
@@ -84,7 +98,7 @@ m <- data.frame(
     "DESeq2 1.46.0；主模型 ~ condition，敏感性 ~ replicate + condition；apeglm 收缩 LFC 仅用于展示",
     "Benjamini–Hochberg",
     "clusterProfiler 4.14.0（ORA + GSEA），TERM2GENE 自建；KEGG（sce）结果缓存",
-    "Quarto 1.9.38（HTML 与 Typst 生成 PDF）"),
+    "Quarto 1.9.38（HTML；PDF 由 LaTeX/xelatex 生成）"),
   stringsAsFactors = FALSE)
 kable(m, booktabs = TRUE, longtable = TRUE, col.names = c("步骤", "工具、版本与参数"))
 ```
@@ -267,7 +281,3 @@ R 环境以 conda 而非 renv 锁定，因为在本机配置下 renv 的项目�
 混杂从假设变为测量。无法消除的限制——线粒体编码基因、外源绝对丰度、CLC 特有的映射统计——
 均被明确声明。
 
-# 参考文献 {.unnumbered}
-
-::: {#refs}
-:::

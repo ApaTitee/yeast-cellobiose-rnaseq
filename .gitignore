@@ -33,7 +33,8 @@ results/qc/fastqc/
 # ---- Quarto 构建缓存（typst 包等，自动重建）----
 **/.quarto/
 
-# ---- 报告目录内的图件副本（由 20_render_report.sh 复制）----
+# ---- 报告目录内的图件与字体副本（由 20_render_report.sh 复制）----
+docs/report/fonts/
 docs/report/figures/
 
 # ---- bowtie2 索引（由脚本重建）----

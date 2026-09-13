@@ -1,2 +1,2 @@
 check	tables_en_only	tables_zh_only	tables_shared	verdict
-table_numeric_values	0	0	96	all_english_table_values_present_in_chinese
+table_numeric_values	0	0	95	all_english_table_values_present_in_chinese

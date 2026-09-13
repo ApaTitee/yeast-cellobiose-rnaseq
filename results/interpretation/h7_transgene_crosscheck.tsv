@@ -1,13 +1,13 @@
 estimator	gene	glucose_value	cellobiose_value	FC	note
-salmon_CPM	cdt-1EGFP	2256.1	4528.7	2.007	每百万映射读数的均值
-salmon_CPM	gh1-1	1404.6	3257.5	2.319	每百万映射读数的均值
-salmon_TPM	cdt-1EGFP	26.80	75.70	2.825	TPM（长度归一化）
-salmon_TPM	gh1-1	26.45	84.43	3.192	TPM（长度归一化）
-URA3_proxy	URA3(YEL021W)	432.0	589.1	1.364	质粒拷贝数代理（原文锚定 1.354）
-PGK1_control	PGK1(YCR012W)			0.749	同启动子反证（原文锚定 0.745）
+salmon_CPM	cdt-1EGFP	2256.1	4528.7	2.007	mean of reads per million mapped (salmon)
+salmon_CPM	gh1-1	1404.6	3257.5	2.319	mean of reads per million mapped (salmon)
+salmon_TPM	cdt-1EGFP	26.80	75.70	2.825	TPM (length-normalised, salmon)
+salmon_TPM	gh1-1	26.45	84.43	3.192	TPM (length-normalised, salmon)
+URA3_proxy	URA3(YEL021W)	432.0	589.1	1.364	plasmid copy-number proxy (original anchor 1.354)
+PGK1_control	PGK1(YCR012W)			0.749	same-promoter control (original anchor 0.745)
 URA3_normalized	cdt-1EGFP			1.472	= CPM_FC / URA3_FC
 URA3_normalized	gh1-1			1.700	= CPM_FC / URA3_FC
-original_RPKM	cdt-1EGFP	876.73	1640.70	1.871	原文 Dataset S1 锚定值
-original_RPKM	gh1-1	931.74	2013.08	2.160	原文 Dataset S1 锚定值
-reads_1M_subsample	cdt-1	1392.7	2625.3	1.885	裁决实验 bowtie2 读数（PLAN 3.4.3）
-reads_1M_subsample	gh1-1	1205.0	2679.7	2.224	裁决实验 bowtie2 读数（PLAN 3.4.3）
+original_RPKM	cdt-1EGFP	876.73	1640.70	1.871	original study anchor (Dataset S1)
+original_RPKM	gh1-1	931.74	2013.08	2.160	original study anchor (Dataset S1)
+reads_1M_subsample	cdt-1	1392.7	2625.3	1.885	adjudication experiment, bowtie2 read counts (PLAN 3.4.3)
+reads_1M_subsample	gh1-1	1205.0	2679.7	2.224	adjudication experiment, bowtie2 read counts (PLAN 3.4.3)

@@ -1,6 +1,7 @@
 ```{r fig-pca}
 #| echo: false
 #| fig-cap: "PCA of VST-normalised expression. Conditions separate on PC1 (93.4% of variance); within-condition replicates are tightly clustered (Spearman rho 0.994-0.998)."
+#| out-width: "85%"
 #| fig-alt: "PCA plot of six samples showing separation by carbon source"
 include_graphics(FIG("pca.png"))
 ```
@@ -8,6 +9,7 @@ include_graphics(FIG("pca.png"))
 ```{r fig-corr}
 #| echo: false
 #| fig-cap: "Sample-to-sample Spearman correlation of VST-normalised expression."
+#| out-width: "80%"
 include_graphics(FIG("sample_correlation.png"))
 ```
 

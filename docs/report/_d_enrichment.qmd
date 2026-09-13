@@ -10,6 +10,7 @@ tbl(slim, digits = 3)
 ```{r fig-goslim}
 #| echo: false
 #| fig-cap: "GO slim over-representation analysis (top 10 terms per gene set; BH-adjusted p)."
+#| out-width: "100%"
 include_graphics(FIG("enrichment/go_slim_ora.png"))
 ```
 
