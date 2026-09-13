@@ -1,0 +1,37 @@
+```{r setup-helpers}
+#| echo: false
+#| message: false
+#| warning: false
+# Quarto 默认以父文档所在目录为工作目录（docs/report），项目根即其上两级
+root <- normalizePath(file.path(getwd(), "..", ".."))
+if (!dir.exists(file.path(root, "config"))) stop("无法从工作目录定位项目根：", getwd())
+# 读取结果表的统一入口：所有数字都来自 results/ 下的产物文件
+RD <- function(...) read.delim(file.path(root, ...), check.names = FALSE, stringsAsFactors = FALSE)
+# typst 只允许读取文档目录内的文件，图件由 20_render_report.sh 复制到 docs/report/figures/
+FIG <- function(f) file.path("figures", f)
+
+# 表格输出：显式区分 HTML 与 Typst，使用 knitr::asis_output 直接注入原生标记。
+# 不使用 kable()：在子文档中它无法探测 pandoc 目标格式（会退化为 markdown 管道表），
+# 且所装 knitr 版本不支持 kable(format = "typst")。
+esc_html <- function(x) gsub(">", "&gt;", gsub("<", "&lt;", gsub("&", "&amp;", as.character(x))))
+esc_typ  <- function(x) gsub("#", "\\\\#", gsub("\\]", "\\\\]", gsub("\\[", "\\\\[", gsub("\\$", "\\\\$", as.character(x)))))
+
+tbl <- function(df, digits = 3) {
+  df[] <- lapply(df, function(x) if (is.numeric(x)) signif(x, digits) else x)
+  to <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+  if (is.null(to) || !nzchar(to)) to <- if (knitr::is_html_output()) "html" else "typst"
+  if (grepl("html", to)) {
+    rows <- apply(df, 1, function(r)
+      paste0("<tr>", paste0("<td>", esc_html(r), "</td>", collapse = ""), "</tr>"))
+    out <- paste0("<table class=\"table table-sm table-striped\"><thead><tr>",
+                  paste0("<th>", esc_html(names(df)), "</th>", collapse = ""),
+                  "</tr></thead><tbody>", paste(rows, collapse = ""), "</tbody></table>")
+  } else {
+    body <- apply(df, 1, function(r) paste0("  ", paste0("[", esc_typ(r), "]", collapse = ", "), ","))
+    out <- paste0("#table(\n  columns: ", ncol(df), ",\n  table.header(",
+                  paste0("[", esc_typ(names(df)), "]", collapse = ", "), "),\n",
+                  paste(body, collapse = "\n"), "\n)\n")
+  }
+  knitr::asis_output(out)
+}
+```

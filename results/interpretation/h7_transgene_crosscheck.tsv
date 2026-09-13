@@ -5,8 +5,8 @@ salmon_TPM	cdt-1EGFP	26.80	75.70	2.825	TPM（长度归一化）
 salmon_TPM	gh1-1	26.45	84.43	3.192	TPM（长度归一化）
 URA3_proxy	URA3(YEL021W)	432.0	589.1	1.364	质粒拷贝数代理（原文锚定 1.354）
 PGK1_control	PGK1(YCR012W)			0.749	同启动子反证（原文锚定 0.745）
-URA3_normalized	cdt-1EGFP			2.072	= TPM_FC / URA3_FC（原文推导 1.382 / 1.596）
-URA3_normalized	gh1-1			2.341	= TPM_FC / URA3_FC（原文推导 1.382 / 1.596）
+URA3_normalized	cdt-1EGFP			1.472	= CPM_FC / URA3_FC
+URA3_normalized	gh1-1			1.700	= CPM_FC / URA3_FC
 original_RPKM	cdt-1EGFP	876.73	1640.70	1.871	原文 Dataset S1 锚定值
 original_RPKM	gh1-1	931.74	2013.08	2.160	原文 Dataset S1 锚定值
 reads_1M_subsample	cdt-1	1392.7	2625.3	1.885	裁决实验 bowtie2 读数（PLAN 3.4.3）

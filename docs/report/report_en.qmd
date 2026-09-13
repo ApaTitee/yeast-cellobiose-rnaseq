@@ -1,0 +1,328 @@
+---
+title: "Re-analysis of GEO GSE54825: transcriptional response of engineered *Saccharomyces cerevisiae* to cellobiose versus glucose"
+subtitle: "A reproducible pipeline with a quantitative comparison to the original publication"
+author: "ApaTitee"
+date: today
+date-format: "YYYY-MM-DD"
+lang: en
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    embed-resources: true
+    fig-align: center
+    code-fold: true
+    theme: cosmo
+  typst:
+    toc: true
+    number-sections: true
+    margin:
+      x: 2.2cm
+      y: 2.2cm
+    mainfont: "Noto Sans SC"
+bibliography: refs.bib
+reference-section-title: "References"
+---
+
+```{r doc-setup}
+#| echo: false
+#| message: false
+#| warning: false
+library(knitr)
+opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+{{< include _setup.qmd >}}
+
+# Background {#sec-background}
+
+*Saccharomyces cerevisiae* cannot metabolise cellobiose. Engineering a heterologous cellobiose
+utilisation pathway — a cellodextrin transporter (cdt-1) and an intracellular β-glucosidase
+(gh1-1) from *Neurospora crassa* — enables growth on this sugar, but fermentation remains slower
+than on glucose [@Galazka2010]. The original study of the data set re-analysed here
+(GEO [GSE54825](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE54825); [@Lin2014])
+profiled the transcriptome of the engineered strain on cellobiose versus glucose under anaerobic
+conditions and reported 519 differentially expressed genes, mitochondrial activation, reduced
+amino-acid and thiamine biosynthesis, and two engineering leads (SUT1 overexpression,
+HAP4 deletion).
+
+That study was analysed with a commercial platform (CLC Genomics Workbench 6.5), a private
+reference assembly, and a statistical framework (Baggerley's test) that is no longer standard.
+This report re-analyses the same raw reads with a modern, fully scripted pipeline and asks a
+question the original could not answer: **how much of the original result is reproducible, and
+what is not assessable at all?**
+
+# Research question {#sec-question}
+
+What is the global transcriptional difference between cellobiose- and glucose-grown engineered
+*S. cerevisiae* under anaerobic exponential growth; which biological processes are involved; and
+which observations from the original study can be quantitatively reproduced with an independent
+pipeline?
+
+# Dataset {#sec-dataset}
+
+The seven input files (paper and supplements of both studies) are archived read-only with md5
+checksums; the sequencing data are public and were verified against the md5 values published by
+ENA.
+
+{{< include _d_dataset.qmd >}}
+
+# Experimental design {#sec-design}
+
+Two conditions × three biological replicates, a single batch, anaerobic exponential phase
+(80 g/L starting sugar, harvested at ≈50 g/L residual sugar). The original study used an
+unpaired two-group comparison; replicate numbering (`JCYL001B/001D`, …) hints at pairing but this
+cannot be verified from public metadata. The primary model is therefore unpaired (`~ condition`)
+and a paired model (`~ replicate + condition`) is run as a sensitivity analysis
+(see the *Differential expression* section). No spike-in controls and no independent batch are available.
+
+# Methods {#sec-methods}
+
+```{r tab-methods}
+#| echo: false
+m <- data.frame(
+  step = c("Raw data", "Read QC", "Reference (host)", "Reference (transgenes)",
+           "Quantification", "Gene-level matrix", "Differential expression",
+           "Multiple testing", "Functional enrichment", "Report"),
+  tool_and_version = c(
+    "ENA FTP download; md5 verified against ENA-published values",
+    "FastQC 0.12.1; fastp 1.3.6 (light trimming, length >= 36 bp); MultiQC 1.35",
+    "RefSeq GCF_000146045.2 (S288C R64-1-1, 16 chromosomes + mitochondrion); transcripts extracted with gffread 0.12.9; annotation from the SGD GAF (release R64-5-1)",
+    "Host-vector-insert sequences adjudicated from the reads themselves (see the *Quantification* section)",
+    "Salmon 2.7.0, decoy-aware index (k = 31; k = 25 as sensitivity), --libType A --gcBias --seqBias, fragment-length prior set to the observed read length (49 bp)",
+    "tximport 1.34.0, countsFromAbundance = lengthScaledTPM",
+    "DESeq2 1.46.0; primary ~ condition, sensitivity ~ replicate + condition; LFC shrinkage (apeglm) for display only",
+    "Benjamini-Hochberg",
+    "clusterProfiler 4.14.0 (ORA + GSEA) with self-built TERM2GENE tables; KEGG (sce) cached",
+    "Quarto 1.9.38 (HTML and PDF via Typst)"),
+  stringsAsFactors = FALSE)
+kable(m, booktabs = TRUE, longtable = TRUE, col.names = c("Step", "Tool, version and settings"))
+```
+
+**Thresholds.** Primary DEGs are BH-adjusted p < 0.05 and |log2FC| > 1. A relaxed (p < 0.1) and a
+stringent tier (p < 0.01 and |log2FC| > 1.5) are also reported, plus a tier matched to the
+original study (FDR ≤ 0.001 and |log2FC| ≥ 1). **All thresholding uses unshrunken (MLE) log2FC
+values**; apeglm-shrunken values are used only for ranking and plots. The enrichment universe is
+the set of expressed genes (count ≥ 10 in at least three samples): `r` `r` 6049 genes.
+
+# Quality control {#sec-qc}
+
+The 2014 data are single-end 50 bp reads from a Genome Analyzer II. FastQC reported
+Sanger/Illumina 1.9 encoding, so no Phred64 handling was required. Light trimming retained 95.1%
+of 238.6 million reads and raised the Q30 fraction from 0.88–0.93 to 0.93–0.96; adapter content
+is negligible (≈150 reads per sample after trimming, 0.01%).
+
+*Read fate.* Reads were attributed in three tiers: (i) end-to-end alignment to the host genome
+plus transgenes (94.5–95.5%), (ii) local-mode re-alignment of the remainder (recovering
+19.9–22.8% of the unmapped fraction, attributable to the strict end-to-end mode and to read
+errors in these older data), and (iii) a diagnostic reference containing the pRS426 backbone, the
+native 2 µm plasmid and TruSeq adapters (a further 35.6–40.4% of the residual). A small,
+quantified fraction (2.2–3.0% of the library) remains unexplained; candidate explanations are
+listed in the *Limitations* section. Multi-mapping is 23.0–24.9%, driven by Ty elements and the
+rDNA repeat, and the rDNA locus is the most deeply covered region of the reference
+(RDN25-1, mean depth 23×).
+
+*Plasmid copy number.* Reads from the engineered plasmid backbone are 1.65× more abundant on
+cellobiose (10,385 → 17,188 reads per million), whereas reads from the native 2 µm plasmid are
+unchanged (3,358 → 3,012). This is independent evidence that any copy-number effect is specific
+to the engineered plasmid.
+
+# Quantification {#sec-quant}
+
+The host reference and annotation were frozen (RefSeq `GCF_000146045.2`, SGD annotation release
+R64-5-1, all files md5-recorded). Two properties of this data set required specific handling.
+
+**The transgenes are not what the literature suggests.** The RNA-seq samples carry
+pRS426-BT, whose inserts derive from *N. crassa* cDNA. Reads-derived consensus sequences match the
+public CDS of cdt-1 (NCU00801) and gh1-1 (NCU00130) base-for-base (0 differences). The
+codon-optimised `gh1-1a` published in the supplement (Figure S8) is **absent** from the samples
+(2 reads in 6 million) and differs from the native CDS at 25% of positions: using it as a
+reference would have silently destroyed transgene quantification. The C-terminal tag is a
+**superfolder GFP**: the consensus differs from the humanised EGFP CDS at only 7 nucleotides,
+and its translation carries all six superfolder substitutions (S30R/Y39N/N105T/Y145F/I171V/A206V)
+on an EGFP backbone. The cdt-1–tag junction was read directly from soft-clipped reads:
+`…GTTGCT` + `ATCGAT` (ClaI) + `GGTAGTGGTAGT` (Gly-Ser-Gly-Ser) + `GTGAGC…`, consistent with the
+cloning strategy described in the earlier work [@Galazka2010]. Because part of the transgene
+reference is derived from the sample reads, transgene results are reported **as ratios only**.
+
+**Mitochondrially encoded genes must be measured, not assumed.** The RefSeq RNA FASTA contains no
+mitochondrial protein-coding mRNA, so transcripts were extracted from the GFF with gffread
+(6480 host transcripts, including 19 mitochondrial mRNAs) plus the two transgenes.
+
+Salmon with a decoy-aware index mapped 80.0–83.5% of reads (k = 31); library type was inferred as
+unstranded (**U**) in all twelve runs, consistent with TruSeq v1 chemistry. Quantification was
+validated in three independent ways: (i) TPM versus the original RPKM correlates with
+Spearman = 0.880 over 5796 genes; (ii) adding or removing the genome decoy changes TPMs by a
+median of 0.027 log2 units (17 of 5960 genes exceed 1); and (iii) two calibration genes reproduce
+the original values almost exactly (URA3 ratio 1.364 versus 1.354; PGK1 ratio 0.749 versus 0.745).
+
+> **Reported `EffectiveLength` values are anomalous in Salmon 2.7.0 (Rust port)**: host
+> transcripts receive a median effective length of 0.465 × length, and the transgene entries
+> receive values above 10 × length. This does not affect the conclusions above; the checks in
+> (i)–(iii) and the decoy comparison were performed specifically to bound the risk, and all
+> transgene statements are based on ratios.
+
+# Sample-level analysis {#sec-sample}
+
+```
+
+{{< include _d_samplelevel.qmd >}}
+
+Conditions separate on PC1 (93.4% of variance) and replicates within a condition are extremely
+concordant (Spearman ρ 0.994–0.998) compared with the between-condition range (0.886–0.895),
+supporting H0.
+
+# Differential expression {#sec-de}
+
+{{< include _d_de.qmd >}}
+
+The primary model yields **644 DEGs** (346 up, 298 down); the tier matched to the original
+thresholds yields **632** (341 up, 291 down). The paired sensitivity model yields 643 DEGs and
+agrees with the primary model almost perfectly (Jaccard 0.986; 100% directional concordance;
+Pearson correlation of log2FC = 1.0000), so the conclusions do not depend on the pairing
+assumption. Model diagnostics show no systematic anti-conservatism and only one gene above the
+Cook's distance cutoff.
+
+# Functional enrichment {#sec-enrichment}
+
+{{< include _d_enrichment.qmd >}}
+
+The original study used FunSpec with Bonferroni correction (p 0.01); this re-analysis uses
+clusterProfiler with Benjamini–Hochberg correction and a self-built GO slim mapping (SGD
+`go_slim_mapping.tab`) as well as full GO annotations propagated to ancestor terms via the true
+path rule. The direction and identity of the enriched processes reproduce the original
+conclusions: upregulated genes are dominated by the respiratory chain, oxidative
+phosphorylation, ATP synthesis, mitochondrial and TCA-cycle terms, whereas downregulated genes
+are dominated by amino-acid biosynthesis (methionine, cysteine, arginine, histidine) and
+**thiamine (vitamin B1) biosynthesis**, with the same signal in KEGG (oxidative phosphorylation,
+biosynthesis of amino acids, cysteine/methionine and histidine metabolism).
+
+One observation not reported originally: the strongest negative GSEA signal involves Ty
+retrotransposon-related terms. Because these sequences are heavily multi-mapping, this finding is
+reported with caution and is not used for any biological claim.
+
+# Biological interpretation {#sec-interpretation}
+
+{{< include _d_scorecard.qmd >}}
+
+The nine pre-registered hypotheses were scored with set-level statistics (Wilcoxon signed-rank
+against zero, Fisher's exact test for differential-expression enrichment, and the number of DEGs
+inside each set). Every hypothesis is supported:
+
+- **H1 (mitochondrial activation)** replicates across five independent gene sets
+  (respiratory chain complex +1.91, ATP synthesis +1.79 with 15 of 16 genes differentially
+  expressed, oxidative phosphorylation +1.79, electron transport chain +1.55, TCA cycle +0.86).
+  Mitochondrially encoded genes are excluded from this test (see *Limitations*).
+- **H2 (amino-acid and thiamine biosynthesis down)** replicates in all six subsets, including
+  thiamine biosynthesis (−1.22, 7 of 16 genes differentially expressed, Fisher p = 2.7 × 10⁻³).
+- **H3 (glucose signalling only partially activated)** is supported in the sense the original
+  reported: the PKA set shifts only slightly (+0.45) and the Rgt1 and Snf1–Mig1 sets show no
+  systematic shift.
+- **H4 (hexose-transporter rearrangement)** has no net directional shift (mean log2FC −0.14) but
+  six of eleven transporters are differentially expressed: a family-level rearrangement rather
+  than a uniform response.
+- **H5–H8** replicate, including the engineering leads: SUT1 +1.77, HAP4 +2.61 and DAL80 +1.22.
+- **H9 (growth-rate/glucose-repression confounder)** — the ribosomal-protein gene set (132 genes)
+  shifts by +0.34 (p = 1.4 × 10⁻²¹). A confounder therefore exists and is measurable; its
+  direction suggests relief of glucose repression rather than a slow-growth effect, because
+  ribosomal-protein genes are typically *up* at higher growth rates in yeast.
+
+# Comparison with the original study {#sec-comparison}
+
+{{< include _d_comparison.qmd >}}
+
+Agreement is high at every level that can be compared:
+
+| Level | Result |
+| --- | --- |
+| Per-gene log2FC (5771 genes) | Spearman **0.973**, Pearson 0.840 |
+| DEG overlap (632 vs the original 519) | **496 shared**, Jaccard 0.757, hypergeometric p ≈ 0 |
+| Direction concordance in the overlap | **100%** |
+| Count reconciliation | original 519 = 244 up + 256 down + 18 unmappable + *gh1-1* (no GO annotation) |
+| Transgene fold changes (ratio-based) | 1.89–2.01 (cdt-1EGFP) and 2.22–2.32 (gh1-1) versus 1.87 and 2.16 originally |
+| Plasmid copy-number proxy (URA3) | 1.364 versus 1.354 originally |
+
+Absolute RPKM/TPM values cannot match the original: CLC's internal multi-mapping handling is not
+reproducible outside CLC (only 76.3% of reads were uniquely mapped there), and percentages such
+as 92.3/83.4/76.3% are software-specific quantities. What is reproducible is the gene-level trend,
+and the trend is reproduced almost exactly.
+
+# Limitations {#sec-limitations}
+
+- **Enrichment framework differs** from the original (clusterProfiler + BH versus FunSpec +
+  Bonferroni), so enrichment p-values are not directly comparable; only the identity and
+  direction of the enriched processes are.
+- **Mitochondrially encoded genes are not assessable**: poly-A selection captures them poorly
+  (5–18 chrM reads per million; none of the 19 mitochondrial genes reaches 1× coverage), which is
+  expected because budding-yeast mitochondrial mRNAs lack the long poly(A) tails used for capture
+  [@Chang2012]. H1 is therefore tested on nuclear-encoded mitochondrial genes only.
+- **Transgene abundance is circular to a degree**: the tag and junction sequences are derived from
+  the sample reads. Ratios are robust to this (the same reference bias applies to both
+  conditions), absolute TPM is not.
+- **Plasmid copy number varies between conditions** (URA3 1.364×; backbone reads 1.65×). Dividing
+  the transgene ratio by the proxy (1.47 for cdt-1EGFP, 1.70 for gh1-1) lowers the effect but does
+  not remove it, so part of the transgene increase reflects copy number rather than transcription.
+- **Terminator/promoter crosstalk** from the plasmid affects PGK1 and CYC1 minimally but cannot be
+  fully separated; CYC1 is itself a mitochondrial-activation gene and changes by 2.5× in the
+  original data.
+- **Unmapped reads are only partly explained**: 2.2–3.0% of the library remains unattributed;
+  candidates include read errors in GA II data, non-yeast contamination, regions that are
+  collapsed or absent in the R64 assembly (subtelomeric/Y′ elements), and chimeric reads spanning
+  junctions that exist in no reference (promoter–CDS, CDS–terminator).
+- **No spike-in, no independent batch, n = 3** limit absolute quantification and variance
+  estimation; surrogate-variable methods are not applicable with six samples.
+- **`EffectiveLength` semantics are anomalous in Salmon 2.7.0** (see the *Quantification* section); the
+  conclusions were shown to be insensitive to it, but absolute TPM values should not be
+  over-interpreted.
+- **Pairing could not be verified**; the paired model is reported as a sensitivity analysis only.
+
+# Engineering implications {#sec-engineering}
+
+The re-analysis reproduces the two engineering leads of the original study and places them in a
+quantified context: SUT1 (+1.77) and HAP4 (+2.61) are among the most strongly induced transcription
+factors, and DAL80 (+1.22) also qualifies. Because HAP4 is *induced* on cellobiose while its
+deletion improves fermentation, its regulatory role is non-monotonic — a caution against reading
+transcriptional direction as a direct engineering instruction. The yeast mitochondrial and
+amino-acid/thiamine pathways together account for the bulk of the response, which suggests that
+engineering strategies aimed at cofactor and precursor supply (rather than at sugar transport
+alone) are the most promising.
+
+# Reproducibility {#sec-reproducibility}
+
+Everything in this report is generated by numbered scripts in `scripts/`:
+
+```bash
+conda env create -f environment.yml && conda activate yeast-cellobiose-rnaseq
+bash run_all.sh          # idempotent; skips completed steps
+```
+
+| Artefact | Location |
+| --- | --- |
+| Raw-data checksums (self-computed and ENA-published) | `checksums/` |
+| Reference and annotation versions | `refs/VERSIONS.md` |
+| Provenance of every non-public sequence | `refs/custom/PROVENANCE.md` |
+| Sequence adjudication and junction evidence | `refs/custom/{sequence_adjudication.tsv,junctions.tsv}` |
+| Environment lock (conda-explicit + R package snapshot) | `env/` |
+| Parameter and scope decisions | `docs/decisions/` |
+| Stage acceptance records | `docs/acceptance/` |
+
+The R environment is locked with conda rather than renv because renv project activation masks the
+conda library in this setup (`docs/decisions/r_environment.md`).
+
+# Conclusion {#sec-conclusion}
+
+Re-analysing GSE54825 with an independent, fully scripted pipeline reproduces the original study
+almost completely at the level at which comparison is meaningful: 97.3% rank agreement of per-gene
+fold changes, 496 of the original 519 DEGs recovered, 100% directional concordance, and the same
+enriched processes. Three results go beyond the original: the transgene reference sequences were
+reconstructed and validated from the data (revealing that the published codon-optimised gh1-1a is
+not the allele in these samples), the plasmid copy-number contribution to the transgene signal was
+quantified, and the growth-rate/glucose-repression confounder was measured rather than assumed.
+The limitations that cannot be removed — mitochondrially encoded genes, absolute transgene
+abundance, and CLC-specific mapping statistics — are stated explicitly rather than papered over.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

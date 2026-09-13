@@ -1,0 +1,13 @@
+```{r tab-samples}
+#| echo: false
+ss <- RD("config", "samplesheet.tsv")
+tbl(ss)
+```
+
+```{r tab-md5}
+#| echo: false
+md5 <- RD("checksums", "md5_verification.tsv")
+md5$md5_self <- substr(md5$md5_self, 1, 12)
+md5$md5_ena <- substr(md5$md5_ena, 1, 12)
+tbl(md5)
+```

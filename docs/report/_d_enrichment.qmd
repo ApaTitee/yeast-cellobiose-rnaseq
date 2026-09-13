@@ -1,0 +1,32 @@
+```{r tab-enrich-slim}
+#| echo: false
+ora <- RD("results", "enrichment", "ora_go.tsv")
+slim <- ora[grepl("GOslim", ora$comparison), c("comparison", "Description", "GeneRatio", "pvalue", "p.adjust", "Count")]
+slim <- do.call(rbind, lapply(split(slim, slim$comparison), function(d) head(d[order(d$p.adjust), ], 8)))
+rownames(slim) <- NULL
+tbl(slim, digits = 3)
+```
+
+```{r fig-goslim}
+#| echo: false
+#| fig-cap: "**Fig. 7** GO slim over-representation analysis (top 10 terms per gene set; BH-adjusted p)."
+include_graphics(FIG("enrichment/go_slim_ora.png"))
+```
+
+```{r tab-kegg}
+#| echo: false
+k <- RD("results", "enrichment", "kegg.tsv")
+k <- head(k[order(k$p.adjust), c("ID", "Description", "GeneRatio", "pvalue", "p.adjust", "Count")], 10)
+rownames(k) <- NULL
+tbl(k, digits = 3)
+```
+
+```{r tab-gsea}
+#| echo: false
+g <- RD("results", "enrichment", "gsea_go.tsv")
+g <- g[order(g$p.adjust), c("ID", "Description", "setSize", "NES", "pvalue", "p.adjust")]
+g$Description <- substr(g$Description, 1, 60)
+g <- head(g, 10)
+rownames(g) <- NULL
+tbl(g, digits = 3)
+```

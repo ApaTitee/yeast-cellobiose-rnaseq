@@ -1,0 +1,26 @@
+```{r tab-consistency}
+#| echo: false
+tbl(RD("results", "comparison", "consistency_metrics.tsv"))
+```
+
+```{r fig-fc}
+#| echo: false
+#| fig-cap: "**Fig. 8** Per-gene log2FC agreement with the original study (Spearman = 0.973 over 5771 genes)."
+include_graphics(FIG("fc_agreement.png"))
+```
+
+```{r fig-sweep}
+#| echo: false
+#| fig-cap: "**Fig. 9** Precision/recall of the original 519 DEGs as a function of threshold."
+include_graphics(FIG("threshold_sweep.png"))
+```
+
+```{r tab-notassessable}
+#| echo: false
+tbl(RD("results", "comparison", "not_assessable.tsv"))
+```
+
+```{r tab-recon}
+#| echo: false
+tbl(RD("results", "comparison", "reconciliation_check.tsv"))
+```

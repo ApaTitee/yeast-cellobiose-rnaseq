@@ -23,6 +23,9 @@ results/quantification/**/aux_info/
 results/quantification/**/*.rad
 results/quantification/**/logs/
 
+# ---- 报告目录内的图件副本（由 20_render_report.sh 复制）----
+docs/report/figures/
+
 # ---- bowtie2 索引（由脚本重建）----
 refs/diagnostic/*.bt2
 refs/diagnostic/*.rev.*

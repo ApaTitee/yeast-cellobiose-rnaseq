@@ -1,0 +1,30 @@
+```{r tab-qc}
+#| echo: false
+qc <- RD("results", "qc", "qc_summary.tsv")
+qc$adapter_pct <- NULL
+names(qc) <- c("run", "sample", "condition", "reads_before", "reads_after", "pct_passed",
+               "low_quality_reads", "too_short_reads", "q30_before", "q30_after")
+tbl(qc)
+```
+
+```{r tab-quant}
+#| echo: false
+q <- RD("results", "qc", "salmon_libtype.tsv")
+q$multimap_or_orphan <- NULL
+tbl(q)
+```
+
+```{r tab-readfate}
+#| echo: false
+rf <- RD("results", "qc", "postmap", "read_fate.tsv")
+out <- data.frame(
+  sample = rf$sample,
+  reads = rf$reads_total,
+  mapped_e2e_pct = round(100 * rf$mapped_genome_e2e / rf$reads_total, 2),
+  unmapped_pct = round(100 * rf$unmapped_e2e / rf$reads_total, 2),
+  recovered_local_pct_of_library = round(100 * rf$recovered_local / rf$reads_total, 2),
+  plasmid_or_adapter_pct_of_library = round(100 * rf$diag_hits / rf$reads_total, 2),
+  unexplained_pct_of_library = round(100 * (rf$residual_after_local - rf$diag_hits) / rf$reads_total, 2),
+  chrM_reads = rf$chrM_reads)
+tbl(out)
+```

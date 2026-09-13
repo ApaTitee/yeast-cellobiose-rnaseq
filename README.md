@@ -20,6 +20,24 @@ Reference dataset: Lin Y, *et al.* *Biotechnol Biofuels.* 2014;7:126. PMID 25435
 | **Cross-study comparison** | per-gene log2FC correlation, DEG overlap (Jaccard / hypergeometric / threshold sweep), direction concordance, enrichment-layer and count-level reconciliation against the published datasets |
 | **Failure accounting** | read-fate diagnostics, mitochondrial-transcript detectability, plasmid copy-number proxy, crosstalk checks, and a `not_assessable` list with reasons |
 
+## Results at a glance
+
+| | |
+| --- | --- |
+| Differential expression | **644 DEGs** (primary: BH-adjusted p < 0.05 and \|log2FC\| > 1); **632** at thresholds matched to the original study |
+| Reproducibility of the original study | per-gene log2FC **Spearman 0.973**; **496 of the 519** original DEGs recovered (Jaccard 0.757, hypergeometric p ≈ 0); **100%** directional concordance |
+| Functional layer | respiratory chain / oxidative phosphorylation / ATP synthesis up; amino-acid and **thiamine** biosynthesis down — the same processes reported in 2014 |
+| Transgene work | cdt-1/gh1-1 reference sequences reconstructed and verified from the reads; the published codon-optimised `gh1-1a` is **not** the allele in these samples |
+| Explicitly not assessable | mitochondrially encoded genes (poly-A selection), absolute transgene abundance, CLC-specific mapping statistics |
+
+**Reports** (bilingual; all figure and table labels in English):
+
+- English: [`docs/report/report_en.html`](docs/report/report_en.html) · [`report_en.pdf`](docs/report/report_en.pdf)
+- 中文：[`docs/report/report_zh.html`](docs/report/report_zh.html) · [`report_zh.pdf`](docs/report/report_zh.pdf)
+
+Stage acceptance records are in [`docs/acceptance/`](docs/acceptance/); parameter and scope decisions
+(with their evidence) are in [`docs/decisions/`](docs/decisions/).
+
 ## Dataset
 
 | | |
@@ -42,6 +60,18 @@ bash run_all.sh
 
 # 3. single step, e.g. download + checksum verification only
 bash run_all.sh 01 03
+
+# 4. render the bilingual reports (HTML + PDF)
+bash scripts/07_comparison/20_render_report.sh
+```
+
+For the Chinese PDF, a CJK font must be available (Typst reads system fonts directly):
+
+```bash
+mkdir -p ~/.local/share/fonts
+curl -fsSL -o ~/.local/share/fonts/NotoSansSC-Regular.otf \
+  https://github.com/notofonts/noto-cjk/raw/main/Sans/SubsetOTF/SC/NotoSansSC-Regular.otf
+fc-cache -f
 ```
 
 Requirements: Linux (developed on WSL2 Ubuntu), ~15 GB free disk for raw data + indices,

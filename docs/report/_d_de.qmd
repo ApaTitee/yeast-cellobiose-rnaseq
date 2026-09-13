@@ -1,0 +1,28 @@
+```{r tab-de}
+#| echo: false
+tbl(RD("results", "differential_expression", "de_summary.tsv"))
+```
+
+```{r fig-volcano}
+#| echo: false
+#| fig-cap: "**Fig. 3** Volcano plot of the primary model (`~ condition`). Thresholds: BH-adjusted p < 0.05 and |log2FC| > 1; fold changes are unshrunken (MLE) values, which are the values used for all thresholding."
+include_graphics(FIG("volcano.png"))
+```
+
+```{r fig-heatmap}
+#| echo: false
+#| fig-cap: "**Fig. 4** Row-scaled VST expression of the 50 most significant DEGs."
+include_graphics(FIG("deg_heatmap.png"))
+```
+
+```{r fig-pval}
+#| echo: false
+#| fig-cap: "**Fig. 5** p-value distribution of the primary model (no systematic anti-conservatism; Cook's cutoff exceeded by 1 of 6049 genes)."
+include_graphics(FIG("model_diagnostics/pvalue_histogram.png"))
+```
+
+```{r fig-ma}
+#| echo: false
+#| fig-cap: "**Fig. 6** MA plot with apeglm-shrunken log2FC (display only; thresholding uses MLE values)."
+include_graphics(FIG("model_diagnostics/ma_plot.png"))
+```

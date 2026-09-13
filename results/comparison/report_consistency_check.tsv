@@ -1,0 +1,3 @@
+check	tables_en_only	tables_zh_only	tables_shared	verdict
+table_numeric_values	0	8	88	all_english_table_values_present_in_chinese
+# zh_only: 0.88554821526251, 0.895435984222037, 0.994419170799163, 0.996128331581355, 0.997418249388038, 0.997657475384432, 2.3, 93.4

@@ -1,0 +1,26 @@
+```{r tab-scorecard-summary}
+#| echo: false
+hs <- RD("results", "interpretation", "hypothesis_summary.tsv")
+hs$mean_log2FC_range <- NULL
+tbl(hs)
+```
+
+```{r tab-scorecard-detail}
+#| echo: false
+sc <- RD("results", "interpretation", "hypothesis_scorecard.tsv")
+sc <- sc[, c("hypothesis", "n_genes", "mean_log2FC", "wilcoxon_p", "n_deg_in_set", "fisher_p", "verdict")]
+rownames(sc) <- NULL
+tbl(sc, digits = 3)
+```
+
+```{r tab-transgene}
+#| echo: false
+x <- RD("results", "interpretation", "h7_transgene_crosscheck.tsv")
+tbl(x)
+```
+
+```{r fig-anchor}
+#| echo: false
+#| fig-cap: "**Fig. 10** Independent estimators of the transgene fold change (cellobiose/glucose) and of the plasmid copy-number proxy URA3. Read-based estimators (1.89-2.01 for cdt-1EGFP, 2.22-2.32 for gh1-1) bracket the values reported in the original study (1.87 and 2.16)."
+include_graphics(FIG("transgene_anchor.png"))
+```
