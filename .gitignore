@@ -23,6 +23,12 @@ results/quantification/**/aux_info/
 results/quantification/**/*.rad
 results/quantification/**/logs/
 
+# ---- bowtie2 索引（由脚本重建）----
+refs/diagnostic/*.bt2
+refs/diagnostic/*.rev.*
+refs/index/**
+!refs/index/.gitkeep
+
 # ---- 注释映射中间产物（由 scripts/05_enrichment/16a_build_term2gene.R 重建）----
 refs/host/annotation/term2gene_go_propagated.tsv
 
