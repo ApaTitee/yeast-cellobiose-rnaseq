@@ -1,0 +1,7 @@
+sample	reads_total	mapped_genome_e2e	unmapped_e2e	recovered_local	multi_XS	pct_mapped	pct_multi	chrM_reads	pct_chrM	residual_after_local	diag_hits	pct_of_residual_diag	diag_breakdown
+SRR1166442_JCYL001B_glucose	1130072	1069170	60902	12731	260144	94.61	23.02	8	0.0	48171	13753	28.55	plasmid_pRS426_U03451=9897;plasmid_native_2micron_NC001398=3704;adapter_TruSeq_read1=152
+SRR1166443_JCYL002B_glucose	1136089	1086304	49785	11740	272178	95.62	23.96	5	0.0	38045	13606	35.76	plasmid_pRS426_U03451=9937;plasmid_native_2micron_NC001398=3526;adapter_TruSeq_read1=143
+SRR1166444_JCYL003B_glucose	1140140	1099072	41068	10164	280280	96.4	24.58	9	0.0	30904	14326	46.36	plasmid_pRS426_U03451=11321;plasmid_native_2micron_NC001398=2843;adapter_TruSeq_read1=162
+SRR1166445_JCYL001D_cellobiose	1133699	1058065	75634	13591	267398	93.33	23.59	12	0.0	62043	21971	35.41	plasmid_pRS426_U03451=19064;plasmid_native_2micron_NC001398=2772;adapter_TruSeq_read1=134;adapter_TruSeq_read2=1
+SRR1166446_JCYL002D_cellobiose	1142451	1082719	59732	12333	284902	94.77	24.94	17	0.0	47399	17802	37.56	plasmid_pRS426_U03451=14196;plasmid_native_2micron_NC001398=3480;adapter_TruSeq_read1=126
+SRR1166447_JCYL003D_cellobiose	1142290	1088922	53368	11624	284580	95.33	24.91	18	0.0	41744	21233	50.86	plasmid_pRS426_U03451=18304;plasmid_native_2micron_NC001398=2785;adapter_TruSeq_read1=144
