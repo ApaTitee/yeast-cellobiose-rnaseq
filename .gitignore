@@ -1,0 +1,41 @@
+# ---- 大文件：不入库，仅保留下载/构建脚本与校验值 ----
+data/raw/fastq/*
+data/processed/fastq/*
+!data/processed/fastq/.gitkeep
+refs/index/
+refs/host/*.fna.gz
+refs/host/*.fa.gz
+refs/host/*.gbff.gz
+*.bam
+*.bam.bai
+*.bai
+*.sra
+*.fastq
+*.fastq.gz
+
+# ---- 运行日志 ----
+logs/*
+!logs/.gitkeep
+
+# ---- 环境与缓存 ----
+renv/library/
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+__pycache__/
+.ipynb_checkpoints/
+.cache/
+*.quarto_ipynb
+
+# ---- 编辑器 / 系统 ----
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# ---- 凭据（绝不入库）----
+.env
+*.pem
+*token*
+!docs/decisions/token_notes.md

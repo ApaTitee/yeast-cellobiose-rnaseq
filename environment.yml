@@ -1,0 +1,57 @@
+name: yeast-cellobiose-rnaseq
+# ---------------------------------------------------------------------------
+# 环境锁定说明
+#   environment.yml         —— 可读的依赖声明（本文件）
+#   env/conda-explicit.txt  —— 精确锁定（conda list --explicit），由 00_setup 生成
+# 重建：  conda env create -f environment.yml
+# 复核：  conda list --explicit > env/conda-explicit.txt
+# R 包版本快照见 env/tool_versions.txt 与运行结束时的 sessionInfo()。
+# ---------------------------------------------------------------------------
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # --- 运行时 ---
+  - python=3.11
+  - pip
+  # --- 数据处理与定量 ---
+  - fastqc
+  - fastp
+  - multiqc
+  - salmon
+  - bowtie2
+  - samtools
+  - seqtk
+  - gffread
+  - ncbi-datasets-cli
+  - pigz
+  - curl
+  - jq
+  # --- 报告 ---
+  - quarto
+  - typst
+  # --- R / Bioconductor ---
+  - r-base=4.4
+  - r-renv
+  - r-biocmanager
+  - bioconductor-deseq2
+  - bioconductor-tximport
+  - bioconductor-apeglm
+  - bioconductor-clusterprofiler
+  - bioconductor-fgsea
+  - bioconductor-org.sc.sgd.db
+  - bioconductor-go.db
+  - r-ggplot2
+  - r-pheatmap
+  - r-ggrepel
+  - r-patchwork
+  - r-corrplot
+  - r-data.table
+  - r-dplyr
+  - r-tidyr
+  - r-tibble
+  - r-readxl
+  - r-openxlsx
+  - r-rmarkdown
+  - r-knitr
+  - r-sessioninfo
