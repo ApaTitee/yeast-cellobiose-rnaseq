@@ -36,6 +36,7 @@ export SALMON_INDEX="$REFS_INDEX/salmon"
 # --- 结果 / 日志 / 校验 ---
 export RESULTS_DIR="$PROJECT_ROOT/results"
 export QC_DIR="$RESULTS_DIR/qc"
+export FASTP_DIR="$QC_DIR/fastp"        # fastp 的 json/html 输出（读长等参数由此读取）
 export QUANT_DIR="$RESULTS_DIR/quantification"
 export DE_DIR="$RESULTS_DIR/differential_expression"
 export ENRICH_DIR="$RESULTS_DIR/enrichment"

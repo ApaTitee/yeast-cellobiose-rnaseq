@@ -1,31 +1,31 @@
-[2m2026-09-13T15:45:17.280820Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
-[2m2026-09-13T15:45:17.284104Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ssi
-[2m2026-09-13T15:45:17.295954Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=25, 28642 strings
-[2m2026-09-13T15:45:17.295992Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ctab
-[2m2026-09-13T15:45:17.296742Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   28642 contigs, 122315 entries, entry_width=35 bits
-[2m2026-09-13T15:45:17.296771Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.refinfo
-[2m2026-09-13T15:45:17.297834Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   6312 references, max_ref_len=1531933
-[2m2026-09-13T15:45:17.297903Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ectab
-[2m2026-09-13T15:45:17.298327Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   28642 tiles, 11747 ECs, 54073 label entries
-[2m2026-09-13T15:45:17.298349Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=22, pos_mask=0x1fffff
-[2m2026-09-13T15:45:17.310892Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m0.026892782
-[2m2026-09-13T15:45:17.311630Z[0m [32m INFO[0m [2mpiscem_rs::io::calibrate[0m[2m:[0m using the serial decoder: 8 threads for 1 gzip input(s) is below the 50 threads per input needed before parallel decoding adds concurrency the serial path does not already have
-[2m2026-09-13T15:45:17.311761Z[0m [32m INFO[0m [2msalmon_quant::decode[0m[2m:[0m thread execution plan [3mrequested_budget[0m[2m=[0m8 [3meffective_budget[0m[2m=[0m8 [3mmapping_threads[0m[2m=[0m8 [3mdecode_slots[0m[2m=[0m0 [3mparallel_decode[0m[2m=[0mfalse [3mreason[0m[2m=[0mPolicyDeclined
-[2m2026-09-13T15:45:17.311774Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 8 threads)
-[2m2026-09-13T15:46:00.107980Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 35133549 / 42836520 fragments (82.02%)
-[2m2026-09-13T15:46:00.108369Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m40.092058517
-[2m2026-09-13T15:46:00.108528Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.000160733
-[2m2026-09-13T15:46:00.143448Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m0.034913979
-[2m2026-09-13T15:46:00.143475Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m3.3245e-5
-[2m2026-09-13T15:46:00.143846Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to <PROJECT_ROOT>/results/quantification/salmon_k25/SRR1166445_JCYL001D_cellobiose
-[2m2026-09-13T15:46:00.146266Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.002788507
-[2m2026-09-13T15:46:00.151040Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m deterministic: mapped 35133549 / 42836520 fragments (82.02%); quantifying from intermediate RAD
-[2m2026-09-13T15:46:00.157681Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m quantifying from RAD (salmon SA), 6312 references
-[2m2026-09-13T15:46:00.157804Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m using fragment-length distribution baked in the RAD header
-[2m2026-09-13T15:46:00.157808Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m library format under `-l A`: U (baked in RAD header)
-[2m2026-09-13T15:46:02.336679Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m mapped 35133549 / 42836520 fragments from RAD
-[2m2026-09-13T15:46:02.341908Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"rad_read" [3melapsed_s[0m[2m=[0m2.186916639
-[2m2026-09-13T15:46:06.078659Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m3.736747987
-[2m2026-09-13T15:46:06.078875Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.000224699
-[2m2026-09-13T15:46:06.084950Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.006068718
-[2m2026-09-13T15:46:06.086222Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m 42836520 fragments from intermediate RAD, 35133549 quantified (82.02%); 10745 equivalence classes
+[2m2026-09-13T16:02:47.632642Z[0m [33m WARN[0m [2msalmon[0m[2m:[0m --validateMappings has no effect (deprecated in salmon too): selective alignment is the default mapping mode; pass --sketch for pseudoalignment.
+[2m2026-09-13T16:02:47.635639Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading SSHash dictionary from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ssi
+[2m2026-09-13T16:02:47.644265Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   k=25, 28642 strings
+[2m2026-09-13T16:02:47.644295Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading contig table from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ctab
+[2m2026-09-13T16:02:47.644527Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   28642 contigs, 122315 entries, entry_width=35 bits
+[2m2026-09-13T16:02:47.644540Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading reference info from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.refinfo
+[2m2026-09-13T16:02:47.644905Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   6312 references, max_ref_len=1531933
+[2m2026-09-13T16:02:47.644922Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m Loading equivalence class table from <PROJECT_ROOT>/refs/index/salmon/k25_decoy_host/index.ectab
+[2m2026-09-13T16:02:47.645090Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   28642 tiles, 11747 ECs, 54073 label entries
+[2m2026-09-13T16:02:47.645099Z[0m [32m INFO[0m [2mpiscem_rs::index::reference_index[0m[2m:[0m   ref_shift=22, pos_mask=0x1fffff
+[2m2026-09-13T16:02:47.656235Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"index_load" [3melapsed_s[0m[2m=[0m0.020624359
+[2m2026-09-13T16:02:47.657936Z[0m [32m INFO[0m [2mpiscem_rs::io::calibrate[0m[2m:[0m using the serial decoder: 8 threads for 1 gzip input(s) is below the 50 threads per input needed before parallel decoding adds concurrency the serial path does not already have
+[2m2026-09-13T16:02:47.658204Z[0m [32m INFO[0m [2msalmon_quant::decode[0m[2m:[0m thread execution plan [3mrequested_budget[0m[2m=[0m8 [3meffective_budget[0m[2m=[0m8 [3mmapping_threads[0m[2m=[0m8 [3mdecode_slots[0m[2m=[0m0 [3mparallel_decode[0m[2m=[0mfalse [3mreason[0m[2m=[0mPolicyDeclined
+[2m2026-09-13T16:02:47.658331Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapping reads (selective-alignment mode, 8 threads)
+[2m2026-09-13T16:03:24.592726Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m mapped 35133549 / 42836520 fragments (82.02%)
+[2m2026-09-13T16:03:24.592757Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"mapping" [3melapsed_s[0m[2m=[0m34.375403664
+[2m2026-09-13T16:03:24.592900Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"eff_length_collapse" [3melapsed_s[0m[2m=[0m0.000142564
+[2m2026-09-13T16:03:24.619243Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m0.026336102
+[2m2026-09-13T16:03:24.619278Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m4.2681e-5
+[2m2026-09-13T16:03:24.619758Z[0m [32m INFO[0m [2msalmon_quant[0m[2m:[0m writing results to <PROJECT_ROOT>/results/quantification/salmon_k25/SRR1166445_JCYL001D_cellobiose
+[2m2026-09-13T16:03:24.622371Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.003087762
+[2m2026-09-13T16:03:24.622426Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m deterministic: mapped 35133549 / 42836520 fragments (82.02%); quantifying from intermediate RAD
+[2m2026-09-13T16:03:24.631234Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m quantifying from RAD (salmon SA), 6312 references
+[2m2026-09-13T16:03:24.631386Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m using fragment-length distribution baked in the RAD header
+[2m2026-09-13T16:03:24.631399Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m library format under `-l A`: U (baked in RAD header)
+[2m2026-09-13T16:03:26.967350Z[0m [32m INFO[0m [2msalmon_align::rad[0m[2m:[0m mapped 35133549 / 42836520 fragments from RAD
+[2m2026-09-13T16:03:26.973196Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"rad_read" [3melapsed_s[0m[2m=[0m2.342403288
+[2m2026-09-13T16:03:30.893893Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"em_bias" [3melapsed_s[0m[2m=[0m3.9206985149999998
+[2m2026-09-13T16:03:30.894061Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"posterior" [3melapsed_s[0m[2m=[0m0.000173412
+[2m2026-09-13T16:03:30.899263Z[0m [32m INFO[0m [2msalmon::timing[0m[2m:[0m phase complete [3mphase[0m[2m=[0m"output" [3melapsed_s[0m[2m=[0m0.005196745
+[2m2026-09-13T16:03:30.900186Z[0m [32m INFO[0m [2msalmon[0m[2m:[0m 42836520 fragments from intermediate RAD, 35133549 quantified (82.02%); 10239 equivalence classes

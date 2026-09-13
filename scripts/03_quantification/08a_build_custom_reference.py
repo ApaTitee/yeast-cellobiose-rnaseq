@@ -170,8 +170,9 @@ def main() -> int:
         fh.write("transcript_id\tgene_id\tsource\n")
         for name, _, _ in transgenes:
             fh.write(f"{name}\t{name}\ttransgene\n")
-        for tx, gene, _, _ in rows:
-            fh.write(f"{tx}\t{gene}\thost\n")
+        for tx, gene, head, _ in rows:
+            # 键必须与 quant.sf 中的 Name 完全一致（即 FASTA 头部首个 token，含 'rna-' 前缀）
+            fh.write(f"{head.split()[0]}\t{gene}\thost\n")
 
     # ---------- 4. decoy 与 gentrome ----------
     genome = read_fasta(os.path.join(HOST, "GCF_000146045.2_R64_genomic.fna.gz"))
