@@ -1,0 +1,10 @@
+item	value
+genes_tested	6049
+frac_p_below_0.05	0.7331
+p_hist_first_bin_over_mean	14.663
+cook_cutoff	29.457
+genes_above_cook_cutoff	1
+size_factor_min	0.877
+size_factor_max	1.152
+size_factor_ratio_max_min	1.313
+verdict	no systematic anti-conservatism
