@@ -22,6 +22,34 @@ rm -rf "$REPORT_DIR/figures"; mkdir -p "$REPORT_DIR/figures"
 cp -r "$RESULTS_DIR/figures/." "$REPORT_DIR/figures/"
 log "图件已复制到 docs/report/figures（$(find "$REPORT_DIR/figures" -type f | wc -l) 个文件）"
 
+# 1c) 渲染前静态自检：代码围栏必须成对；include 之间不得夹带游离围栏
+#     （曾出现的问题：模板残留的孤立围栏把整段 include 变成代码块，HTML/PDF 中图表退化为原始文本）
+python3 - "$REPORT_DIR" <<'PYCHECK' || exit 1
+import sys, os, glob
+d = sys.argv[1]
+bad = 0
+for f in sorted(glob.glob(os.path.join(d, "*.qmd"))):
+    lines = open(f, encoding="utf-8").read().split("\n")
+    fences = [i + 1 for i, l in enumerate(lines) if l.strip().startswith("```")]
+    if len(fences) % 2 != 0:
+        print(f"  !! {os.path.basename(f)}: 代码围栏为奇数（{len(fences)}）")
+        bad = 1
+    for i, l in enumerate(lines):
+        if l.strip().startswith("```"):
+            j = i + 1
+            while j < len(lines) and lines[j].strip() == "":
+                j += 1
+            if j < len(lines) and lines[j].strip().startswith("{{< include"):
+                # 允许：围栏是该 chunk 的闭合符（前后文应有 {r ...} 开头）
+                prev_block = any(x.strip().startswith("```{") for x in lines[max(0, i - 60):i])
+                if not prev_block:
+                    print(f"  !! {os.path.basename(f)}:{i+1} include 之前的游离围栏")
+                    bad = 1
+if not bad:
+    print("  静态自检通过：围栏成对、include 前无游离围栏")
+sys.exit(bad)
+PYCHECK
+
 # 2) 渲染
 for lang in en zh; do
   for fmt in html typst; do

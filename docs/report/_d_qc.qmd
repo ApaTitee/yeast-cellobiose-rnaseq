@@ -24,7 +24,6 @@ out <- data.frame(
   unmapped_pct = round(100 * rf$unmapped_e2e / rf$reads_total, 2),
   recovered_local_pct_of_library = round(100 * rf$recovered_local / rf$reads_total, 2),
   plasmid_or_adapter_pct_of_library = round(100 * rf$diag_hits / rf$reads_total, 2),
-  unexplained_pct_of_library = round(100 * (rf$residual_after_local - rf$diag_hits) / rf$reads_total, 2),
-  chrM_reads = rf$chrM_reads)
+  unexplained_pct_of_library = round(100 * (rf$residual_after_local - rf$diag_hits) / rf$reads_total, 2))
 tbl(out)
 ```

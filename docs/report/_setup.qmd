@@ -16,8 +16,16 @@ FIG <- function(f) file.path("figures", f)
 esc_html <- function(x) gsub(">", "&gt;", gsub("<", "&lt;", gsub("&", "&amp;", as.character(x))))
 esc_typ  <- function(x) gsub("#", "\\\\#", gsub("\\]", "\\\\]", gsub("\\[", "\\\\[", gsub("\\$", "\\\\$", as.character(x)))))
 
+# 数值列格式化：**整数（计数）原样保留**，仅对小数取 3 位有效数字。
+# （此前对所有数值列统一 signif(x, 3) 会把 6049 变成 6050、4583 变成 4580，属实际错误。）
+fmt_num <- function(x, digits = 3) {
+  if (!is.numeric(x) || all(is.na(x))) return(x)
+  v <- x[!is.na(x)]
+  if (length(v) && all(abs(v - round(v)) < 1e-9)) return(x)   # 整数计数保持原值
+  signif(x, digits)
+}
 tbl <- function(df, digits = 3) {
-  df[] <- lapply(df, function(x) if (is.numeric(x)) signif(x, digits) else x)
+  df[] <- lapply(df, function(x) if (is.numeric(x)) fmt_num(x, digits) else x)
   to <- knitr::opts_knit$get("rmarkdown.pandoc.to")
   if (is.null(to) || !nzchar(to)) to <- if (knitr::is_html_output()) "html" else "typst"
   if (grepl("html", to)) {
@@ -28,9 +36,14 @@ tbl <- function(df, digits = 3) {
                   "</tr></thead><tbody>", paste(rows, collapse = ""), "</tbody></table>")
   } else {
     body <- apply(df, 1, function(r) paste0("  ", paste0("[", esc_typ(r), "]", collapse = ", "), ","))
-    out <- paste0("#table(\n  columns: ", ncol(df), ",\n  table.header(",
-                  paste0("[", esc_typ(names(df)), "]", collapse = ", "), "),\n",
-                  paste(body, collapse = "\n"), "\n)\n")
+    # Typst 语法必须包在 pandoc 的 raw block 中，否则会被当作普通文本转义（PDF 中显示为源码）
+    # 列宽用 1fr 等分，使长文本换行而不是溢出页边；列数较多时整体缩小字号
+    cols <- paste(rep("1fr", ncol(df)), collapse = ", ")
+    body_tbl <- paste0("#table(\n  columns: (", cols, "),\n  table.header(",
+                       paste0("[", esc_typ(names(df)), "]", collapse = ", "), "),\n",
+                       paste(body, collapse = "\n"), "\n)\n")
+    if (ncol(df) > 6) body_tbl <- paste0("#text(size: 7.5pt)[\n", body_tbl, "]\n")
+    out <- paste0("```{=typst}\n", body_tbl, "```\n")
   }
   knitr::asis_output(out)
 }

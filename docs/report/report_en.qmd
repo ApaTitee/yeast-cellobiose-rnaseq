@@ -165,7 +165,6 @@ the original values almost exactly (URA3 ratio 1.364 versus 1.354; PGK1 ratio 0.
 
 # Sample-level analysis {#sec-sample}
 
-```
 
 {{< include _d_samplelevel.qmd >}}
 

@@ -1,11 +1,11 @@
 item	value
-n_genes_used	6049
-PC1_var_pct	93.4
-PC2_var_pct	2.3
-within_glucose_spearman_min	0.996128331581355
-within_glucose_spearman_max	0.997418249388038
-within_cellobiose_spearman_min	0.994419170799163
-within_cellobiose_spearman_max	0.997657475384432
-between_condition_spearman_min	0.88554821526251
-between_condition_spearman_max	0.895435984222037
+n_genes_used	 6049
+PC1_var_pct	 93.4
+PC2_var_pct	  2.3
+within_glucose_spearman_min	0.9961
+within_glucose_spearman_max	0.9974
+within_cellobiose_spearman_min	0.9944
+within_cellobiose_spearman_max	0.9977
+between_condition_spearman_min	0.8855
+between_condition_spearman_max	0.8954
 separation_verdict	conditions separated on PC1

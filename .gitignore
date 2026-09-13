@@ -23,6 +23,13 @@ results/quantification/**/aux_info/
 results/quantification/**/*.rad
 results/quantification/**/logs/
 
+# ---- 第三方 QC 产物（可重建；其 HTML/JSON 内嵌完整命令行与绝对路径）----
+results/qc/multiqc_report.html
+results/qc/multiqc_report_data/
+results/qc/fastp/*.html
+results/qc/fastqc/
+*.parquet
+
 # ---- Quarto 构建缓存（typst 包等，自动重建）----
 **/.quarto/
 

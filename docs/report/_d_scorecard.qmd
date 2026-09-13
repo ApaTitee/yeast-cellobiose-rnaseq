@@ -1,7 +1,9 @@
 ```{r tab-scorecard-summary}
 #| echo: false
 hs <- RD("results", "interpretation", "hypothesis_summary.tsv")
-hs$mean_log2FC_range <- NULL
+# 精简列：诊断性计数移到正文，避免 PDF 中宽表溢出
+hs <- hs[, c("hypothesis_id", "n_subtests", "n_subtests_replicated", "hypothesis_verdict")]
+names(hs) <- c("hypothesis", "subtests", "replicated", "verdict")
 tbl(hs)
 ```
 
@@ -21,6 +23,6 @@ tbl(x)
 
 ```{r fig-anchor}
 #| echo: false
-#| fig-cap: "**Fig. 10** Independent estimators of the transgene fold change (cellobiose/glucose) and of the plasmid copy-number proxy URA3. Read-based estimators (1.89-2.01 for cdt-1EGFP, 2.22-2.32 for gh1-1) bracket the values reported in the original study (1.87 and 2.16)."
+#| fig-cap: "Independent estimators of the transgene fold change (cellobiose/glucose) and of the plasmid copy-number proxy URA3. Read-based estimators (1.89-2.01 for cdt-1EGFP, 2.22-2.32 for gh1-1) bracket the values reported in the original study (1.87 and 2.16)."
 include_graphics(FIG("transgene_anchor.png"))
 ```
